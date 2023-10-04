@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Oct  4 09:23:23 2023
+# Process ID: 11464
+# Current directory: G:/My Drive/NUS/Sem 3/EE2026/Labs/Project Lab 1/MODS
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28496 G:\My Drive\NUS\Sem 3\EE2026\Labs\Project Lab 1\MODS\MODS.xpr
+# Log file: G:/My Drive/NUS/Sem 3/EE2026/Labs/Project Lab 1/MODS/vivado.log
+# Journal file: G:/My Drive/NUS/Sem 3/EE2026/Labs/Project Lab 1/MODS\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {G:/My Drive/NUS/Sem 3/EE2026/Labs/Project Lab 1/MODS/MODS.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/elegst/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21028-ECE-1CZ20808VG/PrjAr/_X_' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1

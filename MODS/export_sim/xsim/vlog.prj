@@ -1,0 +1,17 @@
+verilog xil_defaultlib  \
+"../../MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_inter/sim/blk_mem_gen_inter.v" \
+"../../MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_const/sim/blk_mem_gen_const.v" \
+"../../MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_img/sim/blk_mem_gen_img.v" \
+"../../MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_0_1/sim/blk_mem_gen_0.v" \
+"../../MODS.srcs/sources_1/imports/Desktop/CanvasTransfer.v" \
+"../../MODS.srcs/sources_1/imports/Desktop/Oled_Display.v" \
+"../../MODS.srcs/sources_1/imports/Desktop/clk_divider.v" \
+"../../MODS.srcs/sources_1/imports/Desktop/module_pack.v" \
+"../../MODS.srcs/sources_1/imports/Desktop/neural_net.v" \
+"../../MODS.srcs/sources_1/imports/Desktop/paint.v" \
+"../../MODS.srcs/sources_1/imports/Desktop/ss_display.v" \
+"../../MODS.srcs/sources_1/new/Top_Student.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
