@@ -1,0 +1,108 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 11464
+License: Customer
+
+Current time: 	Wed Oct 04 09:23:40 SGT 2023
+Time zone: 	Singapore Time (Asia/Singapore)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1504x1003
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 42 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	james
+User home directory: C:/Users/james
+User working directory: G:/My Drive/NUS/Sem 3/EE2026/Labs/Project Lab 1/MODS
+User country: 	SG
+User language: 	en
+User locale: 	en_SG
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/james/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/james/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/james/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	G:/My Drive/NUS/Sem 3/EE2026/Labs/Project Lab 1/MODS/vivado.log
+Vivado journal file location: 	G:/My Drive/NUS/Sem 3/EE2026/Labs/Project Lab 1/MODS/vivado.jou
+Engine tmp dir: 	G:/My Drive/NUS/Sem 3/EE2026/Labs/Project Lab 1/MODS/.Xil/Vivado-11464-james-surface
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	207 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 541 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: G:\My Drive\NUS\Sem 3\EE2026\Labs\Project Lab 1\MODS\MODS.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 56 MB (+56627kb) [00:00:06]
+// [Engine Memory]: 498 MB (+370743kb) [00:00:06]
+// Tcl Message: open_project {G:/My Drive/NUS/Sem 3/EE2026/Labs/Project Lab 1/MODS/MODS.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {G:/My Drive/NUS/Sem 3/EE2026/Labs/Project Lab 1/MODS/MODS.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/elegst/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21028-ECE-1CZ20808VG/PrjAr/_X_' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 73 MB (+13980kb) [00:00:09]
+// [Engine Memory]: 547 MB (+24862kb) [00:00:09]
+// [GUI Memory]: 78 MB (+2035kb) [00:00:09]
+// [Engine Memory]: 575 MB (+1406kb) [00:00:09]
+// [GUI Memory]: 85 MB (+2807kb) [00:00:10]
+// [GUI Memory]: 91 MB (+1568kb) [00:00:10]
+// HMemoryUtils.trashcanNow. Engine heap size: 602 MB. GUI used memory: 40 MB. Current time: 10/4/23 9:23:43 AM SGT
+// Project name: MODS; location: G:/My Drive/NUS/Sem 3/EE2026/Labs/Project Lab 1/MODS; part: xc7a35tcpg236-1
+// [Engine Memory]: 607 MB (+2830kb) [00:00:10]
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 629 MB. GUI used memory: 38 MB. Current time: 10/4/23 9:33:43 AM SGT
+// Elapsed time: 1140 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, paint (paint.v)]", 1); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, paint (paint.v)]", 1); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, paint (paint.v)]", 1); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, paint (paint.v)]", 1); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MouseCtl(Behavioral) (Mouse_Control.vhd)]", 2); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MouseCtl(Behavioral) (Mouse_Control.vhd)]", 2); // B (D, ck)
