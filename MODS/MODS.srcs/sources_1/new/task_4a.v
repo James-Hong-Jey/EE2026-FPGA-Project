@@ -2,6 +2,19 @@
 
 `include "constants.vh"
 `include "Top_Student.v"
+/**
+ * Modified clock that needs an activation wire to start
+ */
+module new_clock_active (input [32:0] frequency, input clock, input active, output reg SLOW_CLOCK);
+    reg [32:0] COUNT = 0;
+    // Equation: 1 / frequency / 2 / 10^-8 / 10
+    always @ (posedge clock) begin
+        if(active == 1) begin
+            COUNT <= (COUNT == 100000000 / frequency / 2 - 1) ? 0 : COUNT + 1;
+            SLOW_CLOCK <= (COUNT == 0) ? ~SLOW_CLOCK : SLOW_CLOCK;
+        end
+    end
+endmodule
 
 /**
  * This function runs once per pixel,
@@ -27,6 +40,10 @@ module border (
         ? main_col : bg_col;
 endmodule
 
+/** 
+ * Creates a square at the middle of the oled
+ * Technically its 1 pixel right and 1 pixel up because of rounding
+ */ 
 module square (
     input [15:0] main_col, bg_col,
     input [32:0] width,
@@ -68,8 +85,11 @@ module border_mux (
     border green3(.main_col(`GREEN), .bg_col(`BLACK), .thickness(3), .offset(19), .x(x), .y(y), .oled_data(green_border_3));
     square redsq(.main_col(`RED), .bg_col(`BLACK), .width(6), .x(x), .y(y), .oled_data(red_square));
 
+    // Timer to iterate once every 0.5s
     wire SLOW_CLOCK;
-    new_clock twohertz (.frequency(2), .clock(clock), .SLOW_CLOCK(SLOW_CLOCK));
+    wire active;
+    assign active = orange_on;
+    new_clock_active twohertz (.frequency(2), .clock(clock), .active(active), .SLOW_CLOCK(SLOW_CLOCK));
     
     reg [32:0] halfsecs = 0;
     always @ (posedge SLOW_CLOCK) begin
@@ -79,49 +99,38 @@ module border_mux (
     reg orange_on = 0;
     reg red_on = 0;
 
+    reg [32:0] COUNT = 0;
+
     always @ (posedge clock) begin
 
-        // Button Debouncing
+        // Set orange_on once
+        if(btnC == 1) orange_on <= 1;
+
+        // Button Debouncing for btnU
         if(DEBOUNCE > 0) begin
             DEBOUNCE <= DEBOUNCE - 1;
         end
-
         if(btnU == 1 && DEBOUNCE == 0) begin
             // 500ms debounce -> 500 * 10^-3 / 10^-8
             DEBOUNCE <= 50000000;
             red_on <= ~red_on;
         end
 
-        // Set orange_on once
-        if(btnC == 1) orange_on <= 1;
-
-        // TODO: Figure out why the slow clock is not working
-
-        // SLOW_CLOCK is for green borders to slowly turn on
-        // Every SLOW_CLOCK is 0.5 seconds
-
-        // Actual Operation
+        // Actual Colour Multiplexing
         if(red_border != `BLACK) begin
             oled_data <= red_border;
         end else if (orange_on) begin // btnC pressed
-
-            // halfsecs <= 0;
 
             if(red_on && red_square != `BLACK) begin // btnU pressed - toggle red square
                 oled_data = red_square;
             end else if(orange_border != `BLACK) begin
                 oled_data = orange_border;
-            end else if (halfsecs >= 4 && green_border_1 != `BLACK) begin
-            //end else if (green_border_1 != `BLACK) begin
+            end else if (halfsecs >= 4 && green_border_1 != `BLACK) begin // 2s
                 oled_data <= green_border_1;
-            end else if (halfsecs >= 7 && green_border_2 != `BLACK) begin
-            // end else if (green_border_2 != `BLACK) begin
+            end else if (halfsecs >= 7 && green_border_2 != `BLACK) begin // 3.5s
                 oled_data <= green_border_2;
-            end else if (halfsecs >= 9 && green_border_3 != `BLACK) begin
-            // end else if (green_border_3 != `BLACK) begin
+            end else if (halfsecs >= 9 && green_border_3 != `BLACK) begin // 4.5s
                 oled_data <= green_border_3;
-            // end else if (red_square != `BLACK) begin
-                // oled_data <= red_square;
             end else oled_data = `BLACK;
 
         end else begin
