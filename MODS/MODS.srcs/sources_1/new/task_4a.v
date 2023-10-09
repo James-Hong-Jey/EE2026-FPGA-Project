@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
 `include "constants.vh"
+`include "Top_Student.v"
 
 /**
  * This function runs once per pixel,
@@ -55,8 +56,7 @@ module border_mux (
     input btnU
     );
 
-    reg [32:0] COUNT, DEBOUNCE = 0;
-    reg [3:0] SLOW_CLOCK = 0;
+    reg [32:0] DEBOUNCE = 0;
     wire [6:0] x, y;
     xy xy_converter (.pixel_index(pixel_index), .x(x), .y(y));
 
@@ -68,9 +68,16 @@ module border_mux (
     border green3(.main_col(`GREEN), .bg_col(`BLACK), .thickness(3), .offset(19), .x(x), .y(y), .oled_data(green_border_3));
     square redsq(.main_col(`RED), .bg_col(`BLACK), .width(6), .x(x), .y(y), .oled_data(red_square));
 
+    wire SLOW_CLOCK;
+    new_clock twohertz (.frequency(2), .clock(clock), .SLOW_CLOCK(SLOW_CLOCK));
+    
+    reg [32:0] halfsecs = 0;
+    always @ (posedge SLOW_CLOCK) begin
+        halfsecs <= (halfsecs == 11) ? 0 : halfsecs + 1;
+    end
+
     reg orange_on = 0;
     reg red_on = 0;
-    reg orange_on = 0;
 
     always @ (posedge clock) begin
 
@@ -80,8 +87,8 @@ module border_mux (
         end
 
         if(btnU == 1 && DEBOUNCE == 0) begin
-            // 50ms debounce -> 50 * 10^-3 / 10^-8
-            DEBOUNCE <= 5000000;
+            // 500ms debounce -> 500 * 10^-3 / 10^-8
+            DEBOUNCE <= 50000000;
             red_on <= ~red_on;
         end
 
@@ -92,40 +99,29 @@ module border_mux (
 
         // SLOW_CLOCK is for green borders to slowly turn on
         // Every SLOW_CLOCK is 0.5 seconds
-        // Equation: 1 / frequency / 2 / 10^-8 / 10
-        COUNT <= (COUNT == 100000000 / 2 / 2 - 1) ? 0 : COUNT + 1;
-        SLOW_CLOCK <= (COUNT == 0) ? SLOW_CLOCK + 1 : SLOW_CLOCK;
 
         // Actual Operation
         if(red_border != `BLACK) begin
             oled_data <= red_border;
         end else if (orange_on) begin // btnC pressed
 
-            COUNT <= 0; // Reset timer
-            SLOW_CLOCK <= 0;
+            // halfsecs <= 0;
 
-            if(SLOW_CLOCK > 11) begin
-                COUNT <= 0;
-                SLOW_CLOCK <= 0;
-            end
-
-            if(red_on) begin // btnU pressed - toggle red square
-                //oled_data = red_square;
-            end
-
-            if(orange_border != `BLACK) begin
+            if(red_on && red_square != `BLACK) begin // btnU pressed - toggle red square
+                oled_data = red_square;
+            end else if(orange_border != `BLACK) begin
                 oled_data = orange_border;
-            //end else if (SLOW_CLOCK >= 4 && green_border_1 != `BLACK) begin
-            end else if (green_border_1 != `BLACK) begin
+            end else if (halfsecs >= 4 && green_border_1 != `BLACK) begin
+            //end else if (green_border_1 != `BLACK) begin
                 oled_data <= green_border_1;
-            // end else if (SLOW_CLOCK >= 7 && green_border_2 != `BLACK) begin
-            end else if (green_border_2 != `BLACK) begin
+            end else if (halfsecs >= 7 && green_border_2 != `BLACK) begin
+            // end else if (green_border_2 != `BLACK) begin
                 oled_data <= green_border_2;
-            //end else if (SLOW_CLOCK >= 9 && green_border_3 != `BLACK) begin
-            end else if (green_border_3 != `BLACK) begin
+            end else if (halfsecs >= 9 && green_border_3 != `BLACK) begin
+            // end else if (green_border_3 != `BLACK) begin
                 oled_data <= green_border_3;
-            end else if (red_square != `BLACK) begin
-                oled_data <= red_square;
+            // end else if (red_square != `BLACK) begin
+                // oled_data <= red_square;
             end else oled_data = `BLACK;
 
         end else begin

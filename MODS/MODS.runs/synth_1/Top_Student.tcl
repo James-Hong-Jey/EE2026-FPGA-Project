@@ -35,8 +35,8 @@ read_verilog {{C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/ne
 set_property file_type "Verilog Header" [get_files {{C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/constants.vh}}]
 read_verilog -library xil_defaultlib {
   {C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v}
-  {C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/task_4a.v}
   {C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/Top_Student.v}
+  {C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/task_4a.v}
 }
 read_vhdl -library xil_defaultlib {
   {C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd}
