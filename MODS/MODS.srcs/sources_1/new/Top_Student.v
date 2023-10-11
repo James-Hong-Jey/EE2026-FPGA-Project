@@ -55,38 +55,35 @@ module Top_Student (
 
 
     // 3.B
-    // UNTESTED
-
-    wire clk100;
-    new_clock clk100m (100000000, clock, clk100); 
 
     wire [11:0] xpos, ypos;
     wire [3:0] zpos;
     wire left, middle, right, new_event;
-    wire [11:0] value = 0;
-    wire setx, sety, setmax_x, setmax_y;
-    assign setx = 0;
-    assign sety = 0;
-    assign setmax_x = 0;
-    assign setmax_y = 0;
+    reg [11:0] value = 0;
+    reg setx = 0;
+    reg sety = 0;
+    reg setmax_x = 0;
+    reg setmax_y = 0;
 
-     MouseCtl (.clk(clk100), .rst(rst), .xpos(xpos), .ypos(ypos), .zpos(zpos), 
+     MouseCtl (.clk(clk), .rst(rst), .xpos(xpos), .ypos(ypos), .zpos(zpos), 
              .left(left), .middle(middle), .right(right), .new_event(new_event), 
              .value(value), .setx(setx), .sety(sety), .setmax_x(setmax_x), .setmax_y(setmax_y), 
              .ps2_clk(PS2Clk), .ps2_data(PS2Data) );
                     
-    assign led[15] = left;
-    assign led[14] = middle;
-    assign led[13] = right;
+    // assign led[15] = left;
+    // assign led[14] = middle;
+    // assign led[13] = right;
 
     // 3.C
-    // UNTESTED
 
-    // wire [11:0] mouse_press_x, mouse_press_y;
-    // paint paint1(clk100, new_event, btnC, xpos, ypos, pixel_index, 
-        // led, left, right, mouse_press_x, mouse_press_y, seg, oled_data);
+    wire mouse_press, mouse_reset;
+    wire [11:0] mouse_press_x, mouse_press_y;
+    //paint (.clk_100M(clk), .mouse_1(new_event), .reset(right), .enable(left), .mouse_x(xpos), .mouse_y(ypos), .pixel_index(pixel_index), 
+      //  .led(led), .mouse_press(mouse_press), .mouse_reset(mouse_reset), .mouse_press_x(mouse_press_x), .mouse_press_y(mouse_press_y), .seg(seg), .colour_chooser(oled_data));
+    // ^ doesn't work for some reason
+    paint pt(clk, left, right, 1'b1, xpos, ypos, pixel_index, led, mouse_press, mouse_reset, mouse_press_x, mouse_press_y, seg, oled_data);
 
     // 4.A
-    border_mux task4A (.clock(clock), .pixel_index(pixel_index), .oled_data(oled_data), .btnC(btnC), .btnU(btnU));
+    // border_mux task4A (.clock(clock), .pixel_index(pixel_index), .oled_data(oled_data), .btnC(btnC), .btnU(btnU));
 
 endmodule

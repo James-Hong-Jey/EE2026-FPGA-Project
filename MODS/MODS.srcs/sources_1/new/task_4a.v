@@ -2,6 +2,7 @@
 
 `include "constants.vh"
 `include "Top_Student.v"
+
 /**
  * Modified clock that needs an activation wire to start
  */
@@ -59,6 +60,7 @@ endmodule
 
 /**
  * Function specific to Task 4.A
+ *
  * Starts with a 1 thickness red border
  * Once btnC is pressed, orange_on is enabled
  * Instantly turns out 3 thickness orange border
@@ -93,7 +95,7 @@ module border_mux (
     
     reg [32:0] halfsecs = 0;
     always @ (posedge SLOW_CLOCK) begin
-        halfsecs <= (halfsecs == 11) ? 0 : halfsecs + 1;
+        halfsecs <= (halfsecs == 11) ? 0 : halfsecs + 1; // Task needs to reset at 5.5s or 11 halfsecs
     end
 
     reg orange_on = 0;
@@ -111,8 +113,8 @@ module border_mux (
             DEBOUNCE <= DEBOUNCE - 1;
         end
         if(btnU == 1 && DEBOUNCE == 0) begin
-            // 500ms debounce -> 500 * 10^-3 / 10^-8
-            DEBOUNCE <= 50000000;
+            // 500ms debounce -> 100 * 10^-3 / 10^-8
+            DEBOUNCE <= 10000000;
             red_on <= ~red_on;
         end
 
