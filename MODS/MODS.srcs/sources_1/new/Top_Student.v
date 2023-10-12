@@ -4,14 +4,14 @@
 //
 //  FILL IN THE FOLLOWING INFORMATION:
 //  STUDENT A NAME: James Hong Jey
-//  STUDENT B NAME:
+//  STUDENT B NAME: Barbara Chong
 //  STUDENT C NAME: 
 //  STUDENT D NAME:  
 //
 //////////////////////////////////////////////////////////////////////////////////
 `include "constants.vh"
 
-/** 
+/**  
  * usage:
  * new_clock clk625M (6250000, clock, <output>);
  */ 
@@ -34,23 +34,30 @@ module Top_Student (
     input [15:0] sw,
     input [6:0] seg,
     input btnU, 
-    input btnC, 
+    input btnC,
+    input btnL,
+    input btnR,
+    output [7:0] JB
     inout PS2Clk,
     inout PS2Data,
     output [7:0] JB,
     output [15:0] led
     );
 
+    wire frame_begin, sending_pixels, sample_pixel;
     wire rst;
     assign rst = 0;
 
     // 3.A
     wire clk, frame_begin, sending_pixels, sample_pixel;
+    wire frame_begin, sending_pixels, sample_pixel;
     wire [12:0] pixel_index;
-    new_clock clk6p25m (6250000, clock, clk);
-    // wire [15:0] oled_data = sw[4] == 1 ? 16'hF800 : 16'h07E0;
+    
     wire [15:0] oled_data;
-    Oled_Display(clk, rst, frame_begin, sending_pixels, sample_pixel, pixel_index, oled_data,
+    task_4b (clock, btnC, btnL, btnR, pixel_index, oled_data);
+    wire clk;
+    new_clock clk6p25m (6250000, clock, clk);
+    Oled_Display(clk, btnC, frame_begin, sending_pixels, sample_pixel, pixel_index, oled_data,
                 JB[0], JB[1], JB[3], JB[4], JB[5], JB[6], JB[7]);
 
 
