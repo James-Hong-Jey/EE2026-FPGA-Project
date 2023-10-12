@@ -31,3 +31,8 @@
 `define DIG7    7'b1111000
 `define DIG8    7'b0
 `define DIG9    7'b0010000  
+
+// 7 Segment Display Characters
+`define V   7'b1000001
+`define A   7'b0001000
+`define L   7'b1110001
