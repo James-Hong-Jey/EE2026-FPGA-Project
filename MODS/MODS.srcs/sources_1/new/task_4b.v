@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module task_4b (
-    input clock, btnC, btnL, btnR, 
+    input clock, rst, btnL, btnR, 
     input [12:0] pixel_index, 
     output reg [15:0] oled_data
     );
