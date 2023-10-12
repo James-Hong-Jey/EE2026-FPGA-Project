@@ -31,15 +31,10 @@ set_property ip_output_repo {c:/Users/james/Desktop/EE2026 Project/MODS/MODS.cac
 set_property ip_cache_permissions {read write} [current_project]
 add_files {{C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/weights.coe}}
 add_files {{C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/00.coe}}
-read_verilog {{C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/constants.vh}}
-set_property file_type "Verilog Header" [get_files {{C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/constants.vh}}]
 read_verilog -library xil_defaultlib {
   {C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v}
+  {C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/task_4b.v}
   {C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/Top_Student.v}
-}
-read_vhdl -library xil_defaultlib {
-  {C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd}
-  {C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

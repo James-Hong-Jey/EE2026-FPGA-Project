@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Oct  9 11:22:27 2023
-# Process ID: 4492
+# Start of session at: Thu Oct 12 00:39:09 2023
+# Process ID: 7528
 # Current directory: C:/Users/james/Desktop/EE2026 Project/MODS/MODS.runs/synth_1
 # Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
 # Log file: C:/Users/james/Desktop/EE2026 Project/MODS/MODS.runs/synth_1/Top_Student.vds
@@ -15,13 +15,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16948 
+INFO: Helper process launched with PID 16956 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 356.559 ; gain = 100.059
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 356.266 ; gain = 99.180
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:44]
-INFO: [Synth 8-6157] synthesizing module 'new_clock' [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:18]
-INFO: [Synth 8-6155] done synthesizing module 'new_clock' (1#1) [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:18]
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:25]
+INFO: [Synth 8-6157] synthesizing module 'task_4b' [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/task_4b.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'task_4b' (1#1) [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/task_4b.v:3]
+INFO: [Synth 8-6157] synthesizing module 'new_clock' [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'new_clock' (2#1) [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:16]
 INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
@@ -76,36 +78,14 @@ INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/james/Desktop/
 INFO: [Synth 8-226] default block is never used [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
 INFO: [Synth 8-226] default block is never used [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
 WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (2#1) [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
-INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
-	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
-	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
-	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:156' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:374]
-INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
-INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (3#1) [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
-WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:455]
-WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:461]
-WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:519]
-WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:525]
-INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (4#1) [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (5#1) [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (3#1) [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (4#1) [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:25]
+WARNING: [Synth 8-3331] design task_4b has unconnected port btnC
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[11]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[10]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[9]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[8]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[7]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[6]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[5]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[4]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[0]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[15]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[14]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[13]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[12]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[11]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[10]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[9]
@@ -118,15 +98,8 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[3]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[6]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[5]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[4]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 411.641 ; gain = 155.141
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 410.984 ; gain = 153.898
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -139,10 +112,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 411.641 ; gain = 155.141
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 410.984 ; gain = 153.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 411.641 ; gain = 155.141
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 410.984 ; gain = 153.898
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -150,6 +123,144 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:100]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:100]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -174,6 +285,36 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:107]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:107]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PS2Clk'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:274]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:274]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PS2Clk'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:275]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:275]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PS2Clk'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:276]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:276]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PS2Data'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:277]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:277]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PS2Data'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:278]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:278]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PS2Data'. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:279]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc:279]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/james/Desktop/EE2026 Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -182,94 +323,29 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 756.551 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 742.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 756.551 ; gain = 500.051
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 742.715 ; gain = 485.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 756.551 ; gain = 500.051
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 742.715 ; gain = 485.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 756.551 ; gain = 500.051
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 742.715 ; gain = 485.629
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "delay_done" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "SLOW_CLOCK0" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Ps2Interface'
-INFO: [Synth 8-5546] ROM "reset_bit_count" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "busy" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "read_data" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "load_tx_data" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "ps2_clk_h" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "delay_100us_counter_enable" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "delay_20us_counter_enable" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "delay_63clk_counter_enable" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'MouseCtl'
-INFO: [Synth 8-5545] ROM "periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "reset_periodic_check_cnt" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "new_event" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -307,72 +383,8 @@ INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address si
                SendPixel | 00000000000000000010000000000000 |                            10000
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                    idle |                00000000000000001 |                            00000
-            rx_down_edge |                00000000000000010 |                            00011
-                rx_clk_l |                00000000000000100 |                            00010
-                rx_clk_h |                00000000000001000 |                            00001
-         rx_error_parity |                00000000000010000 |                            00100
-           rx_data_ready |                00000000000100000 |                            00101
-          tx_force_clk_l |                00000000001000000 |                            00110
-      tx_bring_data_down |                00000000010000000 |                            00111
-          tx_release_clk |                00000000100000000 |                            01000
- tx_first_wait_down_edge |                00000001000000000 |                            01001
-                tx_clk_l |                00000010000000000 |                            01010
-         tx_wait_up_edge |                00000100000000000 |                            01011
-tx_wait_up_edge_before_ack |                00001000000000000 |                            01101
-             tx_wait_ack |                00010000000000000 |                            01110
-         tx_received_ack |                00100000000000000 |                            01111
-         tx_error_no_ack |                01000000000000000 |                            10000
-                tx_clk_h |                10000000000000000 |                            01100
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Ps2Interface'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                   reset | 0000000000000000000000000000000000001 |                           000000
-          reset_wait_ack | 0000000000000000000000000000000000010 |                           000001
-reset_wait_bat_completion | 0000000000000000000000000000000000100 |                           000010
-           reset_wait_id | 0000000000000000000000000000000001000 |                           000011
-reset_set_sample_rate_200 | 0000000000000000000000000000000010000 |                           000100
-reset_set_sample_rate_200_wait_ack | 0000000000000000000000000000000100000 |                           000101
-reset_send_sample_rate_200 | 0000000000000000000000000000001000000 |                           000110
-reset_send_sample_rate_200_wait_ack | 0000000000000000000000000000010000000 |                           000111
-reset_set_sample_rate_100 | 0000000000000000000000000000100000000 |                           001000
-reset_set_sample_rate_100_wait_ack | 0000000000000000000000000001000000000 |                           001001
-reset_send_sample_rate_100 | 0000000000000000000000000010000000000 |                           001010
-reset_send_sample_rate_100_wait_ack | 0000000000000000000000000100000000000 |                           001011
-reset_set_sample_rate_80 | 0000000000000000000000001000000000000 |                           001100
-reset_set_sample_rate_80_wait_ack | 0000000000000000000000010000000000000 |                           001101
-reset_send_sample_rate_80 | 0000000000000000000000100000000000000 |                           001110
-reset_send_sample_rate_80_wait_ack | 0000000000000000000001000000000000000 |                           001111
-           reset_read_id | 0000000000000000000010000000000000000 |                           010000
-  reset_read_id_wait_ack | 0000000000000000000100000000000000000 |                           010001
-   reset_read_id_wait_id | 0000000000000000001000000000000000000 |                           010010
-    reset_set_resolution | 0000000000000000010000000000000000000 |                           010011
-reset_set_resolution_wait_ack | 0000000000000000100000000000000000000 |                           010100
-   reset_send_resolution | 0000000000000001000000000000000000000 |                           010101
-reset_send_resolution_wait_ack | 0000000000000010000000000000000000000 |                           010110
-reset_set_sample_rate_40 | 0000000000000100000000000000000000000 |                           010111
-reset_set_sample_rate_40_wait_ack | 0000000000001000000000000000000000000 |                           011000
-reset_send_sample_rate_40 | 0000000000010000000000000000000000000 |                           011001
-reset_send_sample_rate_40_wait_ack | 0000000000100000000000000000000000000 |                           011010
-  reset_enable_reporting | 0000000001000000000000000000000000000 |                           011011
-reset_enable_reporting_wait_ack | 0000000010000000000000000000000000000 |                           011100
-             read_byte_1 | 0000000100000000000000000000000000000 |                           011101
-             read_byte_2 | 0000001000000000000000000000000000000 |                           011110
-             read_byte_3 | 0000010000000000000000000000000000000 |                           011111
-             read_byte_4 | 0000100000000000000000000000000000000 |                           100000
-          mark_new_event | 0001000000000000000000000000000000000 |                           100100
-           check_read_id | 0010000000000000000000000000000000000 |                           100001
-  check_read_id_wait_ack | 0100000000000000000000000000000000000 |                           100010
-   check_read_id_wait_id | 1000000000000000000000000000000000000 |                           100011
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'MouseCtl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 756.551 ; gain = 500.051
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 742.715 ; gain = 485.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -385,52 +397,32 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     33 Bit       Adders := 2     
-	   2 Input     26 Bit       Adders := 1     
-	   2 Input     24 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 4     
-	   2 Input     11 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	               40 Bit    Registers := 1     
-	               26 Bit    Registers := 1     
-	               24 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
-	               12 Bit    Registers := 6     
-	               11 Bit    Registers := 2     
-	                8 Bit    Registers := 4     
-	                7 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 4     
-	                1 Bit    Registers := 36    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input     40 Bit        Muxes := 3     
-	  37 Input     37 Bit        Muxes := 1     
-	   2 Input     37 Bit        Muxes := 69    
 	  32 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
-	   2 Input     26 Bit        Muxes := 1     
-	   2 Input     24 Bit        Muxes := 1     
 	  32 Input     20 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 19    
-	  17 Input     17 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 10    
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 7     
+	   4 Input     16 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 1     
-	   2 Input      9 Bit        Muxes := 2     
-	  37 Input      8 Bit        Muxes := 3     
 	  32 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 1     
-	  37 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	  17 Input      1 Bit        Muxes := 4     
-	  37 Input      1 Bit        Muxes := 20    
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -438,10 +430,20 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module Top_Student 
+Module task_4b 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 7     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
 Module new_clock 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -468,49 +470,6 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
-Module Ps2Interface 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 3     
-+---Registers : 
-	               11 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
-	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 17    
-+---Muxes : 
-	  17 Input     17 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 18    
-	   2 Input     11 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
-	  17 Input      1 Bit        Muxes := 4     
-Module MouseCtl 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     26 Bit       Adders := 1     
-	   2 Input     24 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 4     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	               26 Bit    Registers := 1     
-	               24 Bit    Registers := 1     
-	               12 Bit    Registers := 6     
-	                8 Bit    Registers := 3     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 17    
-+---Muxes : 
-	  37 Input     37 Bit        Muxes := 1     
-	   2 Input     37 Bit        Muxes := 69    
-	   2 Input     26 Bit        Muxes := 1     
-	   2 Input     24 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 10    
-	   2 Input      9 Bit        Muxes := 2     
-	  37 Input      8 Bit        Muxes := 3     
-	  37 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
-	  37 Input      1 Bit        Muxes := 20    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -527,30 +486,16 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5545] ROM "clk6p25m/SLOW_CLOCK0" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "clk100m/SLOW_CLOCK0" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "delay_done" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "SLOW_CLOCK0" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "clk6p25m/SLOW_CLOCK0" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "clk100m/SLOW_CLOCK0" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design task_4b has unconnected port btnC
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[11]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[10]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[9]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[8]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[7]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[6]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[5]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[4]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[0]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[15]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[14]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[13]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[12]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[11]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[10]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[9]
@@ -563,114 +508,21 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[3]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[6]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[5]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[4]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[0]
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_new_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_overflow_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_inc_reg[7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_inc_reg[6]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_inc_reg[5]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_inc_reg[4]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_inc_reg[3]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_inc_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_inc_reg[1]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_inc_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[11]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[10]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[8]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[6]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[5]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[4]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[3]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[1]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_max_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_sign_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[11]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[10]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[8]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[6]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[5]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[4]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[3]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[1]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/x_pos_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[11]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[10]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[8]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[6]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[5]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[4]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[3]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[1]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/xpos_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_new_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_overflow_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_inc_reg[7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_inc_reg[6]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_inc_reg[5]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_inc_reg[4]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_inc_reg[3]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_inc_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_inc_reg[1]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_inc_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[11]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[10]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[8]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[6]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[5]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[4]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[3]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[1]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_max_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_sign_reg) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[11]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[10]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[8]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[6]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[5]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[4]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[3]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[1]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/y_pos_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[11]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[10]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[8]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[6]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[5]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[4]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[3]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[1]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/ypos_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/zpos_reg[3]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/zpos_reg[2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/zpos_reg[1]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/zpos_reg[0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line84/new_event_reg) is unused and will be removed from module Top_Student.
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[0]' (FDR) to 'nolabel_line38/oled_data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[1]' (FDR) to 'nolabel_line38/oled_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[2]' (FDR) to 'nolabel_line38/oled_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[3]' (FDR) to 'nolabel_line38/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[5]' (FDS) to 'nolabel_line38/oled_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[6]' (FDS) to 'nolabel_line38/oled_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[7]' (FDS) to 'nolabel_line38/oled_data_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[8]' (FDS) to 'nolabel_line38/oled_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[9]' (FDS) to 'nolabel_line38/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[11]' (FDR) to 'nolabel_line38/oled_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[12]' (FDR) to 'nolabel_line38/oled_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[13]' (FDR) to 'nolabel_line38/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line38/oled_data_reg[14]' (FDR) to 'nolabel_line38/oled_data_reg[15]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 756.551 ; gain = 500.051
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 742.715 ; gain = 485.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -682,13 +534,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 756.551 ; gain = 500.051
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 742.715 ; gain = 485.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 765.234 ; gain = 508.734
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 808.664 ; gain = 551.578
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -700,7 +552,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 783.031 ; gain = 526.531
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 819.574 ; gain = 562.488
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -720,13 +572,11 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5365] Flop nolabel_line84/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to nolabel_line84/Inst_Ps2Interface/ps2_clk_h_reg_inv.
-INFO: [Synth 8-5365] Flop nolabel_line84/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to nolabel_line84/Inst_Ps2Interface/ps2_data_h_reg_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 783.031 ; gain = 526.531
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 819.574 ; gain = 562.488
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -739,7 +589,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 783.031 ; gain = 526.531
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 819.574 ; gain = 562.488
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -751,25 +601,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 783.031 ; gain = 526.531
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 819.574 ; gain = 562.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 783.031 ; gain = 526.531
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 819.574 ; gain = 562.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 783.031 ; gain = 526.531
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 819.574 ; gain = 562.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 783.031 ; gain = 526.531
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 819.574 ; gain = 562.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -785,59 +635,54 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     3|
-|2     |CARRY4 |    44|
-|3     |LUT1   |    15|
-|4     |LUT2   |    94|
-|5     |LUT3   |    65|
-|6     |LUT4   |    77|
-|7     |LUT5   |    81|
-|8     |LUT6   |   123|
-|9     |FDCE   |    56|
-|10    |FDPE   |     4|
-|11    |FDRE   |   293|
-|12    |FDRE_1 |    31|
-|13    |FDSE_1 |     1|
-|14    |IBUF   |     3|
-|15    |IOBUF  |     2|
-|16    |OBUF   |    11|
-|17    |OBUFT  |    13|
+|1     |BUFG   |     2|
+|2     |CARRY4 |    54|
+|3     |LUT1   |    87|
+|4     |LUT2   |    80|
+|5     |LUT3   |    61|
+|6     |LUT4   |    64|
+|7     |LUT5   |    52|
+|8     |LUT6   |   168|
+|9     |FDRE   |   206|
+|10    |FDRE_1 |    31|
+|11    |FDSE   |    16|
+|12    |FDSE_1 |     1|
+|13    |IBUF   |     4|
+|14    |OBUF   |     7|
+|15    |OBUFT  |     1|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+----------------------+-------------+------+
-|      |Instance              |Module       |Cells |
-+------+----------------------+-------------+------+
-|1     |top                   |             |   916|
-|2     |  clk100m             |new_clock    |    58|
-|3     |  clk6p25m            |new_clock_0  |    55|
-|4     |  nolabel_line63      |Oled_Display |   289|
-|5     |  nolabel_line84      |MouseCtl     |   481|
-|6     |    Inst_Ps2Interface |Ps2Interface |   271|
-+------+----------------------+-------------+------+
++------+-----------------+-------------+------+
+|      |Instance         |Module       |Cells |
++------+-----------------+-------------+------+
+|1     |top              |             |   834|
+|2     |  clk6p25m       |new_clock    |    66|
+|3     |  nolabel_line38 |task_4b      |   277|
+|4     |  nolabel_line41 |Oled_Display |   475|
++------+-----------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 783.031 ; gain = 526.531
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 819.574 ; gain = 562.488
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 134 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 783.031 ; gain = 181.621
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 783.031 ; gain = 526.531
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 819.574 ; gain = 230.758
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 819.574 ; gain = 562.488
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 81 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 90 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 34 instances were transformed.
+  A total of 32 instances were transformed.
   FDRE_1 => FDRE (inverted pins: C): 31 instances
   FDSE_1 => FDSE (inverted pins: C): 1 instances
-  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-109 Infos, 182 Warnings, 8 Critical Warnings and 0 Errors encountered.
+46 Infos, 101 Warnings, 64 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 783.031 ; gain = 539.387
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 819.574 ; gain = 575.340
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/james/Desktop/EE2026 Project/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 783.031 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Oct  9 11:22:57 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 819.574 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 12 00:39:59 2023...

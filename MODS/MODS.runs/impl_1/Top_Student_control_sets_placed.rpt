@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon Oct  9 11:23:31 2023
+| Date         : Thu Oct 12 00:40:52 2023
 | Host         : james-surface running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    22 |
-| Unused register locations in slices containing registers |    52 |
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    36 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,10 +35,7 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      2 |            1 |
-|      4 |            1 |
-|      8 |            3 |
-|     14 |            2 |
-|    16+ |           15 |
+|    16+ |            9 |
 +--------+--------------+
 
 
@@ -48,43 +45,31 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              38 |           12 |
-| No           | No                    | Yes                    |             120 |           23 |
-| No           | Yes                   | No                     |             372 |           55 |
-| Yes          | No                    | No                     |              66 |            9 |
+| No           | No                    | No                     |              18 |            6 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             190 |           32 |
+| Yes          | No                    | No                     |              64 |            8 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             176 |           24 |
+| Yes          | Yes                   | No                     |             236 |           31 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------+---------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
-|   Clock Signal   |                         Enable Signal                         |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count |
-+------------------+---------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
-| ~clk_BUFG        |                                                               |                                                               |                1 |              2 |
-|  clock_IBUF_BUFG |                                                               |                                                               |                2 |              4 |
-|  clk100_BUFG     |                                                               | nolabel_line84/Inst_Ps2Interface/clk_inter0                   |                1 |              8 |
-|  clk100_BUFG     |                                                               | nolabel_line84/Inst_Ps2Interface/data_inter0                  |                1 |              8 |
-|  clk100_BUFG     | nolabel_line84/Inst_Ps2Interface/shift_frame                  | nolabel_line84/Inst_Ps2Interface/reset_bit_count              |                1 |              8 |
-|  clk100_BUFG     | nolabel_line84/Inst_Ps2Interface/delay_63clk_count[6]_i_2_n_0 | nolabel_line84/Inst_Ps2Interface/delay_63clk_count[6]_i_1_n_0 |                2 |             14 |
-|  clk100_BUFG     | nolabel_line84/Inst_Ps2Interface/ps2_data_h_reg_inv_0         |                                                               |                1 |             14 |
-|  clk100_BUFG     | nolabel_line84/tx_data0                                       |                                                               |                4 |             16 |
-|  clk100_BUFG     | nolabel_line84/Inst_Ps2Interface/load_rx_data                 |                                                               |                2 |             16 |
-|  clk100_BUFG     | nolabel_line84/Inst_Ps2Interface/frame[9]_i_1_n_0             |                                                               |                2 |             20 |
-|  clk100_BUFG     | nolabel_line84/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0 | nolabel_line84/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0 |                3 |             22 |
-|  clk100_BUFG     | nolabel_line84/Inst_Ps2Interface/delay_100us_count[0]_i_2_n_0 | nolabel_line84/Inst_Ps2Interface/clear                        |                4 |             28 |
-|  clk100_BUFG     |                                                               |                                                               |                9 |             32 |
-| ~clk_BUFG        |                                                               | btnC_IBUF                                                     |                5 |             34 |
-| ~clk_BUFG        | nolabel_line63/delay[0]_i_1_n_0                               | btnC_IBUF                                                     |                5 |             40 |
-|  clk100_BUFG     |                                                               | nolabel_line84/reset_timeout_cnt_reg_n_0                      |                7 |             48 |
-|  clk100_BUFG     |                                                               | nolabel_line84/reset_periodic_check_cnt__0                    |                6 |             52 |
-| ~clk_BUFG        | nolabel_line63/state                                          | btnC_IBUF                                                     |                9 |             64 |
-|  clock_IBUF_BUFG |                                                               | clk100m/COUNT[0]_i_1__0_n_0                                   |                9 |             66 |
-|  clock_IBUF_BUFG |                                                               | clk6p25m/clear                                                |                9 |             66 |
-| ~clk_BUFG        |                                                               | nolabel_line63/spi_word[39]_i_1_n_0                           |               17 |             90 |
-|  clk100_BUFG     |                                                               | btnC_IBUF                                                     |               23 |            120 |
-+------------------+---------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
++------------------+---------------------------------------------+------------------------------------------+------------------+----------------+
+|   Clock Signal   |                Enable Signal                |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
++------------------+---------------------------------------------+------------------------------------------+------------------+----------------+
+| ~clk_BUFG        |                                             |                                          |                1 |              2 |
+|  clock_IBUF_BUFG |                                             |                                          |                5 |             16 |
+| ~clk_BUFG        |                                             | btnC_IBUF                                |                4 |             34 |
+| ~clk_BUFG        | nolabel_line41/delay[0]_i_1_n_0             | btnC_IBUF                                |                5 |             40 |
+|  clock_IBUF_BUFG | nolabel_line38/p_0_in                       |                                          |                8 |             64 |
+| ~clk_BUFG        | nolabel_line41/FSM_onehot_state[31]_i_1_n_0 | btnC_IBUF                                |                8 |             64 |
+|  clock_IBUF_BUFG |                                             | clk6p25m/clear                           |                9 |             66 |
+|  clock_IBUF_BUFG | nolabel_line38/DEBOUNCE_LEFT                | nolabel_line38/DEBOUNCE_LEFT[0]_i_1_n_0  |                9 |             66 |
+|  clock_IBUF_BUFG | nolabel_line38/DEBOUNCE_RIGHT[0]_i_2_n_0    | nolabel_line38/DEBOUNCE_RIGHT[0]_i_1_n_0 |                9 |             66 |
+| ~clk_BUFG        |                                             | nolabel_line41/spi_word[39]_i_1_n_0      |               19 |             90 |
++------------------+---------------------------------------------+------------------------------------------+------------------+----------------+
 
 
