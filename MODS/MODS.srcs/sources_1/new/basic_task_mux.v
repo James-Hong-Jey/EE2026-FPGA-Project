@@ -4,7 +4,7 @@
 
 module task_5e2 (
     input clock,
-    input [3:0] digit,
+    input [6:0] paint_seg,
     output reg [6:0] seg,
     output reg [3:0] an,
     output reg dp
@@ -36,22 +36,10 @@ module task_5e2 (
         end else if (count == 2) begin
             seg <= `L;
             an <= 4'b1101;
-            dp <= 0;
+            dp <= 1;
         end else if (count == 3) begin // Some number
+            seg <= paint_seg;
             an <= 4'b1110;
-            case(digit) 
-                0: seg <= `DIG0;
-                1: seg <= `DIG1;
-                2: seg <= `DIG2;
-                3: seg <= `DIG3;
-                4: seg <= `DIG4;
-                5: seg <= `DIG5;
-                6: seg <= `DIG6;
-                4'b0111: seg <= `DIG7;
-                8: seg <= `DIG8;
-                9: seg <= `DIG9;
-                default: seg <= 7'b0;
-            endcase
             dp <= 1;
         end
     end
@@ -116,8 +104,8 @@ module basic_task_mux(
       //  .led(led), .mouse_press(mouse_press), .mouse_reset(mouse_reset), .mouse_press_x(mouse_press_x), .mouse_press_y(mouse_press_y), .seg(seg), .colour_chooser(oled_data));
     // ^ doesn't work for some reason
     wire [15:0] led_blink;
-    wire [6:0] seg_blink;
-    // paint pt(clock, left, right, 1'b1, xpos, ypos, pixel_index, led_blink, mouse_press, mouse_reset, mouse_press_x, mouse_press_y, seg_blink, oled_data);
+    wire [6:0] paint_seg;
+    paint pt(clock, left, right, 1'b1, xpos, ypos, pixel_index, led_blink, mouse_press, mouse_reset, mouse_press_x, mouse_press_y, paint_seg, oled_data);
 
     // 4.A
     // border_mux task4A (.clock(clock), .pixel_index(pixel_index), .oled_data(oled_data), .btnC(btnC), .btnU(btnU));
@@ -131,5 +119,5 @@ module basic_task_mux(
     assign led = clk5hz == 1 ? led_blink : 0;
 
     // 4.E2 VAL + paint.v number on 7 seg 
-    task_5e2(.clock(clock), .digit(4'b0111), .seg(seg), .an(an), .dp(dp));
+    task_5e2(.clock(clock), .digit(), .seg(seg), .an(an), .dp(dp));
 endmodule
