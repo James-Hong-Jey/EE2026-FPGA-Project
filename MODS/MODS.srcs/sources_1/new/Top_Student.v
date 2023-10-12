@@ -54,7 +54,6 @@ module Top_Student (
     wire [12:0] pixel_index;
     
     wire [15:0] oled_data;
-    task_4b (clock, btnC, btnL, btnR, pixel_index, oled_data);
     wire clk;
     new_clock clk6p25m (6250000, clock, clk);
     Oled_Display(clk, btnC, frame_begin, sending_pixels, sample_pixel, pixel_index, oled_data,
@@ -92,5 +91,8 @@ module Top_Student (
 
     // 4.A
     // border_mux task4A (.clock(clock), .pixel_index(pixel_index), .oled_data(oled_data), .btnC(btnC), .btnU(btnU));
+
+    // 4.B
+    // task_4b (clock, btnC, btnL, btnR, pixel_index, oled_data);
 
 endmodule
