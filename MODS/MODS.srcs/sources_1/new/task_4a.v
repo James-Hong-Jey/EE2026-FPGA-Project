@@ -69,6 +69,7 @@ endmodule
  */ 
 module border_mux (
     input clock,
+    input rst,
     input [12:0] pixel_index,
     output reg [15:0] oled_data,
     input btnC, 
@@ -94,8 +95,9 @@ module border_mux (
     new_clock_active twohertz (.frequency(2), .clock(clock), .active(active), .SLOW_CLOCK(SLOW_CLOCK));
     
     reg [32:0] halfsecs = 0;
-    always @ (posedge SLOW_CLOCK) begin
-        halfsecs <= (halfsecs == 11) ? 0 : halfsecs + 1; // Task needs to reset at 5.5s or 11 halfsecs
+    always @ (posedge SLOW_CLOCK, posedge rst) begin
+        if(rst == 1) orange_on <= 0;
+        halfsecs <= (rst == 1 || halfsecs == 11) ? 0 : halfsecs + 1; // Task needs to reset at 5.5s or 11 halfsecs
     end
 
     reg orange_on = 0;
@@ -113,8 +115,8 @@ module border_mux (
             DEBOUNCE <= DEBOUNCE - 1;
         end
         if(btnU == 1 && DEBOUNCE == 0) begin
-            // 500ms debounce -> 100 * 10^-3 / 10^-8
-            DEBOUNCE <= 10000000;
+            // 250ms debounce -> 250 * 10^-3 / 10^-8
+            DEBOUNCE <= 25000000;
             red_on <= ~red_on;
         end
 
