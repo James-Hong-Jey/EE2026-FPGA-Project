@@ -35,4 +35,4 @@
 // 7 Segment Display Characters
 `define V   7'b1000001
 `define A   7'b0001000
-`define L   7'b1110001
+`define L   7'b1000111

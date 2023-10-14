@@ -10,6 +10,7 @@ module task_5e2 (
     output reg dp
     );
     
+    // Initialise to blank 7 seg display
     initial begin
         seg <= 7'b1111111;
         an <= 4'b1111;
@@ -65,8 +66,21 @@ module basic_task_mux(
     output reg dp
     );
 
+    // Initialise the reset button
     wire rst;
-    assign rst = 0; // Can assign to any button 
+    reg rst_sw; // If sw changes at all, then this is 1 for a clock cycle, else 0
+    assign rst = rst_sw || btnD; // Can assign to any button 
+
+    // Initialise everything to blank
+    initial begin
+        rst_sw <= 0;
+        led <= 0;
+        seg <= 7'b1111111;
+        an <= 4'b1111;
+        dp <= 1;
+        oled_data <= 0;
+    end
+
 
     // 3.A 
     wire clk625, frame_begin, sending_pixels, sample_pixel;
@@ -112,7 +126,7 @@ module basic_task_mux(
 
     // 4.A
     wire[15:0] oled_data_4a;
-    border_mux task4A (.clock(clock), .rst(rst) .pixel_index(pixel_index), .oled_data(oled_data_4a), .btnC(btnC), .btnU(btnU));
+    border_mux task4A (.clock(clock), .rst(rst), .pixel_index(pixel_index), .oled_data(oled_data_4a), .btnC(btnC), .btnU(btnU));
 
     // 4.B
     wire[15:0] oled_data_4b;
@@ -128,18 +142,17 @@ module basic_task_mux(
     wire [4:0] an_4e2;
     wire dp_4e2;
     task_5e2(.clock(clock), .paint_seg(paint_seg), .seg(seg_4e2), .an(an_4e2), .dp(dp_4e2));
-
+    
+    reg [15:0] sw_prev = 15'b0;
     // Multiplexer 
     always @ (posedge clock) begin
-        case(sw) 
-            default: begin
-                led <= 0;
-                seg <= 7'b1111111;
-                an <= 4'b1111;
-                dp <= 1;
-                oled_data <= 0;
-            end
-            16'b1: begin
+        if(sw != sw_prev) begin
+            rst_sw <= 1;
+            sw_prev <= sw;
+        end else rst_sw <= 0;
+
+        case(sw[4:0]) 
+            5'b1: begin
                 // 4A
                 led <= 16'b1;
                 seg <= 7'b1111111;
@@ -147,7 +160,7 @@ module basic_task_mux(
                 dp <= 1;
                 oled_data <= oled_data_4a;
             end
-            16'b10: begin
+            5'b10: begin
                 // 4B
                 led <= 16'b10;
                 seg <= 7'b1111111;
@@ -155,26 +168,34 @@ module basic_task_mux(
                 dp <= 1;
                 oled_data <= oled_data_4b;
             end
-            16'b100: begin
+            5'b100: begin
                 // 4C
                 led <= 16'b100;
                 seg <= 7'b1111111;
                 an <= 4'b1111;
                 dp <= 1;
             end
-            16'b1000: begin
+            5'b1000: begin
                 // 4D
                 led <= 16'b1000;
                 seg <= 7'b1111111;
                 an <= 4'b1111;
                 dp <= 1;
             end
-            16'b10000: begin
+            5'b10000: begin
                 // 4E
                 seg <= seg_4e2;
+                led <= clk5hz == 1 ? led_blink : 0;
                 an <= an_4e2;
                 dp <= dp_4e2;
                 oled_data <= oled_data_4e;
+            end
+            default: begin
+                led <= 0;
+                seg <= 7'b1111111;
+                an <= 4'b1111;
+                dp <= 1;
+                oled_data <= 0;
             end
         endcase
     end

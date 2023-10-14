@@ -96,7 +96,6 @@ module border_mux (
     
     reg [32:0] halfsecs = 0;
     always @ (posedge SLOW_CLOCK, posedge rst) begin
-        if(rst == 1) orange_on <= 0;
         halfsecs <= (rst == 1 || halfsecs == 11) ? 0 : halfsecs + 1; // Task needs to reset at 5.5s or 11 halfsecs
     end
 
@@ -109,6 +108,7 @@ module border_mux (
 
         // Set orange_on once
         if(btnC == 1) orange_on <= 1;
+        if(rst == 1 && orange_on == 1) orange_on <= 0;
 
         // Button Debouncing for btnU
         if(DEBOUNCE > 0) begin
