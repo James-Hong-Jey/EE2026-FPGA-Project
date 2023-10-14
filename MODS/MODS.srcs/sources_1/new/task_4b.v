@@ -33,6 +33,14 @@ module task_4b (
     end
 
     always @(posedge clock) begin
+
+        if(rst) begin
+            counter <= 2;
+            delay_done <= 0;
+            delay_counter <= 0;
+            oled_data <= 16'h0000; 
+        end
+
         //delay clock
         if (!delay_done) begin
             delay_counter <= delay_counter + 1;

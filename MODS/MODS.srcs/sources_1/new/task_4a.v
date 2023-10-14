@@ -106,15 +106,21 @@ module border_mux (
 
     always @ (posedge clock) begin
 
+        // Reset
+        //if(rst == 1 && orange_on == 1) orange_on <= 0;
+        if(rst) begin
+            orange_on <= 0;
+            red_on <= 0;
+        end
+
         // Set orange_on once
-        if(btnC == 1) orange_on <= 1;
-        if(rst == 1 && orange_on == 1) orange_on <= 0;
+        if(btnC) orange_on <= 1;
 
         // Button Debouncing for btnU
         if(DEBOUNCE > 0) begin
             DEBOUNCE <= DEBOUNCE - 1;
         end
-        if(btnU == 1 && DEBOUNCE == 0) begin
+        if(orange_on && btnU && DEBOUNCE) begin
             // 250ms debounce -> 250 * 10^-3 / 10^-8
             DEBOUNCE <= 25000000;
             red_on <= ~red_on;
