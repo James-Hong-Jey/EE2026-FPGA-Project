@@ -120,7 +120,7 @@ module border_mux (
         if(DEBOUNCE > 0) begin
             DEBOUNCE <= DEBOUNCE - 1;
         end
-        if(orange_on && btnU && DEBOUNCE) begin
+        if(orange_on && btnU && DEBOUNCE == 0) begin
             // 250ms debounce -> 250 * 10^-3 / 10^-8
             DEBOUNCE <= 25000000;
             red_on <= ~red_on;

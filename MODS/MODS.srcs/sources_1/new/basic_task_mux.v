@@ -119,10 +119,11 @@ module basic_task_mux(
     //paint (.clk_100M(clock), .mouse_1(new_event), .reset(right), .enable(left), .mouse_x(xpos), .mouse_y(ypos), .pixel_index(pixel_index), 
       //  .led(led), .mouse_press(mouse_press), .mouse_reset(mouse_reset), .mouse_press_x(mouse_press_x), .mouse_press_y(mouse_press_y), .seg(seg), .colour_chooser(oled_data));
     // ^ doesn't work for some reason
-    wire [15:0] led_blink;
+    wire [15:0] led_paint;
+    reg [15:0] led_blink;
     wire [6:0] paint_seg;
     wire [15:0] oled_data_4e;
-    paint pt(clock, left, (right || rst), 1'b1, xpos, ypos, pixel_index, led_blink, mouse_press, mouse_reset, mouse_press_x, mouse_press_y, paint_seg, oled_data_4e);
+    paint pt(clock, left, (right || rst), 1'b1, xpos, ypos, pixel_index, led_paint, mouse_press, mouse_reset, mouse_press_x, mouse_press_y, paint_seg, oled_data_4e);
 
     // 4.A
     wire[15:0] oled_data_4a;
@@ -132,9 +133,20 @@ module basic_task_mux(
     wire[15:0] oled_data_4b;
     task_4b (.clock(clock), .rst(rst), .btnL(btnL), .btnR(btnR), .pixel_index(pixel_index), .oled_data(oled_data_4b));
 
+    // 4.C
+    wire[15:0] oled_data_4c;
+    task_4c (.clock(clock), .rst(rst), .pixel_index(pixel_index), .btnC(btnC), .btnU(btnU), .oled_data(oled_data_4c));
+
+    // 4.D
+    wire[15:0] oled_data_4d;
+    task_4d (.clock(clock), .rst(rst), .btnC(btnC), .btnL(btnL), .btnR(btnR), .btnU(btnU), .pixel_index(pixel_index), .oled_data(oled_data_4d));
+
     // 4.E1 Blinking LED 
     wire clk5hz; // will be off or on at 5Hz
     new_clock fivehertz(.frequency(5), .clock(clock), .SLOW_CLOCK(clk5hz));
+    always @ (posedge clk5hz) begin
+        led_blink <= led_paint;
+    end
 
     // 4.E2 VAL + paint.v number on 7 seg 
     wire [6:0] seg_4e2;
@@ -173,6 +185,7 @@ module basic_task_mux(
                 seg <= 7'b1111111;
                 an <= 4'b1111;
                 dp <= 1;
+                oled_data <= oled_data_4c;
             end
             5'b1000: begin
                 // 4D
@@ -180,6 +193,7 @@ module basic_task_mux(
                 seg <= 7'b1111111;
                 an <= 4'b1111;
                 dp <= 1;
+                oled_data <= oled_data_4d;
             end
             5'b10000: begin
                 // 4E

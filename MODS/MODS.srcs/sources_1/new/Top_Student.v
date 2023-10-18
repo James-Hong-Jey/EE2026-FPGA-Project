@@ -5,8 +5,8 @@
 //  FILL IN THE FOLLOWING INFORMATION:
 //  STUDENT A NAME: James Hong Jey
 //  STUDENT B NAME: Barbara Chong
-//  STUDENT C NAME: 
-//  STUDENT D NAME:  
+//  STUDENT C NAME: Karishma T
+//  STUDENT D NAME: Azfarul Matin
 //
 //////////////////////////////////////////////////////////////////////////////////
 `include "constants.vh"
