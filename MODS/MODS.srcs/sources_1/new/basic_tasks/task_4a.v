@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
 
 `include "constants.vh"
-`include "Top_Student.v"
 
 /**
  * Modified clock that needs an activation wire to start
