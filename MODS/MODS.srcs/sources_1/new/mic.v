@@ -24,8 +24,11 @@ module mic (
     wire [6:0] x, y;
     xy(pixel_index, x, y);
 
+    reg [4:0] volume_level;
+
     always @ (posedge clock) begin
-        oled_data <= y < peak_vol[10:5] ? `GREEN : `RED;
+        volume_level <= peak_vol > 2000 ? (peak_vol - 2000) / 250 : 0;
+        oled_data <= y < peak_vol[10:5] ? `GREEN : `BLACK;
     end
 
 endmodule
