@@ -29,17 +29,23 @@ module mic (
     reg [11:0] volume_level;
 
     // Draw window
-    wire [15:0] background, floor, window, window_frame, note_yellow, note_red, note_blue;
-    draw_box(.main_col(`GREY), .bg_col(`BLACK), .lefttopx(0), .lefttopy(0), .rightbotx(`WIDTH), .rightboty(`HEIGHT - 20), .x(x), .y(y), .oled_data(background));
-    draw_box(.main_col(`ORANGE), .bg_col(`BLACK), .lefttopx(0), .lefttopy(`HEIGHT - 20), .rightbotx(`WIDTH), .rightboty(`HEIGHT), .x(x), .y(y), .oled_data(floor));
+    wire [15:0] background, floor, window, window_frame, note_yellow, note_red, note_blue, note_cyan, note_magenta, pillow, bed, bed_headboard, bed_base;
+    draw_box(.main_col(`WHITE), .bg_col(`BLACK), .lefttopx(`WIDTH - 12), .lefttopy(26), .rightbotx(`WIDTH - 4), .rightboty(`HEIGHT - 24), .x(x), .y(y), .oled_data(pillow));
+    draw_box(.main_col(`CYAN), .bg_col(`BLACK), .lefttopx(44), .lefttopy(28), .rightbotx(`WIDTH - 12), .rightboty(`HEIGHT - 24), .x(x), .y(y), .oled_data(bed));
+    draw_box(.main_col(`YELLOW), .bg_col(`BLACK), .lefttopx(`WIDTH - 4), .lefttopy(`HEIGHT - 34), .rightbotx(`WIDTH), .rightboty(`HEIGHT - 20), .x(x), .y(y), .oled_data(bed_headboard));
+    draw_box(.main_col(`YELLOW), .bg_col(`BLACK), .lefttopx(44), .lefttopy(`HEIGHT - 24), .rightbotx(`WIDTH), .rightboty(`HEIGHT - 20), .x(x), .y(y), .oled_data(bed_base));
     draw_box(.main_col(`BLUE), .bg_col(`BLACK), .lefttopx(15), .lefttopy(15), .rightbotx(45), .rightboty(30), .x(x), .y(y), .oled_data(window));
     draw_box(.main_col(`MAGENTA), .bg_col(`BLACK), .lefttopx(11), .lefttopy(11), .rightbotx(49), .rightboty(34), .x(x), .y(y), .oled_data(window_frame));
+    draw_box(.main_col(`ORANGE), .bg_col(`BLACK), .lefttopx(0), .lefttopy(`HEIGHT - 20), .rightbotx(`WIDTH), .rightboty(`HEIGHT), .x(x), .y(y), .oled_data(floor));
+    draw_box(.main_col(`GREY), .bg_col(`BLACK), .lefttopx(0), .lefttopy(0), .rightbotx(`WIDTH), .rightboty(`HEIGHT - 20), .x(x), .y(y), .oled_data(background));
 
     // Draw note
     reg [6:0] centre_x;
-    draw_note(.main_col(`RED), .bg_col(`BLACK), .centre_x(centre_x), .centre_y(50), .x(x), .y(y), .oled_data(note_red));
-    draw_note(.main_col(`YELLOW), .bg_col(`BLACK), .centre_x(centre_x), .centre_y(30), .x(x), .y(y), .oled_data(note_yellow));
-    draw_note(.main_col(`BLUE), .bg_col(`BLACK), .centre_x(centre_x), .centre_y(10), .x(x), .y(y), .oled_data(note_blue));
+    draw_note(.main_col(`RED), .bg_col(`BLACK), .centre_x(centre_x), .centre_y(20), .x(x), .y(y), .oled_data(note_red));
+    draw_note(.main_col(`YELLOW), .bg_col(`BLACK), .centre_x(centre_x + 5), .centre_y(40), .x(x), .y(y), .oled_data(note_yellow));
+    draw_note(.main_col(`MAGENTA), .bg_col(`BLACK), .centre_x(centre_x + 10), .centre_y(50), .x(x), .y(y), .oled_data(note_magenta));
+    draw_note(.main_col(`CYAN), .bg_col(`BLACK), .centre_x(centre_x + 15), .centre_y(30), .x(x), .y(y), .oled_data(note_cyan));
+    draw_note(.main_col(`BLUE), .bg_col(`BLACK), .centre_x(centre_x + 20), .centre_y(10), .x(x), .y(y), .oled_data(note_blue));
     wire moving_note;
     new_clock (6, clock, moving_note);
     always @ (posedge moving_note) begin
@@ -71,12 +77,24 @@ module mic (
 
         // oled_data <= y < peak_vol[10:5] ? `GREEN : `BLACK;
         // oled_data <= y < volume_level * 6 ? `GREEN : `BLACK;
-        if(note_red && volume_level > 8) begin
+        if(note_red && volume_level > 20) begin
             oled_data <= note_red;
-        end else if (note_yellow && volume_level > 4) begin
+        end else if (note_yellow && volume_level > 15) begin
             oled_data <= note_yellow;
+        end else if (note_magenta && volume_level > 10) begin
+            oled_data <= note_magenta;
+        end else if (note_cyan && volume_level > 5) begin
+            oled_data <= note_cyan;
         end else if (note_blue) begin
             oled_data <= note_blue;
+        end else if (pillow) begin
+            oled_data <= pillow;
+        end else if (bed) begin
+            oled_data <= bed;
+        end else if (bed_headboard) begin
+            oled_data <= bed_headboard;
+        end else if (bed_base) begin
+            oled_data <= bed_base;
         end else if (window) begin
             oled_data <= window;
         end else if (window_frame) begin
