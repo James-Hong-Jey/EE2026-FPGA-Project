@@ -33,7 +33,6 @@ add_files C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports
 add_files C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/00.coe
 read_verilog C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/constants.vh
 read_verilog -library xil_defaultlib {
-  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Audio_Capture.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v

@@ -11,7 +11,9 @@ module mic (
 
     // output wire [11:0] mic
     input [12:0] pixel_index,
-    output reg [15:0] oled_data
+    output reg [15:0] oled_data,
+    output reg [6:0] seg,
+    output reg [3:0] an
     );
 
     wire cs;
@@ -24,13 +26,67 @@ module mic (
     wire [6:0] x, y;
     xy(pixel_index, x, y);
 
-    reg [4:0] volume_level;
+    reg [11:0] volume_level;
 
-    always @ (posedge clock) begin
-        volume_level <= peak_vol > 2000 ? (peak_vol - 2000) / 250 : 0;
-        oled_data <= y < peak_vol[10:5] ? `GREEN : `BLACK;
+    // Draw window
+    wire [15:0] background, floor, window, window_frame, note_yellow, note_red, note_blue;
+    draw_box(.main_col(`GREY), .bg_col(`BLACK), .lefttopx(0), .lefttopy(0), .rightbotx(`WIDTH), .rightboty(`HEIGHT - 20), .x(x), .y(y), .oled_data(background));
+    draw_box(.main_col(`ORANGE), .bg_col(`BLACK), .lefttopx(0), .lefttopy(`HEIGHT - 20), .rightbotx(`WIDTH), .rightboty(`HEIGHT), .x(x), .y(y), .oled_data(floor));
+    draw_box(.main_col(`BLUE), .bg_col(`BLACK), .lefttopx(15), .lefttopy(15), .rightbotx(45), .rightboty(30), .x(x), .y(y), .oled_data(window));
+    draw_box(.main_col(`MAGENTA), .bg_col(`BLACK), .lefttopx(11), .lefttopy(11), .rightbotx(49), .rightboty(34), .x(x), .y(y), .oled_data(window_frame));
+
+    // Draw note
+    reg [6:0] centre_x;
+    draw_note(.main_col(`RED), .bg_col(`BLACK), .centre_x(centre_x), .centre_y(50), .x(x), .y(y), .oled_data(note_red));
+    draw_note(.main_col(`YELLOW), .bg_col(`BLACK), .centre_x(centre_x), .centre_y(30), .x(x), .y(y), .oled_data(note_yellow));
+    draw_note(.main_col(`BLUE), .bg_col(`BLACK), .centre_x(centre_x), .centre_y(10), .x(x), .y(y), .oled_data(note_blue));
+    wire moving_note;
+    new_clock (6, clock, moving_note);
+    always @ (posedge moving_note) begin
+        centre_x <= (centre_x >= `WIDTH) ? 0 : centre_x + 1;
     end
 
+    wire fivehertz;
+    new_clock (4, clock, fivehertz);
+    always @ (posedge fivehertz) begin
+        case(volume_level)
+        0: seg <= `DIG0;
+        1: seg <= `DIG1;
+        2: seg <= `DIG2;
+        3: seg <= `DIG3;
+        4: seg <= `DIG4;
+        5: seg <= `DIG5;
+        6: seg <= `DIG6;
+        7: seg <= `DIG7;
+        8: seg <= `DIG8;
+        9: seg <= `DIG9;
+        default: seg <= `DIGINV;
+        endcase
+    end
+
+    always @ (posedge clock) begin
+        // Need to constantly adjust this 
+        volume_level <= peak_vol > 2030 ? (peak_vol - 2030) / 10 : 0;
+        an <= 4'b1110;
+
+        // oled_data <= y < peak_vol[10:5] ? `GREEN : `BLACK;
+        // oled_data <= y < volume_level * 6 ? `GREEN : `BLACK;
+        if(note_red && volume_level > 8) begin
+            oled_data <= note_red;
+        end else if (note_yellow && volume_level > 4) begin
+            oled_data <= note_yellow;
+        end else if (note_blue) begin
+            oled_data <= note_blue;
+        end else if (window) begin
+            oled_data <= window;
+        end else if (window_frame) begin
+            oled_data <= window_frame;
+        end else if (floor) begin
+            oled_data <= floor;
+        end else if (background) begin
+            oled_data <= background;
+        end
+    end
 endmodule
 
 //      This module takes the raw mic input and then
@@ -45,10 +101,10 @@ module peak_intensity(
  
     // Regular time interval of 0.2 second == 4_000 samples
     always @(posedge clock) begin
-        count <= count == 13'd3999 ? 0 : count + 1;
+        count <= count == 100000000 / 2 / 2 - 1 ? 0 : count + 1;
         //only accept values between 2048 and 4095
         value <= (mic_in >= 2048) ? mic_in : 0;
-        peak_vol <= (count == 0) ? value : ((value > peak_vol) ? value : peak_vol);
+        peak_vol <= (count == 0) ? value : (value > peak_vol) ? value : peak_vol;
     end
 endmodule
 
@@ -93,5 +149,46 @@ module Audio_Capture(
     always @ (posedge cs) begin
         sample <= temp[11:0];
     end
-    
+endmodule
+
+// Draw a box based on the top left and bottom right coordinates
+module draw_box(
+    input [15:0] main_col, bg_col,
+    input [6:0] lefttopx, lefttopy, rightbotx, rightboty,
+    input [6:0] x, y,
+    output reg [15:0] oled_data
+    );
+
+    always @ (*) begin
+        if(
+            lefttopx <= x && x <= rightbotx &&
+            lefttopy <= y && y <= rightboty
+        ) begin
+            oled_data <= main_col;
+        end else oled_data <= bg_col;
+    end
+endmodule
+
+module draw_note(
+    input [15:0] main_col, bg_col,
+    input [6:0] centre_x, centre_y,
+    input [6:0] x, y,
+    output reg [15:0] oled_data
+    );
+
+    always @ (*) begin
+        if(
+            // Main column of musical note - just a rectangle
+            (centre_x - 1 <= x && x <= centre_x + 1 &&
+            centre_y - 8 <= y && y <= centre_y + 8 ) ||
+            // Top part of the note - another offset rectangle
+            (centre_x + 2 <= x && x <= centre_x + 6 &&
+            centre_y - 8 <= y && y <= centre_y - 4 ) ||
+            // Bottom part - another rectangle
+            (centre_x - 8 <= x && x <= centre_x - 2 &&
+            centre_y <= y && y <= centre_y + 8 )
+        ) begin
+            oled_data <= main_col;
+        end else oled_data <= bg_col;
+    end
 endmodule

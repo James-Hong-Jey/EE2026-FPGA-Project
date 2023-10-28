@@ -60,6 +60,7 @@ module square_controls (
     end
 endmodule
 
+/*
 module draw_box (
     input [6:0] x, y,
     input [15:0] main_col, bg_col,
@@ -69,6 +70,7 @@ module draw_box (
     assign oled_data = (x >= square_left_bound && x <= square_right_bound && y <= square_bottom_bound && y >= square_top_bound)
             ? main_col : bg_col;
 endmodule
+*/
 
 module task_4d (
     input clock, rst, btnC, btnL, btnR, btnU,

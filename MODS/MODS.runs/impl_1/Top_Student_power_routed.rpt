@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Fri Oct 27 08:18:50 2023
+| Date             : Sat Oct 28 10:52:31 2023
 | Host             : DESKTOP-J2M8M7A running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.075        |
+| Total On-Chip Power (W)  | 0.080        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.003        |
+| Dynamic (W)              | 0.008        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -49,22 +49,22 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+-------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
-+-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.001 |        3 |       --- |             --- |
-| Slice Logic             |    <0.001 |      577 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      264 |     20800 |            1.27 |
-|   CARRY4                |    <0.001 |       46 |      8150 |            0.56 |
-|   Register              |    <0.001 |      211 |     41600 |            0.51 |
-|   LUT as Shift Register |    <0.001 |        1 |      9600 |            0.01 |
-|   Others                |     0.000 |       15 |       --- |             --- |
-|   BUFG                  |     0.000 |        1 |        32 |            3.13 |
-| Signals                 |    <0.001 |      423 |       --- |             --- |
-| I/O                     |    <0.001 |       40 |       106 |           37.74 |
-| Static Power            |     0.072 |          |           |                 |
-| Total                   |     0.075 |          |           |                 |
-+-------------------------+-----------+----------+-----------+-----------------+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |     0.002 |        3 |       --- |             --- |
+| Slice Logic    |     0.001 |     1110 |       --- |             --- |
+|   LUT as Logic |     0.001 |      496 |     20800 |            2.38 |
+|   CARRY4       |    <0.001 |      104 |      8150 |            1.28 |
+|   Register     |    <0.001 |      374 |     41600 |            0.90 |
+|   F7/F8 Muxes  |    <0.001 |        2 |     32600 |           <0.01 |
+|   Others       |     0.000 |       21 |       --- |             --- |
+|   BUFG         |     0.000 |        1 |        32 |            3.13 |
+| Signals        |     0.001 |      787 |       --- |             --- |
+| I/O            |     0.003 |       40 |       106 |           37.74 |
+| Static Power   |     0.072 |          |           |                 |
+| Total          |     0.080 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.012 |       0.002 |      0.010 |
+| Vccint    |       1.000 |     0.014 |       0.005 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -142,13 +142,16 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| Top_Student        |     0.003 |
+| Top_Student        |     0.008 |
 |   clk6p25m         |    <0.001 |
 |   nolabel_line66   |    <0.001 |
-|   nolabel_line71   |     0.001 |
-|     nolabel_line16 |    <0.001 |
-|     nolabel_line18 |    <0.001 |
-|     nolabel_line21 |     0.000 |
+|   nolabel_line71   |     0.003 |
+|     nolabel_line20 |    <0.001 |
+|     nolabel_line22 |    <0.001 |
+|     nolabel_line24 |    <0.001 |
+|     nolabel_line40 |    <0.001 |
+|     nolabel_line44 |    <0.001 |
+|     nolabel_line50 |    <0.001 |
 +--------------------+-----------+
 
 

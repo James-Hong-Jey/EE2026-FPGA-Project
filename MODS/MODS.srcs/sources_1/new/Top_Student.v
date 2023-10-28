@@ -68,6 +68,6 @@ module Top_Student (
 
     // wire [11:0] mic_data;
     wire [15:0] oled_data_mic;
-    mic(.clock(clock), .JC_MIC3_Pin1(JC_MIC3_Pin1), .JC_MIC3_Pin3(JC_MIC3_Pin3), .JC_MIC3_Pin4(JC_MIC3_Pin4), .pixel_index(pixel_index), .oled_data(oled_data_final));
+    mic(.clock(clock), .JC_MIC3_Pin1(JC_MIC3_Pin1), .JC_MIC3_Pin3(JC_MIC3_Pin3), .JC_MIC3_Pin4(JC_MIC3_Pin4), .pixel_index(pixel_index), .oled_data(oled_data_final), .seg(seg), .an(an));
 
 endmodule

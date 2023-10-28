@@ -31,6 +31,7 @@
 `define DIG7    7'b1111000
 `define DIG8    7'b0
 `define DIG9    7'b0010000  
+`define DIGINV  7'b0001001
 
 // 7 Segment Display Characters
 `define V   7'b1000001
