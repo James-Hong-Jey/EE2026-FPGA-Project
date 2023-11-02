@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Oct 28 12:28:41 2023
+| Date         : Sat Oct 28 19:09:48 2023
 | Host         : DESKTOP-J2M8M7A running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    20 |
-| Unused register locations in slices containing registers |    60 |
+| Number of unique control sets                            |    24 |
+| Unused register locations in slices containing registers |    80 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,8 +35,11 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      2 |            1 |
-|     14 |            3 |
-|    16+ |           16 |
+|      8 |            1 |
+|     10 |            1 |
+|     12 |            1 |
+|     14 |            1 |
+|    16+ |           19 |
 +--------+--------------+
 
 
@@ -46,41 +49,45 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              78 |           20 |
+| No           | No                    | No                     |              96 |           24 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             544 |           79 |
-| Yes          | No                    | No                     |             142 |           19 |
+| No           | Yes                   | No                     |             610 |           93 |
+| Yes          | No                    | No                     |             146 |           20 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | Yes                   | No                     |              12 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------------------+---------------------------------------------+-------------------------------------------------+------------------+----------------+
-|                  Clock Signal                 |                Enable Signal                |                 Set/Reset Signal                | Slice Load Count | Bel Load Count |
-+-----------------------------------------------+---------------------------------------------+-------------------------------------------------+------------------+----------------+
-| ~clk625_BUFG                                  |                                             |                                                 |                1 |              2 |
-|  nolabel_line71/nolabel_line56/CLK            |                                             |                                                 |                3 |             14 |
-|  clock_IBUF_BUFG                              |                                             |                                                 |                7 |             14 |
-|  clock_IBUF_BUFG                              | nolabel_line66/E[0]                         |                                                 |                2 |             14 |
-|  clock_IBUF_BUFG                              |                                             | nolabel_line71/nolabel_line24/SR[0]             |                4 |             18 |
-|  clock_IBUF_BUFG                              |                                             | nolabel_line71/nolabel_line22/value_reg[10]     |                3 |             22 |
-| ~nolabel_line71/nolabel_line22/CLK            |                                             |                                                 |                4 |             24 |
-|  nolabel_line71/nolabel_line20/sample_reg[11] |                                             |                                                 |                5 |             24 |
-|  clock_IBUF_BUFG                              |                                             | nolabel_line71/nolabel_line20/sample_reg[11]    |                3 |             24 |
-|  clock_IBUF_BUFG                              | nolabel_line71/nolabel_line24/peak_vol0     |                                                 |                4 |             24 |
-|  nolabel_line71/nolabel_line50/moving_note    |                                             | nolabel_line71/clear                            |                6 |             30 |
-| ~clk625_BUFG                                  |                                             | nolabel_line66/frame_counter[16]_i_1_n_0        |                4 |             34 |
-| ~clk625_BUFG                                  | nolabel_line66/delay[0]_i_1_n_0             |                                                 |                5 |             40 |
-|  clock_IBUF_BUFG                              |                                             | nolabel_line71/nolabel_line24/count[31]_i_1_n_0 |                8 |             62 |
-| ~clk625_BUFG                                  | nolabel_line66/FSM_onehot_state[31]_i_1_n_0 |                                                 |                8 |             64 |
-|  clock_IBUF_BUFG                              |                                             | nolabel_line71/nolabel_line50/clear             |                9 |             66 |
-|  clock_IBUF_BUFG                              |                                             | nolabel_line71/nolabel_line56/clear             |                9 |             66 |
-|  clock_IBUF_BUFG                              |                                             | nolabel_line71/nolabel_line20/clear             |                9 |             66 |
-|  clock_IBUF_BUFG                              |                                             | clk6p25m/clear                                  |                9 |             66 |
-| ~clk625_BUFG                                  |                                             | nolabel_line66/spi_word[39]_i_1_n_0             |               15 |             90 |
-+-----------------------------------------------+---------------------------------------------+-------------------------------------------------+------------------+----------------+
++-----------------------------------------------+-----------------------------------------+-------------------------------------------------+------------------+----------------+
+|                  Clock Signal                 |              Enable Signal              |                 Set/Reset Signal                | Slice Load Count | Bel Load Count |
++-----------------------------------------------+-----------------------------------------+-------------------------------------------------+------------------+----------------+
+| ~clk625_BUFG                                  |                                         |                                                 |                1 |              2 |
+|  clock_IBUF_BUFG                              |                                         | nolabel_line71/man_lift[4]_i_1_n_0              |                2 |              8 |
+|  nolabel_line71/nolabel_line77/CLK            |                                         |                                                 |                2 |             10 |
+|  clock_IBUF_BUFG                              | nolabel_line71/oled_data[15]_i_1_n_0    | nolabel_line71/oled_data[10]_i_1_n_0            |                3 |             12 |
+|  nolabel_line71/nolabel_line84/CLK            |                                         |                                                 |                2 |             14 |
+|  clock_IBUF_BUFG                              |                                         | nolabel_line71/nolabel_line24/SR[0]             |                3 |             18 |
+|  clock_IBUF_BUFG                              | nolabel_line71/oled_data[15]_i_1_n_0    |                                                 |                4 |             18 |
+|  nolabel_line71/nolabel_line65/moving_note    |                                         | nolabel_line71/clear                            |                8 |             22 |
+|  clock_IBUF_BUFG                              |                                         |                                                 |                9 |             22 |
+|  clock_IBUF_BUFG                              |                                         | nolabel_line71/nolabel_line22/value_reg[10]     |                3 |             22 |
+|  nolabel_line71/nolabel_line20/sample_reg[11] |                                         |                                                 |                5 |             24 |
+| ~nolabel_line71/nolabel_line22/CLK            |                                         |                                                 |                5 |             24 |
+|  clock_IBUF_BUFG                              |                                         | nolabel_line71/nolabel_line20/sample_reg[11]    |                3 |             24 |
+|  clock_IBUF_BUFG                              | nolabel_line71/nolabel_line24/peak_vol0 |                                                 |                3 |             24 |
+| ~clk625_BUFG                                  |                                         | nolabel_line66/frame_counter[16]_i_1_n_0        |                5 |             34 |
+| ~clk625_BUFG                                  | nolabel_line66/delay[0]_i_1_n_0         |                                                 |                5 |             40 |
+|  clock_IBUF_BUFG                              |                                         | nolabel_line71/nolabel_line24/count[31]_i_1_n_0 |                8 |             62 |
+| ~clk625_BUFG                                  | nolabel_line66/state                    |                                                 |                8 |             64 |
+|  clock_IBUF_BUFG                              |                                         | nolabel_line71/nolabel_line20/clear             |                9 |             66 |
+|  clock_IBUF_BUFG                              |                                         | nolabel_line71/nolabel_line65/clear             |                9 |             66 |
+|  clock_IBUF_BUFG                              |                                         | nolabel_line71/nolabel_line77/clear             |                9 |             66 |
+|  clock_IBUF_BUFG                              |                                         | nolabel_line71/nolabel_line84/clear             |                9 |             66 |
+|  clock_IBUF_BUFG                              |                                         | clk6p25m/clear                                  |                9 |             66 |
+| ~clk625_BUFG                                  |                                         | nolabel_line66/spi_word[39]_i_1_n_0             |               16 |             90 |
++-----------------------------------------------+-----------------------------------------+-------------------------------------------------+------------------+----------------+
 
 
