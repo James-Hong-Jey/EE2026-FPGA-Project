@@ -9,7 +9,6 @@ module mic (
     input JC_MIC3_Pin3,
     output JC_MIC3_Pin4,
 
-    // output wire [11:0] mic
     input [12:0] pixel_index,
     output reg [15:0] oled_data,
     output reg [6:0] seg,
