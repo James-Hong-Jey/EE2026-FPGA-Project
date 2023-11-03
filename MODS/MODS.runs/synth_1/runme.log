@@ -14,18 +14,18 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20204 
+INFO: Helper process launched with PID 2324 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 356.383 ; gain = 99.656
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 356.441 ; gain = 99.516
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
-INFO: [Synth 8-3876] $readmem data file './pixel_art/menu_draft.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:93]
-INFO: [Synth 8-3876] $readmem data file './pixel_art/select_noise.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:95]
-INFO: [Synth 8-3876] $readmem data file './pixel_art/select_sheep.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:97]
-INFO: [Synth 8-3876] $readmem data file './pixel_art/select_alarm.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:99]
-INFO: [Synth 8-3876] $readmem data file './pixel_art/select_unlock.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:101]
-INFO: [Synth 8-6157] synthesizing module 'new_clock' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:134]
-INFO: [Synth 8-6155] done synthesizing module 'new_clock' (1#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:134]
+INFO: [Synth 8-3876] $readmem data file './pixel_art/menu_draft.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:104]
+INFO: [Synth 8-3876] $readmem data file './pixel_art/select_noise.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:106]
+INFO: [Synth 8-3876] $readmem data file './pixel_art/select_sheep.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:108]
+INFO: [Synth 8-3876] $readmem data file './pixel_art/select_alarm.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:110]
+INFO: [Synth 8-3876] $readmem data file './pixel_art/select_unlock.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:112]
+INFO: [Synth 8-6157] synthesizing module 'new_clock' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:148]
+INFO: [Synth 8-6155] done synthesizing module 'new_clock' (1#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:148]
 INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
@@ -100,8 +100,8 @@ INFO: [Synth 8-6157] synthesizing module 'Audio_Capture' [C:/Users/james/Desktop
 INFO: [Synth 8-6155] done synthesizing module 'Audio_Capture' (5#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:169]
 INFO: [Synth 8-6157] synthesizing module 'peak_intensity' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:142]
 INFO: [Synth 8-6155] done synthesizing module 'peak_intensity' (6#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:142]
-INFO: [Synth 8-6157] synthesizing module 'xy' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:146]
-INFO: [Synth 8-6155] done synthesizing module 'xy' (7#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:146]
+INFO: [Synth 8-6157] synthesizing module 'xy' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:160]
+INFO: [Synth 8-6155] done synthesizing module 'xy' (7#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:160]
 INFO: [Synth 8-6157] synthesizing module 'draw_box' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:203]
 INFO: [Synth 8-6155] done synthesizing module 'draw_box' (8#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:203]
 WARNING: [Synth 8-689] width (32) of port connection 'lefttopy' does not match port width (7) of module 'draw_box' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:36]
@@ -126,11 +126,25 @@ INFO: [Synth 8-6157] synthesizing module 'draw_z' [C:/Users/james/Desktop/EE2026
 INFO: [Synth 8-6155] done synthesizing module 'draw_z' (10#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:244]
 WARNING: [Synth 8-6014] Unused sequential element centre_x_reg was removed.  [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:60]
 INFO: [Synth 8-6155] done synthesizing module 'mic' (11#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:5]
-WARNING: [Synth 8-3848] Net led in module/entity Top_Student does not have driver. [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:31]
-WARNING: [Synth 8-3848] Net seg in module/entity Top_Student does not have driver. [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:32]
-WARNING: [Synth 8-3848] Net an in module/entity Top_Student does not have driver. [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:33]
-WARNING: [Synth 8-3848] Net dp in module/entity Top_Student does not have driver. [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:34]
+WARNING: [Synth 8-3848] Net led in module/entity Top_Student does not have driver. [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:33]
+WARNING: [Synth 8-3848] Net dp in module/entity Top_Student does not have driver. [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:36]
 INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (12#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
+WARNING: [Synth 8-3917] design Top_Student has port JA[7] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[6] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[5] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[4] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[3] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[2] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[1] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[0] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[7] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[6] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[5] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[4] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[3] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[2] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[1] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[0] driven by constant 1
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[15]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[14]
@@ -148,17 +162,6 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port led[3]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[0]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[6]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[5]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[4]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[0]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[0]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port dp
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[15]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[14]
@@ -178,7 +181,7 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port btnU
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 448.609 ; gain = 191.883
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 448.699 ; gain = 191.773
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -191,10 +194,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 448.609 ; gain = 191.883
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 448.699 ; gain = 191.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 448.609 ; gain = 191.883
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 448.699 ; gain = 191.773
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -210,22 +213,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 790.695 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 792.066 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 790.695 ; gain = 533.969
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 792.066 ; gain = 535.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 790.695 ; gain = 533.969
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 792.066 ; gain = 535.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 790.695 ; gain = 533.969
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 792.066 ; gain = 535.141
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "SLOW_CLOCK0" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -300,7 +303,7 @@ INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address si
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "peak_vol0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "seg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "seg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -403,7 +406,7 @@ reset_enable_reporting_wait_ack | 0000000010000000000000000000000000000 |       
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'MouseCtl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 790.695 ; gain = 533.969
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 792.066 ; gain = 535.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -411,8 +414,8 @@ Report RTL Partitions:
 |      |RTL Partition    |Replication |Instances |
 +------+-----------------+------------+----------+
 |1     |new_clock        |           5|      4053|
-|2     |mic__GC0         |           1|     30244|
-|3     |Top_Student__GC0 |           1|     27645|
+|2     |mic__GC0         |           1|     30420|
+|3     |Top_Student__GC0 |           1|     27660|
 +------+-----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -443,10 +446,10 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 12    
 	               11 Bit    Registers := 2     
 	                8 Bit    Registers := 4     
-	                7 Bit    Registers := 3     
+	                7 Bit    Registers := 4     
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 1     
-	                4 Bit    Registers := 6     
+	                4 Bit    Registers := 7     
 	                1 Bit    Registers := 41    
 +---Muxes : 
 	   2 Input     40 Bit        Muxes := 3     
@@ -473,9 +476,10 @@ Detailed RTL Component Info :
 	  32 Input      5 Bit        Muxes := 1     
 	  37 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 29    
+	   2 Input      1 Bit        Muxes := 30    
 	  17 Input      1 Bit        Muxes := 4     
 	  37 Input      1 Bit        Muxes := 20    
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -491,14 +495,16 @@ Detailed RTL Component Info :
 +---Registers : 
 	               33 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     33 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
 	   4 Input     16 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
 Module new_clock 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -721,6 +727,22 @@ INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is 
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design Top_Student has port JA[7] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[6] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[5] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[4] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[3] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[2] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[1] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JA[0] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[7] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[6] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[5] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[4] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[3] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[2] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[1] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port JXADC[0] driven by constant 1
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[15]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[14]
@@ -738,17 +760,6 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port led[3]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port led[0]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[6]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[5]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[4]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port seg[0]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port an[0]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port dp
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[15]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[14]
@@ -767,13 +778,13 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port btnU
-INFO: [Synth 8-3886] merging instance 'nolabel_line83i_1/volume_level_reg[11]' (FDR) to 'nolabel_line83i_1/volume_level_reg[10]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line83i_1/volume_level_reg[10]' (FDR) to 'nolabel_line83i_1/volume_level_reg[9]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line83i_1/\volume_level_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line83i_1/\an_reg[0] )
-INFO: [Synth 8-3886] merging instance 'nolabel_line83i_1/an_reg[1]' (FD) to 'nolabel_line83i_1/an_reg[2]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line83i_1/an_reg[2]' (FD) to 'nolabel_line83i_1/an_reg[3]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (nolabel_line83i_1/\an_reg[3] )
+INFO: [Synth 8-3886] merging instance 'nolabel_line94i_1/volume_level_reg[11]' (FDR) to 'nolabel_line94i_1/volume_level_reg[10]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line94i_1/volume_level_reg[10]' (FDR) to 'nolabel_line94i_1/volume_level_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line94i_1/\volume_level_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line94i_1/\an_reg[0] )
+INFO: [Synth 8-3886] merging instance 'nolabel_line94i_1/an_reg[1]' (FD) to 'nolabel_line94i_1/an_reg[2]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line94i_1/an_reg[2]' (FD) to 'nolabel_line94i_1/an_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (nolabel_line94i_1/\an_reg[3] )
 WARNING: [Synth 8-3332] Sequential element (x_new_reg) is unused and will be removed from module MouseCtl.
 WARNING: [Synth 8-3332] Sequential element (x_overflow_reg) is unused and will be removed from module MouseCtl.
 WARNING: [Synth 8-3332] Sequential element (x_inc_reg[7]) is unused and will be removed from module MouseCtl.
@@ -875,8 +886,11 @@ WARNING: [Synth 8-3332] Sequential element (zpos_reg[0]) is unused and will be r
 WARNING: [Synth 8-3332] Sequential element (left_down_reg) is unused and will be removed from module MouseCtl.
 WARNING: [Synth 8-3332] Sequential element (left_reg) is unused and will be removed from module MouseCtl.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'i_0/an_reg_reg[1]' (FDE) to 'i_0/an_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/an_reg_reg[2]' (FDE) to 'i_0/an_reg_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_0/\an_reg_reg[3] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 848.086 ; gain = 591.359
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:41 . Memory (MB): peak = 852.215 ; gain = 595.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -911,23 +925,24 @@ Report RTL Partitions:
 |      |RTL Partition    |Replication |Instances |
 +------+-----------------+------------+----------+
 |1     |new_clock        |           1|       117|
-|2     |mic__GC0         |           1|      6349|
-|3     |Top_Student__GC0 |           1|      5554|
+|2     |mic__GC0         |           1|      6584|
+|3     |Top_Student__GC0 |           1|      5581|
 |4     |new_clock__1     |           1|       116|
 |5     |new_clock__2     |           1|       114|
 |6     |new_clock__3     |           1|       112|
+|7     |new_clock__4     |           1|       111|
 +------+-----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:44 ; elapsed = 00:01:49 . Memory (MB): peak = 848.086 ; gain = 591.359
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:48 ; elapsed = 00:01:53 . Memory (MB): peak = 852.215 ; gain = 595.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:46 ; elapsed = 00:01:51 . Memory (MB): peak = 857.125 ; gain = 600.398
+Finished Timing Optimization : Time (s): cpu = 00:01:50 ; elapsed = 00:01:55 . Memory (MB): peak = 860.238 ; gain = 603.312
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -935,17 +950,18 @@ Report RTL Partitions:
 |      |RTL Partition    |Replication |Instances |
 +------+-----------------+------------+----------+
 |1     |new_clock        |           1|       117|
-|2     |mic__GC0         |           1|      6349|
-|3     |Top_Student__GC0 |           1|      5554|
+|2     |mic__GC0         |           1|      6584|
+|3     |Top_Student__GC0 |           1|      5581|
 |4     |new_clock__1     |           1|       116|
 |5     |new_clock__2     |           1|       114|
 |6     |new_clock__3     |           1|       112|
+|7     |new_clock__4     |           1|       111|
 +------+-----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:50 ; elapsed = 00:01:55 . Memory (MB): peak = 893.426 ; gain = 636.699
+Finished Technology Mapping : Time (s): cpu = 00:01:54 ; elapsed = 00:01:59 . Memory (MB): peak = 897.477 ; gain = 640.551
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -965,13 +981,13 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5365] Flop nolabel_line74/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to nolabel_line74/Inst_Ps2Interface/ps2_clk_h_reg_inv.
-INFO: [Synth 8-5365] Flop nolabel_line74/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to nolabel_line74/Inst_Ps2Interface/ps2_data_h_reg_inv.
+INFO: [Synth 8-5365] Flop nolabel_line85/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to nolabel_line85/Inst_Ps2Interface/ps2_clk_h_reg_inv.
+INFO: [Synth 8-5365] Flop nolabel_line85/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to nolabel_line85/Inst_Ps2Interface/ps2_data_h_reg_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:52 ; elapsed = 00:01:57 . Memory (MB): peak = 893.426 ; gain = 636.699
+Finished IO Insertion : Time (s): cpu = 00:01:56 ; elapsed = 00:02:01 . Memory (MB): peak = 897.477 ; gain = 640.551
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -984,7 +1000,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:52 ; elapsed = 00:01:57 . Memory (MB): peak = 893.426 ; gain = 636.699
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:56 ; elapsed = 00:02:01 . Memory (MB): peak = 897.477 ; gain = 640.551
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -996,25 +1012,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:52 ; elapsed = 00:01:57 . Memory (MB): peak = 893.426 ; gain = 636.699
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:56 ; elapsed = 00:02:01 . Memory (MB): peak = 897.477 ; gain = 640.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:52 ; elapsed = 00:01:57 . Memory (MB): peak = 893.426 ; gain = 636.699
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:56 ; elapsed = 00:02:01 . Memory (MB): peak = 897.477 ; gain = 640.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:53 ; elapsed = 00:01:58 . Memory (MB): peak = 893.426 ; gain = 636.699
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:57 ; elapsed = 00:02:02 . Memory (MB): peak = 897.477 ; gain = 640.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:53 ; elapsed = 00:01:58 . Memory (MB): peak = 893.426 ; gain = 636.699
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:57 ; elapsed = 00:02:02 . Memory (MB): peak = 897.477 ; gain = 640.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1031,41 +1047,41 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |   244|
-|3     |LUT1   |    74|
-|4     |LUT2   |   424|
-|5     |LUT3   |   333|
-|6     |LUT4   |   403|
-|7     |LUT5   |  1094|
-|8     |LUT6   |  1982|
-|9     |MUXF7  |   230|
-|10    |MUXF8  |    21|
+|2     |CARRY4 |   270|
+|3     |LUT1   |    78|
+|4     |LUT2   |   448|
+|5     |LUT3   |   336|
+|6     |LUT4   |   439|
+|7     |LUT5   |  1099|
+|8     |LUT6   |  2024|
+|9     |MUXF7  |   242|
+|10    |MUXF8  |    23|
 |11    |FDCE   |    53|
 |12    |FDPE   |     4|
-|13    |FDRE   |   542|
+|13    |FDRE   |   591|
 |14    |FDRE_1 |    31|
 |15    |FDSE   |    15|
 |16    |FDSE_1 |     1|
 |17    |IBUF   |     6|
 |18    |IOBUF  |     2|
-|19    |OBUF   |     9|
-|20    |OBUFT  |    29|
+|19    |OBUF   |    36|
+|20    |OBUFT  |    18|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+----------------------+---------------+------+
 |      |Instance              |Module         |Cells |
 +------+----------------------+---------------+------+
-|1     |top                   |               |  5499|
-|2     |  clk6p25m            |new_clock      |    66|
-|3     |  nolabel_line61      |Oled_Display   |  1839|
-|4     |  nolabel_line74      |MouseCtl       |   448|
-|5     |    Inst_Ps2Interface |Ps2Interface   |   257|
-|6     |  nolabel_line83      |mic            |  2987|
+|1     |top                   |               |  5718|
+|2     |  clk6p25m            |new_clock      |    65|
+|3     |  nolabel_line72      |Oled_Display   |  1834|
+|4     |  nolabel_line85      |MouseCtl       |   446|
+|5     |    Inst_Ps2Interface |Ps2Interface   |   256|
+|6     |  nolabel_line94      |mic            |  3176|
 |7     |    nolabel_line19    |new_clock_0    |    65|
 |8     |    nolabel_line21    |Audio_Capture  |    65|
 |9     |    nolabel_line23    |peak_intensity |   100|
-|10    |    nolabel_line26    |xy             |   703|
+|10    |    nolabel_line26    |xy             |   717|
 |11    |    nolabel_line36    |draw_box       |     2|
 |12    |    nolabel_line49    |draw_note      |    17|
 |13    |    nolabel_line50    |draw_note_1    |    17|
@@ -1077,16 +1093,17 @@ Report Instance Areas:
 |19    |    nolabel_line56    |draw_note_7    |    16|
 |20    |    nolabel_line58    |new_clock_8    |    65|
 |21    |    nolabel_line70    |new_clock_9    |    65|
+|22    |    nolabel_line77    |new_clock_10   |    65|
 +------+----------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:53 ; elapsed = 00:01:58 . Memory (MB): peak = 893.426 ; gain = 636.699
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:57 ; elapsed = 00:02:02 . Memory (MB): peak = 897.477 ; gain = 640.551
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 153 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:41 ; elapsed = 00:01:48 . Memory (MB): peak = 893.426 ; gain = 294.613
-Synthesis Optimization Complete : Time (s): cpu = 00:01:53 ; elapsed = 00:01:58 . Memory (MB): peak = 893.426 ; gain = 636.699
+Synthesis finished with 0 errors, 0 critical warnings and 158 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:45 ; elapsed = 00:01:52 . Memory (MB): peak = 897.477 ; gain = 297.184
+Synthesis Optimization Complete : Time (s): cpu = 00:01:57 ; elapsed = 00:02:02 . Memory (MB): peak = 897.477 ; gain = 640.551
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 535 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 575 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -1096,11 +1113,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-140 Infos, 218 Warnings, 0 Critical Warnings and 0 Errors encountered.
+143 Infos, 226 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:56 ; elapsed = 00:02:02 . Memory (MB): peak = 893.426 ; gain = 649.559
+synth_design: Time (s): cpu = 00:02:00 ; elapsed = 00:02:06 . Memory (MB): peak = 897.477 ; gain = 653.406
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 893.426 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Nov  3 19:30:27 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 897.477 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  3 21:56:27 2023...

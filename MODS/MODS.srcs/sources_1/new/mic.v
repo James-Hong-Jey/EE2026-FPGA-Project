@@ -72,13 +72,13 @@ module mic (
         sequence <= sequence == 2 ? 0 : sequence + 1;
     end
 
-    // Testing purposes - display volume on 7 seg
+    // Display volume on 7 seg
     wire fivehertz;
     new_clock (4, clock, fivehertz);
     always @ (posedge fivehertz) begin
         an <= 4'b1110;
-        case(volume_level)
-        0: seg <= `DIG0;
+        case( (volume_level)/ 3)
+        0: seg <= 7'b1111111;
         1: seg <= `DIG1;
         2: seg <= `DIG2;
         3: seg <= `DIG3;

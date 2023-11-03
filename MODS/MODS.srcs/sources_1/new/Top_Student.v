@@ -27,23 +27,34 @@ module Top_Student (
     input JC_MIC3_Pin3,
     output JC_MIC3_Pin4,
 
+    output [7:0] JA,
     output [7:0] JB,
+    output [7:0] JXADC,
     output [15:0] led,
     output [6:0] seg,
     output [3:0] an,
     output dp
     );
 
-    // menu(clock, sw, btnU, btnD, btnC, btnL, btnR, PS2Clk, PS2Data, 
-                // //JC_MIC3_Pin1, JC_MIC3_Pin3, JC_MIC3_Pin4, 
-                // JB, led, seg, an, dp);
-
+    assign JXADC = 1;
+    assign JA[0] = 1;
+    assign JA[1] = 1;
+    assign JA[2] = 1;
+    assign JA[3] = 1;
+    assign JA[4] = 1;
+    assign JA[5] = 1;
+    assign JA[6] = 1;
+    assign JA[7] = 1;
 
     // Initialise the reset button
     wire rst;
     reg rst_sw; // If sw changes at all, then this is 1 for a clock cycle, else 0
-    // TODO: Assign a new button by || btnC
     assign rst = rst_sw || btnD; // Can assign to any button 
+
+    reg [6:0] seg_reg = 7'b1111111;
+    assign seg = seg_reg;
+    reg [3:0] an_reg = 4'b1111;
+    assign an = an_reg;
 
     // Initialise everything to blank
     initial begin
@@ -114,13 +125,16 @@ module Top_Student (
         end
 
         case(sequence)
-        4'b1: begin 
-            if(isActive) oled_data <= oled_data_mic;
-            else oled_data <= select_noise[pixel_index];
+        4'b0: begin  // James - Mic
+            if(isActive) begin
+                oled_data <= oled_data_mic;
+                seg_reg <= seg_mic;
+                an_reg <= an_mic;
+            end else oled_data <= select_noise[pixel_index];
         end
-        4'b10: oled_data <= select_sheep[pixel_index];
-        4'b11: oled_data <= select_alarm[pixel_index];
-        4'b0: oled_data <= select_unlock[pixel_index];
+        4'b01: oled_data <= select_sheep[pixel_index];
+        4'b10: oled_data <= select_alarm[pixel_index];
+        4'b11: oled_data <= select_unlock[pixel_index];
         default: oled_data <= menu[pixel_index];
         endcase
     end
@@ -146,4 +160,22 @@ endmodule
 module xy (input [12:0] pixel_index, output [6:0] x, y);
     assign x = pixel_index % `WIDTH;
     assign y = pixel_index / `WIDTH;
+endmodule
+
+/**
+ *
+ */
+module cursor (
+    input clock,
+    input [15:0] color,
+    input [6:0] x, y,
+    input [11:0] xpos, ypos,
+    output reg [15:0] oled_data
+    );
+    
+    always @ (posedge clock) begin
+        if( x >= xpos - 1 && x <= xpos + 1 && y >= ypos - 1 && y <= ypos + 1) begin
+            oled_data <= color;
+        end else oled_data <= 0;
+    end
 endmodule

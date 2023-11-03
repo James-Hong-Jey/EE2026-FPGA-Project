@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Fri Nov  3 19:32:10 2023
+| Date             : Fri Nov  3 21:58:19 2023
 | Host             : DESKTOP-J2M8M7A running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.004 |        3 |       --- |             --- |
-| Slice Logic    |     0.003 |     5490 |       --- |             --- |
-|   LUT as Logic |     0.003 |     3628 |     20800 |           17.44 |
-|   CARRY4       |    <0.001 |      244 |      8150 |            2.99 |
-|   Register     |    <0.001 |      646 |     41600 |            1.55 |
-|   Others       |     0.000 |       42 |       --- |             --- |
+| Slice Logic    |     0.003 |     5695 |       --- |             --- |
+|   LUT as Logic |     0.003 |     3737 |     20800 |           17.97 |
+|   CARRY4       |    <0.001 |      270 |      8150 |            3.31 |
+|   Register     |    <0.001 |      695 |     41600 |            1.67 |
+|   Others       |     0.000 |       44 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |     0.000 |      251 |     32600 |            0.77 |
-| Signals        |     0.003 |     3798 |       --- |             --- |
-| I/O            |    <0.001 |       46 |       106 |           43.40 |
+|   F7/F8 Muxes  |     0.000 |      265 |     32600 |            0.81 |
+| Signals        |     0.003 |     3943 |       --- |             --- |
+| I/O            |    <0.001 |       62 |       106 |           58.49 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.083 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.020 |       0.011 |      0.010 |
+| Vccint    |       1.000 |     0.020 |       0.010 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -146,10 +146,10 @@ Table of Contents
 |   PS2Clk_IOBUF_inst   |     0.000 |
 |   PS2Data_IOBUF_inst  |     0.000 |
 |   clk6p25m            |    <0.001 |
-|   nolabel_line61      |    <0.001 |
-|   nolabel_line74      |     0.002 |
+|   nolabel_line72      |    <0.001 |
+|   nolabel_line85      |     0.002 |
 |     Inst_Ps2Interface |     0.001 |
-|   nolabel_line83      |     0.006 |
+|   nolabel_line94      |     0.006 |
 |     nolabel_line19    |    <0.001 |
 |     nolabel_line21    |    <0.001 |
 |     nolabel_line23    |    <0.001 |
@@ -165,6 +165,7 @@ Table of Contents
 |     nolabel_line56    |     0.000 |
 |     nolabel_line58    |    <0.001 |
 |     nolabel_line70    |    <0.001 |
+|     nolabel_line77    |    <0.001 |
 +-----------------------+-----------+
 
 
