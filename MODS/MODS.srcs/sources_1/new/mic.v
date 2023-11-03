@@ -28,40 +28,34 @@ module mic (
     reg [11:0] volume_level, man_lift;
 
     // Draw everything
-    wire [15:0] background, floor, sun, window, window_frame, note_yellow, note_red, note_blue, note_cyan, note_magenta, 
-    pillow, bed, bed_headboard, bed_base, body, head, angry_head, hair, zed1, zed2, zed3;
+    wire [15:0] note_yellow, note_red, note_blue, note_cyan, note_magenta, note_orange, note_beige, note_turquoise,
+        body, head, angry_head, hair, 
+        zed1, zed2, zed3;
 
     // Draw man
-    draw_box(.main_col(`BEIGE), .bg_col(`BLACK), .lefttopx(`WIDTH - 12), .lefttopy(33 - man_lift), .rightbotx(`WIDTH - 4), .rightboty(`HEIGHT - 18 - man_lift), .x(x), .y(y), .oled_data(head));
-    draw_box(.main_col(`RED), .bg_col(`BLACK), .lefttopx(`WIDTH - 12), .lefttopy(33 - man_lift), .rightbotx(`WIDTH - 4), .rightboty(`HEIGHT - 18 - man_lift), .x(x), .y(y), .oled_data(angry_head));
-    draw_box(.main_col(`BLACK), .bg_col(`BEIGE), .lefttopx(`WIDTH - 6), .lefttopy(33 - man_lift), .rightbotx(`WIDTH - 4), .rightboty(`HEIGHT - 18 - man_lift), .x(x), .y(y), .oled_data(hair));
-    draw_box(.main_col(`DARKBLUE), .bg_col(`BLACK), .lefttopx(46), .lefttopy(33 - man_lift), .rightbotx(`WIDTH - 12), .rightboty(`HEIGHT - 18 - man_lift), .x(x), .y(y), .oled_data(body));
+    draw_box(.main_col(`BEIGE), .bg_col(`BLACK), .lefttopx(`WIDTH - 14), .lefttopy(40 - man_lift), .rightbotx(`WIDTH - 8), .rightboty(`HEIGHT - 18 - man_lift), .x(x), .y(y), .oled_data(head));
+    draw_box(.main_col(`RED), .bg_col(`BLACK), .lefttopx(`WIDTH - 14), .lefttopy(40 - man_lift), .rightbotx(`WIDTH - 8), .rightboty(`HEIGHT - 18 - man_lift), .x(x), .y(y), .oled_data(angry_head));
+    draw_box(.main_col(`BLACK), .bg_col(`BEIGE), .lefttopx(`WIDTH - 10), .lefttopy(40 - man_lift), .rightbotx(`WIDTH - 8), .rightboty(`HEIGHT - 18 - man_lift), .x(x), .y(y), .oled_data(hair));
+    draw_box(.main_col(`DARKBLUE), .bg_col(`BLACK), .lefttopx(62), .lefttopy(40 - man_lift), .rightbotx(`WIDTH - 16), .rightboty(`HEIGHT - 18 - man_lift), .x(x), .y(y), .oled_data(body));
 
-    // Draw window, floor, etc
-    draw_box(.main_col(`WHITE), .bg_col(`BLACK), .lefttopx(`WIDTH - 12), .lefttopy(36), .rightbotx(`WIDTH - 4), .rightboty(`HEIGHT - 14), .x(x), .y(y), .oled_data(pillow));
-    draw_box(.main_col(`CYAN), .bg_col(`BLACK), .lefttopx(44), .lefttopy(38), .rightbotx(`WIDTH - 12), .rightboty(`HEIGHT - 14), .x(x), .y(y), .oled_data(bed));
-    draw_box(.main_col(`BROWN), .bg_col(`BLACK), .lefttopx(`WIDTH - 4), .lefttopy(`HEIGHT - 24), .rightbotx(`WIDTH), .rightboty(`HEIGHT - 10), .x(x), .y(y), .oled_data(bed_headboard));
-    draw_box(.main_col(`BROWN), .bg_col(`BLACK), .lefttopx(44), .lefttopy(`HEIGHT - 14), .rightbotx(`WIDTH), .rightboty(`HEIGHT - 10), .x(x), .y(y), .oled_data(bed_base));
-    draw_box(.main_col(`YELLOW), .bg_col(`BLACK), .lefttopx(15), .lefttopy(15), .rightbotx(20), .rightboty(20), .x(x), .y(y), .oled_data(sun));
-    draw_box(.main_col(`LIGHTBLUE), .bg_col(`BLACK), .lefttopx(15), .lefttopy(15), .rightbotx(45), .rightboty(30), .x(x), .y(y), .oled_data(window));
-    draw_box(.main_col(`BROWN), .bg_col(`BLACK), .lefttopx(11), .lefttopy(11), .rightbotx(49), .rightboty(34), .x(x), .y(y), .oled_data(window_frame));
-    draw_box(.main_col(`ORANGE), .bg_col(`BLACK), .lefttopx(0), .lefttopy(`HEIGHT - 20), .rightbotx(`WIDTH), .rightboty(`HEIGHT), .x(x), .y(y), .oled_data(floor));
-    draw_box(.main_col(`GREY), .bg_col(`BLACK), .lefttopx(0), .lefttopy(0), .rightbotx(`WIDTH), .rightboty(`HEIGHT - 20), .x(x), .y(y), .oled_data(background));
+    // Draw background
+    reg [15:0] noisy_background [0:6144];
+    initial $readmemh ("./pixel_art/noisy.mem", noisy_background);
+    reg [15:0] quiet_background [0:6144];
+    initial $readmemh ("./pixel_art/quiet.mem", quiet_background);
 
     // Draw note
     reg [6:0] centre_x, centre_y;
-    // draw_note(.main_col(`RED), .bg_col(`BLACK), .centre_x(centre_x), .centre_y(20), .x(x), .y(y), .oled_data(note_red));
-    // draw_note(.main_col(`YELLOW), .bg_col(`BLACK), .centre_x(centre_x + 5), .centre_y(40), .x(x), .y(y), .oled_data(note_yellow));
-    // draw_note(.main_col(`MAGENTA), .bg_col(`BLACK), .centre_x(centre_x + 10), .centre_y(50), .x(x), .y(y), .oled_data(note_magenta));
-    // draw_note(.main_col(`CYAN), .bg_col(`BLACK), .centre_x(centre_x + 15), .centre_y(30), .x(x), .y(y), .oled_data(note_cyan));
-    // draw_note(.main_col(`BLUE), .bg_col(`BLACK), .centre_x(centre_x + 20), .centre_y(10), .x(x), .y(y), .oled_data(note_blue));
-    draw_note(.main_col(`RED), .bg_col(`BLACK), .centre_x(80), .centre_y(`HEIGHT -centre_y - 7), .x(x), .y(y), .oled_data(note_red));
-    draw_note(.main_col(`YELLOW), .bg_col(`BLACK), .centre_x(60), .centre_y(`HEIGHT -centre_y - 12), .x(x), .y(y), .oled_data(note_yellow));
-    draw_note(.main_col(`MAGENTA), .bg_col(`BLACK), .centre_x(50), .centre_y(`HEIGHT -centre_y - 15), .x(x), .y(y), .oled_data(note_magenta));
-    draw_note(.main_col(`CYAN), .bg_col(`BLACK), .centre_x(70), .centre_y(`HEIGHT -centre_y - 10), .x(x), .y(y), .oled_data(note_cyan));
-    draw_note(.main_col(`BLUE), .bg_col(`BLACK), .centre_x(65), .centre_y(`HEIGHT -centre_y - 5), .x(x), .y(y), .oled_data(note_blue));
+    draw_note(.main_col(`RED), .bg_col(`BLACK), .centre_x(80), .centre_y(`HEIGHT -centre_y - 10), .x(x), .y(y), .oled_data(note_red));
+    draw_note(.main_col(`YELLOW), .bg_col(`BLACK), .centre_x(70), .centre_y(`HEIGHT -centre_y - 15), .x(x), .y(y), .oled_data(note_yellow));
+    draw_note(.main_col(`MAGENTA), .bg_col(`BLACK), .centre_x(60), .centre_y(`HEIGHT -centre_y - 20), .x(x), .y(y), .oled_data(note_magenta));
+    draw_note(.main_col(`CYAN), .bg_col(`BLACK), .centre_x(50), .centre_y(`HEIGHT -centre_y - 12), .x(x), .y(y), .oled_data(note_cyan));
+    draw_note(.main_col(`BLUE), .bg_col(`BLACK), .centre_x(40), .centre_y(`HEIGHT -centre_y - 5), .x(x), .y(y), .oled_data(note_blue));
+    draw_note(.main_col(`ORANGE), .bg_col(`BLACK), .centre_x(30), .centre_y(`HEIGHT -centre_y - 5), .x(x), .y(y), .oled_data(note_orange));
+    draw_note(.main_col(`BEIGE), .bg_col(`BLACK), .centre_x(20), .centre_y(`HEIGHT -centre_y - 5), .x(x), .y(y), .oled_data(note_beige));
+    draw_note(.main_col(`TURQUOISE), .bg_col(`BLACK), .centre_x(10), .centre_y(`HEIGHT -centre_y - 5), .x(x), .y(y), .oled_data(note_turquoise));
     wire moving_note;
-    new_clock (50, clock, moving_note);
+    new_clock (100, clock, moving_note);
     always @ (posedge moving_note) begin
         centre_x <= (centre_x >= `WIDTH) ? 0 : centre_x + 1;
         centre_y <= (centre_y >= `HEIGHT) ? 0 : centre_y + 1;
@@ -101,19 +95,25 @@ module mic (
     always @ (posedge clock) begin
         // Need to constantly adjust this 
         volume_level <= peak_vol > 2030 ? (peak_vol - 2030) / 10 : 0;
-        man_lift <= volume_level > 5 ? volume_level < 30 ? volume_level : 30 : 0;
+        man_lift <= volume_level > 5 ? volume_level < 40 ? volume_level : 40 : 0;
 
         // Layers of objects
-        if(note_red && volume_level > 20) begin
+        if(note_red && volume_level > 24) begin
             oled_data <= note_red;
-        end else if (note_yellow && volume_level > 15) begin
+        end else if (note_yellow && volume_level > 21) begin
             oled_data <= note_yellow;
-        end else if (note_magenta && volume_level > 11) begin
+        end else if (note_magenta && volume_level > 18) begin
             oled_data <= note_magenta;
-        end else if (note_cyan && volume_level > 5) begin
+        end else if (note_cyan && volume_level > 15) begin
             oled_data <= note_cyan;
-        end else if (note_blue && volume_level > 8) begin
+        end else if (note_blue && volume_level > 12) begin
             oled_data <= note_blue;
+        end else if (note_orange && volume_level > 9) begin
+            oled_data <= note_orange;
+        end else if (note_beige && volume_level > 6) begin
+            oled_data <= note_beige;
+        end else if (note_turquoise && volume_level > 3) begin
+            oled_data <= note_turquoise;
         end else if (zed1 && volume_level <= 5 && sequence == 0) begin
             oled_data <= zed1;
         end else if (zed2 && volume_level <= 5 && sequence == 1) begin
@@ -128,24 +128,11 @@ module mic (
             oled_data <= angry_head;
         end else if (body) begin
             oled_data <= body;
-        end else if (pillow) begin
-            oled_data <= pillow;
-        end else if (bed) begin
-            oled_data <= bed;
-        end else if (bed_headboard) begin
-            oled_data <= bed_headboard;
-        end else if (bed_base) begin
-            oled_data <= bed_base;
-        end else if (sun) begin
-            oled_data <= sun;
-        end else if (window) begin
-            oled_data <= window;
-        end else if (window_frame) begin
-            oled_data <= window_frame;
-        end else if (floor) begin
-            oled_data <= floor;
-        end else if (background) begin
-            oled_data <= background;
+
+        end else if (volume_level > 5 && noisy_background[pixel_index]) begin
+            oled_data <= noisy_background[pixel_index];
+        end else if (quiet_background[pixel_index]) begin
+            oled_data <= quiet_background[pixel_index];
         end
     end
 endmodule
@@ -281,3 +268,38 @@ module draw_z(
         end else oled_data <= bg_col;
     end
 endmodule
+    /*
+    wire [15:0] background, floor, sun, window, window_frame, note_yellow, note_red, note_blue, note_cyan, note_magenta, 
+    pillow, bed, bed_headboard, bed_base, body, head, angry_head, hair, zed1, zed2, zed3;
+    draw_box(.main_col(`WHITE), .bg_col(`BLACK), .lefttopx(`WIDTH - 12), .lefttopy(36), .rightbotx(`WIDTH - 4), .rightboty(`HEIGHT - 14), .x(x), .y(y), .oled_data(pillow));
+    draw_box(.main_col(`CYAN), .bg_col(`BLACK), .lefttopx(44), .lefttopy(38), .rightbotx(`WIDTH - 12), .rightboty(`HEIGHT - 14), .x(x), .y(y), .oled_data(bed));
+    draw_box(.main_col(`BROWN), .bg_col(`BLACK), .lefttopx(`WIDTH - 4), .lefttopy(`HEIGHT - 24), .rightbotx(`WIDTH), .rightboty(`HEIGHT - 10), .x(x), .y(y), .oled_data(bed_headboard));
+    draw_box(.main_col(`BROWN), .bg_col(`BLACK), .lefttopx(44), .lefttopy(`HEIGHT - 14), .rightbotx(`WIDTH), .rightboty(`HEIGHT - 10), .x(x), .y(y), .oled_data(bed_base));
+    draw_box(.main_col(`YELLOW), .bg_col(`BLACK), .lefttopx(15), .lefttopy(15), .rightbotx(20), .rightboty(20), .x(x), .y(y), .oled_data(sun));
+    draw_box(.main_col(`LIGHTBLUE), .bg_col(`BLACK), .lefttopx(15), .lefttopy(15), .rightbotx(45), .rightboty(30), .x(x), .y(y), .oled_data(window));
+    draw_box(.main_col(`BROWN), .bg_col(`BLACK), .lefttopx(11), .lefttopy(11), .rightbotx(49), .rightboty(34), .x(x), .y(y), .oled_data(window_frame));
+    draw_box(.main_col(`ORANGE), .bg_col(`BLACK), .lefttopx(0), .lefttopy(`HEIGHT - 20), .rightbotx(`WIDTH), .rightboty(`HEIGHT), .x(x), .y(y), .oled_data(floor));
+    draw_box(.main_col(`GREY), .bg_col(`BLACK), .lefttopx(0), .lefttopy(0), .rightbotx(`WIDTH), .rightboty(`HEIGHT - 20), .x(x), .y(y), .oled_data(background));
+    */
+
+            /*
+        end else if (pillow) begin
+            oled_data <= pillow;
+        end else if (bed) begin
+            oled_data <= bed;
+        end else if (bed_headboard) begin
+            oled_data <= bed_headboard;
+        end else if (bed_base) begin
+            oled_data <= bed_base;
+        end else if (sun) begin
+            oled_data <= sun;
+        end else if (window) begin
+            oled_data <= window;
+        end else if (window_frame) begin
+            oled_data <= window_frame;
+        end else if (floor) begin
+            oled_data <= floor;
+        end else if (background) begin
+            oled_data <= background;
+        end
+        */

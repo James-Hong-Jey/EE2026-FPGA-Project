@@ -73,4 +73,4 @@ def Convert (ImageName):
 
 
 if __name__ == '__main__':
-	Convert("select_unlock.png")
+	Convert("noisy.png")

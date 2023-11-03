@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Fri Nov  3 14:07:59 2023
+| Date             : Fri Nov  3 19:32:10 2023
 | Host             : DESKTOP-J2M8M7A running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.082        |
+| Total On-Chip Power (W)  | 0.083        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.011        |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.004 |        3 |       --- |             --- |
-| Slice Logic    |     0.003 |     4031 |       --- |             --- |
-|   LUT as Logic |     0.003 |     2543 |     20800 |           12.23 |
-|   CARRY4       |    <0.001 |      246 |      8150 |            3.02 |
-|   Register     |    <0.001 |      641 |     41600 |            1.54 |
-|   Others       |     0.000 |       60 |       --- |             --- |
+| Slice Logic    |     0.003 |     5490 |       --- |             --- |
+|   LUT as Logic |     0.003 |     3628 |     20800 |           17.44 |
+|   CARRY4       |    <0.001 |      244 |      8150 |            2.99 |
+|   Register     |    <0.001 |      646 |     41600 |            1.55 |
+|   Others       |     0.000 |       42 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |     0.000 |       85 |     32600 |            0.26 |
-| Signals        |     0.002 |     2653 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |      251 |     32600 |            0.77 |
+| Signals        |     0.003 |     3798 |       --- |             --- |
 | I/O            |    <0.001 |       46 |       106 |           43.40 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.082 |          |           |                 |
+| Total          |     0.083 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.010 |      0.010 |
+| Vccint    |       1.000 |     0.020 |       0.011 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -149,31 +149,22 @@ Table of Contents
 |   nolabel_line61      |    <0.001 |
 |   nolabel_line74      |     0.002 |
 |     Inst_Ps2Interface |     0.001 |
-|   nolabel_line83      |     0.005 |
+|   nolabel_line83      |     0.006 |
 |     nolabel_line19    |    <0.001 |
 |     nolabel_line21    |    <0.001 |
 |     nolabel_line23    |    <0.001 |
-|     nolabel_line26    |    <0.001 |
-|     nolabel_line35    |    <0.001 |
+|     nolabel_line26    |     0.001 |
 |     nolabel_line36    |     0.000 |
-|     nolabel_line37    |     0.000 |
-|     nolabel_line38    |     0.000 |
-|     nolabel_line41    |     0.000 |
-|     nolabel_line42    |     0.000 |
-|     nolabel_line43    |     0.000 |
-|     nolabel_line44    |     0.000 |
-|     nolabel_line45    |     0.000 |
-|     nolabel_line46    |     0.000 |
-|     nolabel_line47    |     0.000 |
-|     nolabel_line48    |     0.000 |
-|     nolabel_line49    |     0.000 |
+|     nolabel_line49    |    <0.001 |
+|     nolabel_line50    |    <0.001 |
+|     nolabel_line51    |    <0.001 |
+|     nolabel_line52    |    <0.001 |
+|     nolabel_line53    |     0.000 |
+|     nolabel_line54    |     0.000 |
+|     nolabel_line55    |     0.000 |
+|     nolabel_line56    |     0.000 |
 |     nolabel_line58    |    <0.001 |
-|     nolabel_line59    |    <0.001 |
-|     nolabel_line60    |    <0.001 |
-|     nolabel_line61    |    <0.001 |
-|     nolabel_line62    |    <0.001 |
-|     nolabel_line64    |    <0.001 |
-|     nolabel_line76    |    <0.001 |
+|     nolabel_line70    |    <0.001 |
 +-----------------------+-----------+
 
 
