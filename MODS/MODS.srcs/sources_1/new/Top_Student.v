@@ -29,22 +29,14 @@ module Top_Student (
 
     output [7:0] JA,
     output [7:0] JB,
-    output [7:0] JXADC,
+    input [7:0] JXADC,
+    input vp_in,
+    input vn_in,
     output [15:0] led,
     output [6:0] seg,
     output [3:0] an,
     output dp
     );
-
-    assign JXADC = 1;
-    assign JA[0] = 1;
-    assign JA[1] = 1;
-    assign JA[2] = 1;
-    assign JA[3] = 1;
-    assign JA[4] = 1;
-    assign JA[5] = 1;
-    assign JA[6] = 1;
-    assign JA[7] = 1;
 
     // Initialise the reset button
     wire rst;
@@ -55,6 +47,8 @@ module Top_Student (
     assign seg = seg_reg;
     reg [3:0] an_reg = 4'b1111;
     assign an = an_reg;
+    reg dp_reg = 1;
+    assign dp = dp_reg;
 
     // Initialise everything to blank
     initial begin
@@ -82,22 +76,37 @@ module Top_Student (
     reg setmax_x = `WIDTH;
     reg setmax_y = `HEIGHT;
 
-     MouseCtl (.clk(clock), .rst(rst), .xpos(xpos), .ypos(ypos), .zpos(zpos), 
+    MouseCtl (.clk(clock), .rst(rst), .xpos(xpos), .ypos(ypos), .zpos(zpos), 
              .left(left), .middle(middle), .right(right), .new_event(new_event), 
              .value(value), .setx(setx), .sety(sety), .setmax_x(setmax_x), .setmax_y(setmax_y), 
              .ps2_clk(PS2Clk), .ps2_data(PS2Data) );
+
+    // Paint Module
+    wire mouse_press, mouse_reset;
+    wire [11:0] mouse_press_x, mouse_press_y;
+    wire [15:0] led_paint;
+    reg [15:0] led_blink;
+    wire [6:0] paint_seg;
+    wire [15:0] oled_data_paint;
+    paint_modified(clock, left, (right || rst), 1'b1, xpos, ypos, pixel_index, led_paint, mouse_press, mouse_reset, mouse_press_x, mouse_press_y, paint_seg, oled_data_4e);
 
     // James
     wire [15:0] oled_data_mic;
     wire [6:0] seg_mic;
     wire [3:0] an_mic;
-    mic(.clock(clock), .JC_MIC3_Pin1(JC_MIC3_Pin1), .JC_MIC3_Pin3(JC_MIC3_Pin3), .JC_MIC3_Pin4(JC_MIC3_Pin4), .pixel_index(pixel_index), .oled_data(oled_data_mic), .seg(seg_mic), .an(an_mic));
+    mic(.clock(clock), .JC_MIC3_Pin1(JC_MIC3_Pin1), .JC_MIC3_Pin3(JC_MIC3_Pin3), .JC_MIC3_Pin4(JC_MIC3_Pin4),
+    .JXADC(JXADC), .vp_in(vp_in), .vn_in(vn_in), 
+    .pixel_index(pixel_index), .oled_data(oled_data_mic), .seg(seg_mic), .an(an_mic), .led(led));
 
     // Matin
 
     // Barbara
 
-    // Karishma
+    // Karishma 
+    wire [6:0] seg_pw;
+    wire [4:0] an_pw;
+    wire dp_pw;
+    password(.clock(clock), .paint_seg(paint_seg), .seg(seg_pw), .an(an_pw), .dp(dp_pw)    );
 
     // Multiplexer 
     reg [15:0] menu [0:6144];
@@ -119,8 +128,8 @@ module Top_Student (
         if(debounce > 0) debounce <= debounce - 1;
         if(debounce == 0) begin
             debounce <= 150 * 100000; // 150 ms
-            if(btnR) sequence <= sequence == 3 ? 0 : sequence + 1; 
-            else if(btnL) sequence <= sequence == 0 ? 3 : sequence - 1; 
+            if(btnR && !isActive) sequence <= sequence == 3 ? 0 : sequence + 1; 
+            else if(btnL && !isActive) sequence <= sequence == 0 ? 3 : sequence - 1; 
             else if(btnC) isActive <= ~isActive;
         end
 
@@ -130,11 +139,20 @@ module Top_Student (
                 oled_data <= oled_data_mic;
                 seg_reg <= seg_mic;
                 an_reg <= an_mic;
+                dp_reg <= 1;
             end else oled_data <= select_noise[pixel_index];
         end
         4'b01: oled_data <= select_sheep[pixel_index];
         4'b10: oled_data <= select_alarm[pixel_index];
-        4'b11: oled_data <= select_unlock[pixel_index];
+        4'b11: begin
+            if(isActive) begin
+                seg_reg <= seg_pw;   
+                an_reg <= an_pw;
+                dp_reg <= dp_pw;
+                oled_data <= oled_data_paint;
+            end else oled_data <= select_unlock[pixel_index]; 
+        end
+
         default: oled_data <= menu[pixel_index];
         endcase
     end
@@ -163,7 +181,7 @@ module xy (input [12:0] pixel_index, output [6:0] x, y);
 endmodule
 
 /**
- *
+ * Makes a 3x3 cursor around the mouse position
  */
 module cursor (
     input clock,

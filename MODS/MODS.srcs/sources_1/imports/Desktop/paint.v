@@ -189,4 +189,171 @@ module paint(
      
 endmodule
 
+module paint_modified (
+    input clk_100M, mouse_l, reset, enable,  
+    input [11:0] mouse_x, mouse_y,
+    input [12:0] pixel_index,
+    output [15:0] led,
+    output reg mouse_press,
+    output reg mouse_reset,
+    output reg [11:0] mouse_press_x, 
+    output reg [11:0] mouse_press_y,    
+    output [6:0] seg, 
+    output reg [15:0] colour_chooser
+    
+);   
+    wire clockMouse;    
+    clk_freq_divider clock_mouse(
+        .CLOCK(clk_100M),
+        .my_freq(25_000_000),
+        .clk_fdiv(clockMouse)
+    );    
+     
+    reg [2:0]pixel_data[360:0]; //going for 28 x 28, the scale down of 56 x 56. Original is 32 x 32, scale down of 64 x 64
+    integer k;
+    initial begin
+          for (k=0; k<361; k=k+1) begin
+              pixel_data[k] = 0;
+          end
+    end
+    
+    parameter WHITE = 16'b11111_111111_11111;
+    parameter BLUE = 16'b00000_000000_11111;
+    parameter MAGENTA = 16'b11111_000000_11111;
+    parameter PURPLE = 16'b11111_000000_11110;    
+    parameter outline_color = 16'b00000_000000_00000;
+    parameter background_color = 16'b11111_111111_11111;
+    parameter BROWN = 16'b11000_10000_00000;
+    parameter YELLOW = 16'b11111_111111_00000;
+    parameter GREEN = 16'b00000_111111_00000; 
+
+    wire [6:0] row, col;
+    assign col = pixel_index % 96;
+    assign row = pixel_index / 96;        
+    
+    reg [2:0] state_choice = 3'b00;
+    reg [2:0] state;
+    
+    // check if right click for reset with bounce detection
+    reg [31:0] reset_count = 0;
+    
+    initial begin
+        mouse_reset = 1'b1;
+    end
+    
+    always @ (posedge clk_100M) begin
+        if (reset || reset_count > 0) begin
+            reset_count = (reset_count > 999_999) ? 0 : reset_count + 1;
+        end
+        mouse_reset = (reset_count > 0) ? 1 : ((mouse_reset && mouse_l && mouse_x < 55 && mouse_y < 55) ? 0 : mouse_reset);
+    end
+    
+    always @(*) begin
+        if (mouse_x > 66 && mouse_x < 78 && mouse_y > 5 && mouse_y < 29) state <= 3'b011;
+        else if (mouse_x > 80 && mouse_x < 92 && mouse_y > 5 && mouse_y < 29) state <= 3'b001;
+        else if (mouse_x > 66 && mouse_x < 78 && mouse_y > 34 && mouse_y < 58) state <= 3'b010;
+        else if (mouse_x > 80 && mouse_x < 92 && mouse_y > 34 && mouse_y < 58) state <= 3'b100;        
+        else if (mouse_x > 55 || mouse_y > 55) state <= 3'b000;
+    end
+    
+    // To determine the color at each x-y coordinate, configurable    
+    wire magenta, outline, screen, grass, sun, ray1, ray3, ray4;
+    assign magenta = (col > 66 && col < 78 && row > 34 && row < 50);
+    assign outline = (col > 58 || row > 58);    
+    assign screen = (col < 56 && row < 56); // create a 56 x 56 screen
+    assign grass = (col <96 && row > 60); 
+    assign sun = (col > 82 && row <14); 
+    assign ray1 = (row > 17 && row < 22 && col > 90); 
+    assign ray2 = (row > 18 && row < 23 && col > 79 && col < 84); 
+    assign ray3 = (row > 9 && row < 14 && col > 72 && col < 77); 
+    assign ray4 = (row < 4 && col > 75 && col < 79); 
+   
+    // Create a 9 x 9 cursor
+    wire within_cursor; wire [15:0] cursor_color;
+    assign within_cursor = ((col == mouse_x) || ((col - mouse_x) == 1) || ((mouse_x - col) == 1)) && ((row == mouse_y) || ((row - mouse_y) == 1) || ((mouse_y - row) == 1));
+    assign cursor_color = ((col == mouse_x) || ((col - mouse_x) == 1) || ((mouse_x - col) == 1)) && ((row == mouse_y) || ((row - mouse_y) == 1) || ((mouse_y - row) == 1)) ? PURPLE : 0;
+    
+    // This is for color selection
+    always @ (posedge mouse_l) begin
+        if (enable) begin            
+            if (mouse_l && ((mouse_x > 55) || (mouse_y > 55))) begin
+                state_choice <= state; // Set colour
+            end
+        end
+    end
+    
+    // We use 3 pixel per lines or per click    
+    always @ (posedge clockMouse, posedge reset) begin
+        if (reset) begin
+            for (k=0; k<361; k=k+1) begin //  here corresponding change from 1024 to 784
+                pixel_data[k] <= 2'b00;
+            end          
+        end else if (enable && mouse_l && mouse_x < 56 && mouse_y < 56) begin                                 
+            pixel_data[(mouse_y/3)*19 + (mouse_x/3)] <= state_choice; // update pixel_data to chosen colour based on clicks                   
+        end 
+    end
+    
+    wire clk_6p25MHz;   
+    clk_divider unit_6p25m(clk_100M,7, clk_6p25MHz);    
+    wire clk_2;               
+    clock_count_div ccd_inst_2(.clk(clk_100M), .clk_s(clk_2), .div(2));
+    
+    // This portion is necessary to generate required input for neural network       
+    reg [9:0] h_cnt = 0; 
+    reg [9:0] v_cnt = 0;   
+    always @ (posedge clk_6p25MHz) begin
+        v_cnt = (h_cnt >= 55) ?  ((v_cnt >= 55) ? 0 : v_cnt + 1) : v_cnt;
+        h_cnt = (h_cnt >= 55) ? 0 : h_cnt + 1;
+        mouse_press_x = v_cnt;
+        mouse_press_y = h_cnt;
+        mouse_press = (pixel_data[(h_cnt/3)*19 + (v_cnt/3)] > 0) ? 1 : 0;                  
+    end
+    
+    // This portion to generate the pixel data output
+    always @ (pixel_index) begin
+        if (enable) begin
+            if (within_cursor && cursor_color != 16'b1111_11111_1111) colour_chooser <= cursor_color;
+           // else if (blue) colour_chooser <= BLUE;
+            else if (magenta) colour_chooser <= MAGENTA;
+            else if (grass) colour_chooser <= GREEN; 
+            else if (sun) colour_chooser <= YELLOW; 
+            else if (ray1) colour_chooser <= YELLOW; 
+            else if (ray2) colour_chooser <= YELLOW; 
+            else if (ray3) colour_chooser <= YELLOW; 
+            else if (ray4) colour_chooser <= YELLOW; 
+            else if (outline) colour_chooser <= BLUE;
+            else if (screen) begin                
+                case (pixel_data[(19*(row/3)+ col/3)])
+                    0: colour_chooser <= WHITE;
+                //    1: colour_chooser <= BLUE;
+                    2: colour_chooser <= MAGENTA; 
+                 endcase
+            end else colour_chooser <= background_color;
+        end
+    end    
+    // Running neural network package
+    wire [3:0] digit;
+    wire [15:0] nums;   
+    wire [10:0] nnled;
+    module_pack nn_inst(.clk(clk_100M),
+                .clk_2(clk_2),
+                .clk_6p25MHz(clk_6p25MHz),
+                .rst(mouse_reset),
+                .rastSW(1'b0),
+                .input_val(mouse_press),
+                .X_in(mouse_press_x[9:0]),
+                .Y_in(mouse_press_y[9:0]),                
+                .nums(nums),
+                .digit(digit),                    
+                .LED(nnled));
+    
+    // To generate 7 segment output  
+    wire clk_27;
+    clock_count_div ccd_inst_27(.clk(clk_100M), .clk_s(clk_27), .div(27));            
+    ss_display ssd1(.led(nnled), .seg(seg), .clk(clk_27));
+    // removable, for verification purpose
+    assign led[10:0] = nnled;
+endmodule
+
+
 

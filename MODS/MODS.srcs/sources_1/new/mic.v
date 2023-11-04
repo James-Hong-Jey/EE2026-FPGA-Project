@@ -9,12 +9,18 @@ module mic (
     input JC_MIC3_Pin3,
     output JC_MIC3_Pin4,
 
+    input [7:0] JXADC,
+    input vp_in,
+    input vn_in,
+
     input [12:0] pixel_index,
     output reg [15:0] oled_data,
     output reg [6:0] seg,
-    output reg [3:0] an
+    output reg [3:0] an,
+    output [15:0] led
     );
 
+    // Set up Audio Capture
     wire cs;
     new_clock (20000, clock, cs);
     wire [11:0] mic;
@@ -22,6 +28,25 @@ module mic (
     wire [11:0] peak_vol;
     peak_intensity(.clock(clock), .mic_in(mic), .peak_vol(peak_vol));
 
+    // Set up Light Sensor
+    wire [15:0] light_data; // Quite sensitive - just pay attention to [15:12]
+    XADC(
+        .CLK100MHZ(clock),
+        .vauxp6(JXADC[0]),
+        .vauxn6(JXADC[4]),
+        .vauxp7(JXADC[2]),
+        .vauxn7(JXADC[6]),
+        .vauxp15(JXADC[3]),
+        .vauxn15(JXADC[7]),
+        .vauxp14(JXADC[1]),
+        .vauxn14(JXADC[5]),
+        .vp_in(vp_in),
+        .vn_in(vn_in),
+        .data(light_data),
+        .led(led)
+        );
+
+    // Set up Pixel Coordinates 
     wire [6:0] x, y;
     xy(pixel_index, x, y);
 
@@ -39,10 +64,10 @@ module mic (
     draw_box(.main_col(`DARKBLUE), .bg_col(`BLACK), .lefttopx(62), .lefttopy(40 - man_lift), .rightbotx(`WIDTH - 16), .rightboty(`HEIGHT - 18 - man_lift), .x(x), .y(y), .oled_data(body));
 
     // Draw background
-    reg [15:0] noisy_background [0:6144];
-    initial $readmemh ("./pixel_art/noisy.mem", noisy_background);
-    reg [15:0] quiet_background [0:6144];
-    initial $readmemh ("./pixel_art/quiet.mem", quiet_background);
+    reg [15:0] bright_bg [0:6144];
+    initial $readmemh ("./pixel_art/noisy.mem", bright_bg);
+    reg [15:0] dark_bg [0:6144];
+    initial $readmemh ("./pixel_art/quiet.mem", dark_bg);
 
     // Draw note
     reg [6:0] centre_x, centre_y;
@@ -77,7 +102,8 @@ module mic (
     new_clock (4, clock, fivehertz);
     always @ (posedge fivehertz) begin
         an <= 4'b1110;
-        case( (volume_level)/ 3)
+        // case( (volume_level)/ 3)
+        case(light_data[15:12])
         0: seg <= 7'b1111111;
         1: seg <= `DIG1;
         2: seg <= `DIG2;
@@ -129,10 +155,10 @@ module mic (
         end else if (body) begin
             oled_data <= body;
 
-        end else if (volume_level > 5 && noisy_background[pixel_index]) begin
-            oled_data <= noisy_background[pixel_index];
-        end else if (quiet_background[pixel_index]) begin
-            oled_data <= quiet_background[pixel_index];
+        end else if (light_data[15:12] > 5 && bright_bg[pixel_index]) begin
+            oled_data <= bright_bg[pixel_index];
+        end else if (dark_bg[pixel_index]) begin
+            oled_data <= dark_bg[pixel_index];
         end
     end
 endmodule
