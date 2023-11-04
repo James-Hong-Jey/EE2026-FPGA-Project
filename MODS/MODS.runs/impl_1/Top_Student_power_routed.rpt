@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Nov  4 15:43:56 2023
+| Date             : Sat Nov  4 16:52:40 2023
 | Host             : DESKTOP-J2M8M7A running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.118        |
+| Total On-Chip Power (W)  | 0.134        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.045        |
+| Dynamic (W)              | 0.061        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.4         |
-| Junction Temperature (C) | 25.6         |
+| Max Ambient (C)          | 84.3         |
+| Junction Temperature (C) | 25.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -49,25 +49,26 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.008 |        3 |       --- |             --- |
-| Slice Logic    |     0.009 |    11084 |       --- |             --- |
-|   LUT as Logic |     0.008 |     6662 |     20800 |           32.03 |
-|   CARRY4       |    <0.001 |      491 |      8150 |            6.02 |
-|   F7/F8 Muxes  |    <0.001 |      466 |     32600 |            1.43 |
-|   Register     |    <0.001 |     2380 |     41600 |            5.72 |
-|   BUFG         |    <0.001 |        3 |        32 |            9.38 |
-|   Others       |     0.000 |      168 |       --- |             --- |
-| Signals        |     0.009 |     8120 |       --- |             --- |
-| Block RAM      |     0.005 |     26.5 |        50 |           53.00 |
-| DSPs           |     0.002 |       19 |        90 |           21.11 |
-| I/O            |     0.010 |       62 |       106 |           58.49 |
-| XADC           |     0.002 |        1 |       --- |             --- |
-| Static Power   |     0.073 |          |           |                 |
-| Total          |     0.118 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.009 |        3 |       --- |             --- |
+| Slice Logic             |     0.011 |    12646 |       --- |             --- |
+|   LUT as Logic          |     0.009 |     7478 |     20800 |           35.95 |
+|   CARRY4                |     0.001 |      608 |      8150 |            7.46 |
+|   Register              |    <0.001 |     2812 |     41600 |            6.76 |
+|   F7/F8 Muxes           |    <0.001 |      490 |     32600 |            1.50 |
+|   BUFG                  |    <0.001 |        3 |        32 |            9.38 |
+|   LUT as Shift Register |    <0.001 |        2 |      9600 |            0.02 |
+|   Others                |     0.000 |      202 |       --- |             --- |
+| Signals                 |     0.011 |     9404 |       --- |             --- |
+| Block RAM               |     0.005 |     26.5 |        50 |           53.00 |
+| DSPs                    |     0.002 |       19 |        90 |           21.11 |
+| I/O                     |     0.021 |       64 |       106 |           60.38 |
+| XADC                    |     0.002 |        1 |       --- |             --- |
+| Static Power            |     0.073 |          |           |                 |
+| Total                   |     0.134 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -76,9 +77,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.043 |       0.033 |      0.010 |
-| Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
+| Vccint    |       1.000 |     0.049 |       0.038 |      0.010 |
+| Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |
+| Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -145,16 +146,33 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| Top_Student                                      |     0.045 |
+| Top_Student                                      |     0.061 |
 |   PS2Clk_IOBUF_inst                              |     0.000 |
 |   PS2Data_IOBUF_inst                             |     0.000 |
 |   clk6p25m                                       |    <0.001 |
-|   nolabel_line109                                |    <0.001 |
+|   nolabel_line108                                |     0.006 |
+|     a1                                           |    <0.001 |
+|     a2                                           |     0.004 |
+|       audio_out_inst                             |    <0.001 |
+|       clk1052hz                                  |    <0.001 |
+|       clk1320hz                                  |    <0.001 |
+|       clk1405hz                                  |    <0.001 |
+|       clk20khz                                   |    <0.001 |
+|       clk50Mhz                                   |    <0.001 |
+|       clk787hz                                   |    <0.001 |
+|       clk937hz                                   |    <0.001 |
+|       clock_1s                                   |    <0.001 |
+|     a3                                           |    <0.001 |
+|       c4                                         |    <0.001 |
+|     digs                                         |    <0.001 |
+|     hz10                                         |    <0.001 |
+|     seg7                                         |    <0.001 |
+|   nolabel_line118                                |    <0.001 |
 |     nolabel_line39                               |    <0.001 |
 |   nolabel_line66                                 |    <0.001 |
 |   nolabel_line79                                 |     0.004 |
 |     Inst_Ps2Interface                            |     0.001 |
-|   nolabel_line91                                 |     0.020 |
+|   nolabel_line91                                 |     0.019 |
 |     ccd_inst_2                                   |    <0.001 |
 |     ccd_inst_27                                  |    <0.001 |
 |     clock_mouse                                  |    <0.001 |
@@ -243,10 +261,10 @@ Table of Contents
 |                 ramloop[0].ram.r                 |    <0.001 |
 |                   prim_noinit.ram                |    <0.001 |
 |       ct_inst                                    |    <0.001 |
-|       nn1                                        |     0.005 |
+|       nn1                                        |     0.004 |
 |     ssd1                                         |     0.000 |
 |     unit_6p25m                                   |    <0.001 |
-|   nolabel_line97                                 |     0.008 |
+|   nolabel_line98                                 |     0.008 |
 |     nolabel_line102                              |    <0.001 |
 |     nolabel_line25                               |    <0.001 |
 |     nolabel_line27                               |    <0.001 |

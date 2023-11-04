@@ -49,6 +49,8 @@ module Top_Student (
     assign an = an_reg;
     reg dp_reg = 1;
     assign dp = dp_reg;
+    reg [15:0] led_reg = 15'b000000000000000;
+    assign led = led_reg;
 
     // Initialise everything to blank
     initial begin
@@ -94,19 +96,31 @@ module Top_Student (
     wire [15:0] oled_data_mic;
     wire [6:0] seg_mic;
     wire [3:0] an_mic;
+    wire [15:0] led_light;
     mic(.clock(clock), .JC_MIC3_Pin1(JC_MIC3_Pin1), .JC_MIC3_Pin3(JC_MIC3_Pin3), .JC_MIC3_Pin4(JC_MIC3_Pin4),
     .JXADC(JXADC), .vp_in(vp_in), .vn_in(vn_in), 
-    .pixel_index(pixel_index), .oled_data(oled_data_mic), .seg(seg_mic), .an(an_mic), .led(led));
+    .pixel_index(pixel_index), .oled_data(oled_data_mic), .seg(seg_mic), .an(an_mic), .led(led_light));
 
     // Matin
 
     // Barbara
+    wire [15:0] oled_data_alarm;
+    wire [6:0] seg_alarm;
+    wire [3:0] an_alarm;
+    wire [15:0] led_alarm;
+    top_alarm(.clk_100MHz(clock), .reset(rst), .sw0(sw[0]), 
+        .left(left), .pixel_index(pixel_index),
+        .seg(seg_alarm), .an(an_alarm), 
+        .led0(led_alarm[0]), .led(led_alarm[15:1]), .JXADC(JA), .oled_data(oled_data_alarm), 
+        .sw1(sw[1]), .PS2Clk(PS2Clk), .PS2Data(PS2Data));
 
     // Karishma 
     wire [6:0] seg_pw;
     wire [4:0] an_pw;
     wire dp_pw;
-    password(.clock(clock), .paint_seg(paint_seg), .seg(seg_pw), .an(an_pw), .dp(dp_pw)    );
+    password(.clock(clock), .paint_seg(paint_seg), .seg(seg_pw), .an(an_pw), .dp(dp_pw));
+    reg [15:0] password_unlocked_screen [0:6144];
+    initial $readmemh ("./pixel_art/morning.mem", password_unlocked_screen);
 
     // Multiplexer 
     reg [15:0] menu [0:6144];
@@ -140,17 +154,44 @@ module Top_Student (
                 seg_reg <= seg_mic;
                 an_reg <= an_mic;
                 dp_reg <= 1;
-            end else oled_data <= select_noise[pixel_index];
+                led_reg <= led_light;
+            end else begin
+                oled_data <= select_noise[pixel_index];
+                seg_reg <= 7'b1111111;
+                an_reg <= 4'b1111;
+                dp_reg <= 1;
+                led_reg <= 15'b000000000000000;
+            end
         end
         4'b01: oled_data <= select_sheep[pixel_index];
-        4'b10: oled_data <= select_alarm[pixel_index];
-        4'b11: begin
+        4'b10: begin // Barbara - Alarm
+            if(isActive) begin
+                seg_reg <= seg_alarm;   
+                an_reg <= an_alarm;
+                dp_reg <= 1;
+                led_reg <= led_alarm;
+                oled_data <= oled_data_alarm;
+            end else begin
+                oled_data <= select_alarm[pixel_index];  
+                seg_reg <= 7'b1111111;
+                an_reg <= 4'b1111;
+                dp_reg <= 1;
+                led_reg <= 15'b000000000000000;
+            end
+        end
+        4'b11: begin // Karishma - Password
             if(isActive) begin
                 seg_reg <= seg_pw;   
                 an_reg <= an_pw;
                 dp_reg <= dp_pw;
                 oled_data <= oled_data_paint;
-            end else oled_data <= select_unlock[pixel_index]; 
+            end else begin
+                oled_data <= select_unlock[pixel_index];  
+                seg_reg <= 7'b1111111;
+                an_reg <= 4'b1111;
+                dp_reg <= 1;
+                led_reg <= 15'b000000000000000;
+            end
         end
 
         default: oled_data <= menu[pixel_index];

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Nov  4 15:42:59 2023
+| Date         : Sat Nov  4 16:51:43 2023
 | Host         : DESKTOP-J2M8M7A running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    91 |
-| Unused register locations in slices containing registers |   200 |
+| Number of unique control sets                            |   113 |
+| Unused register locations in slices containing registers |   256 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,13 +34,13 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |            2 |
-|      6 |            2 |
-|      8 |            7 |
+|      2 |            9 |
+|      6 |            3 |
+|      8 |            9 |
 |     10 |            5 |
-|     12 |            3 |
-|     14 |            7 |
-|    16+ |           65 |
+|     12 |            4 |
+|     14 |            6 |
+|    16+ |           77 |
 +--------+--------------+
 
 
@@ -50,112 +50,134 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             510 |          123 |
-| No           | No                    | Yes                    |            2322 |          354 |
-| No           | Yes                   | No                     |            1034 |          154 |
-| Yes          | No                    | No                     |             184 |           28 |
+| No           | No                    | No                     |             632 |          162 |
+| No           | No                    | Yes                    |            2408 |          375 |
+| No           | Yes                   | No                     |            1612 |          225 |
+| Yes          | No                    | No                     |             200 |           35 |
 | Yes          | No                    | Yes                    |             154 |           23 |
-| Yes          | Yes                   | No                     |             556 |          129 |
+| Yes          | Yes                   | No                     |             618 |          129 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
-|                  Clock Signal                 |                         Enable Signal                         |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count |
-+-----------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
-| ~clk625_BUFG                                  |                                                               |                                                               |                1 |              2 |
-|  clock_IBUF_BUFG                              | nolabel_line97/nolabel_line33/XLXI_7/drdy_out                 |                                                               |                1 |              2 |
-|  nolabel_line79/E[0]                          |                                                               |                                                               |                1 |              6 |
-|  clk_2                                        |                                                               | nolabel_line91/nn_inst/nn_rst                                 |                2 |              6 |
-|  nolabel_line91/unit_6p25m/clk_6p25MHz        |                                                               | nolabel_line91/mouse_press_y[5]_i_1_n_0                       |                1 |              8 |
-|  nolabel_line91/ccd_inst_27/CLK               |                                                               |                                                               |                2 |              8 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line79/Inst_Ps2Interface/data_inter0                  |                1 |              8 |
-|  clk_2                                        | nolabel_line91/nn_inst/nn1/FSM_sequential_state[1]_i_1_n_0    | nolabel_line91/nn_inst/nn_algo_rst                            |                2 |              8 |
-|  clk_2                                        | nolabel_line91/nn_inst/nn1/digit[3]_i_1_n_0                   | nolabel_line91/nn_inst/nn_algo_rst                            |                1 |              8 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line79/Inst_Ps2Interface/clk_inter0                   |                1 |              8 |
-|  clock_IBUF_BUFG                              | nolabel_line79/Inst_Ps2Interface/shift_frame                  | nolabel_line79/Inst_Ps2Interface/reset_bit_count              |                1 |              8 |
-|  nolabel_line97/nolabel_line95/CLK            |                                                               |                                                               |                2 |             10 |
-|  nolabel_line109/nolabel_line39/CLK           |                                                               |                                                               |                5 |             10 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line97/man_lift[6]_i_1_n_0                            |                3 |             10 |
-|  clock_IBUF_BUFG                              | nolabel_line97/nolabel_line51/oled_data_reg[11]_4             | nolabel_line97/nolabel_line51/oled_data_reg[4]_20             |                2 |             10 |
-|  clock_IBUF_BUFG                              | nolabel_line97/nolabel_line51/oled_data_reg[11]_4             | nolabel_line97/nolabel_line51/oled_data_reg[11]_26            |                3 |             10 |
-|  clock_IBUF_BUFG                              | nolabel_line97/nolabel_line51/oled_data_reg[11]_4             | nolabel_line97/nolabel_line51/oled_data_reg[5]_9              |                6 |             12 |
-|  clk_2                                        | nolabel_line91/nn_inst/nn1/i[5]_i_1_n_0                       | nolabel_line91/nn_inst/nn_algo_rst                            |                2 |             12 |
-|  clock_IBUF_BUFG                              | nolabel_line79/Inst_Ps2Interface/right_down_reg               | btnD_IBUF                                                     |                3 |             12 |
-|  clock_IBUF_BUFG                              | nolabel_line79/Inst_Ps2Interface/delay_63clk_count[6]_i_2_n_0 | nolabel_line79/Inst_Ps2Interface/delay_63clk_count[6]_i_1_n_0 |                2 |             14 |
-|  nolabel_line97/nolabel_line102/fivehertz     |                                                               |                                                               |                1 |             14 |
-|  clock_IBUF_BUFG                              | nolabel_line97/nolabel_line33/XLXI_7/drdy_out                 | nolabel_line97/nolabel_line33/led[7]_i_1_n_0                  |                2 |             14 |
-|  clock_IBUF_BUFG                              | nolabel_line97/nolabel_line33/XLXI_7/drdy_out                 | nolabel_line97/nolabel_line33/led[15]_i_1_n_0                 |                3 |             14 |
-|  clk_2                                        | nolabel_line91/nn_inst/nn1/addr_inter0                        | nolabel_line91/nn_inst/nn_algo_rst                            |                5 |             14 |
-|  clk_2                                        | nolabel_line91/nn_inst/nn1/next_out_valid                     | nolabel_line91/nn_inst/nn_algo_rst                            |                3 |             14 |
-|  clock_IBUF_BUFG                              | nolabel_line79/Inst_Ps2Interface/ps2_data_h_reg_inv_0         |                                                               |                5 |             14 |
-|  clock_IBUF_BUFG                              | nolabel_line79/tx_data[7]_i_1_n_0                             |                                                               |                3 |             16 |
-|  clock_IBUF_BUFG                              | nolabel_line79/Inst_Ps2Interface/y_inc_reg[0][0]              | btnD_IBUF                                                     |                2 |             16 |
-|  clock_IBUF_BUFG                              | nolabel_line79/Inst_Ps2Interface/E[0]                         | btnD_IBUF                                                     |                1 |             16 |
-|  clock_IBUF_BUFG                              | nolabel_line79/Inst_Ps2Interface/load_rx_data                 |                                                               |                1 |             16 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line97/nolabel_line29/SR[0]                           |                6 |             18 |
-|  clk_2                                        | nolabel_line91/nn_inst/nn1/addr_img0                          | nolabel_line91/nn_inst/nn_algo_rst                            |                4 |             20 |
-|  nolabel_line109/nolabel_line39/CLK           | nolabel_line91/ssd1/E[0]                                      |                                                               |                3 |             20 |
-|  clk_2                                        | nolabel_line91/nn_inst/nn1/digit_valid                        | nolabel_line91/nn_inst/nn_rst                                 |                2 |             20 |
-|  clk_2                                        | nolabel_line91/nn_inst/nn1/j[9]_i_1_n_0                       | nolabel_line91/nn_inst/nn_algo_rst                            |                5 |             20 |
-|  clock_IBUF_BUFG                              | nolabel_line79/Inst_Ps2Interface/frame[9]_i_1_n_0             |                                                               |                2 |             20 |
-|  clock_IBUF_BUFG                              | nolabel_line79/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0 | nolabel_line79/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0 |                3 |             22 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line97/nolabel_line27/value_reg[10]                   |                3 |             22 |
-|  clk_2                                        | nolabel_line91/nn_inst/imgw_valid_i_1_n_0                     | nolabel_line91/nn_inst/nn_rst                                 |                3 |             22 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line97/nolabel_line25/sample_reg[11]                  |                3 |             24 |
-| ~nolabel_line97/nolabel_line27/CLK            |                                                               |                                                               |                3 |             24 |
-|  nolabel_line97/nolabel_line25/sample_reg[11] |                                                               |                                                               |                3 |             24 |
-|  clock_IBUF_BUFG                              | nolabel_line79/y_new_reg_n_0                                  |                                                               |                3 |             24 |
-|  clock_IBUF_BUFG                              | nolabel_line97/nolabel_line29/peak_vol0                       |                                                               |                4 |             24 |
-|  clock_IBUF_BUFG                              | seg_reg[6]_i_1_n_0                                            |                                                               |                2 |             24 |
-|  clock_IBUF_BUFG                              | nolabel_line79/x_new_reg_n_0                                  |                                                               |                4 |             24 |
-|  clock_IBUF_BUFG                              | nolabel_line79/Inst_Ps2Interface/delay_100us_count[0]_i_2_n_0 | nolabel_line79/Inst_Ps2Interface/clear                        |                4 |             28 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line91/nn_inst/nn_rst_i_1_n_0                         |                7 |             28 |
-|  clk_2                                        | nolabel_line91/nn_inst/nn1/addr_const[15]_i_1_n_0             | nolabel_line91/nn_inst/nn_algo_rst                            |               12 |             32 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line91/AR[0]                                          |                8 |             32 |
-| ~clk625_BUFG                                  |                                                               | btnD_IBUF                                                     |                5 |             34 |
-|  nolabel_line97/nolabel_line83/moving_note    |                                                               | nolabel_line97/clear                                          |               12 |             34 |
-|  nolabel_line79/left                          |                                                               |                                                               |                9 |             36 |
-| ~clk625_BUFG                                  | nolabel_line66/delay[0]_i_1_n_0                               | btnD_IBUF                                                     |                5 |             40 |
-|  nolabel_line91/unit_6p25m/clk_6p25MHz        |                                                               |                                                               |                9 |             42 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line79/reset_timeout_cnt_reg_n_0                      |                6 |             48 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line79/reset_periodic_check_cnt__0                    |                6 |             52 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line97/nolabel_line29/count[31]_i_1_n_0               |                8 |             62 |
-| ~clk625_BUFG                                  | nolabel_line66/FSM_onehot_state[31]_i_1__0_n_0                | btnD_IBUF                                                     |                8 |             64 |
-|  clock_IBUF_BUFG                              |                                                               | debounce[32]_i_1_n_0                                          |                8 |             64 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line91/clock_mouse/clear                              |                8 |             64 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line91/unit_6p25m/clear                               |                8 |             64 |
-|  clock_IBUF_BUFG                              | nolabel_line91/nn_inst/nn_rst_i_1_n_0                         | nolabel_line91/nn_inst/rst_counter                            |                8 |             64 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line97/nolabel_line83/clear                           |                9 |             66 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line109/nolabel_line39/clear                          |                9 |             66 |
-|  clock_IBUF_BUFG                              |                                                               | clk6p25m/clear                                                |                9 |             66 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line97/nolabel_line102/clear                          |                9 |             66 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line97/nolabel_line25/clear                           |                9 |             66 |
-|  clock_IBUF_BUFG                              |                                                               | nolabel_line97/nolabel_line95/clear                           |                9 |             66 |
-|  clk_2                                        |                                                               |                                                               |               26 |             66 |
-|  clock_IBUF_BUFG                              | nolabel_line91/nn_inst/ct_inst/nextDY                         | nolabel_line91/AR[0]                                          |               12 |             68 |
-| ~clk625_BUFG                                  |                                                               | nolabel_line66/spi_word[39]_i_1_n_0                           |               14 |             90 |
-|  clock_IBUF_BUFG                              |                                                               | btnD_IBUF                                                     |               20 |            118 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[64][1]                          |               19 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[128][0]                         |               19 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[256][2]                         |               20 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[256][1]                         |               17 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[0][2]                           |               23 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[128][1]                         |               24 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[64][2]                          |               24 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[256][0]                         |               18 |            128 |
-|  clk_2                                        | nolabel_line91/nn_inst/nn1/val_out[63]_i_1_n_0                | nolabel_line91/nn_inst/nn_algo_rst                            |               48 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[192][0]                         |               18 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[0][0]                           |               17 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[192][2]                         |               18 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[0][1]                           |               19 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[192][1]                         |               17 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[64][0]                          |               18 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[128][2]                         |               17 |            128 |
-|  clockMouse                                   |                                                               | nolabel_line79/pixel_data_reg[320][0]                         |               36 |            246 |
-|  clock_IBUF_BUFG                              |                                                               |                                                               |               61 |            268 |
-+-----------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
++----------------------------------------------------------+-----------------------------------------------------------------------+------------------------------------------------------------------------+------------------+----------------+
+|                       Clock Signal                       |                             Enable Signal                             |                            Set/Reset Signal                            | Slice Load Count | Bel Load Count |
++----------------------------------------------------------+-----------------------------------------------------------------------+------------------------------------------------------------------------+------------------+----------------+
+|  nolabel_line108/a2/audio_out_inst/shiftCounter_reg[0]_0 |                                                                       |                                                                        |                1 |              2 |
+|  nolabel_line108/a2/clk787hz/clk787hz_signal             |                                                                       |                                                                        |                1 |              2 |
+|  nolabel_line108/a2/clk937hz/clk937hz_signal             |                                                                       |                                                                        |                1 |              2 |
+|  nolabel_line108/a3/c4/SLOW_CLOCK_reg_n_0                |                                                                       | nolabel_line108/a3/c4/COUNT_Z_reg[0]_0                                 |                1 |              2 |
+| ~clk625_BUFG                                             |                                                                       |                                                                        |                1 |              2 |
+|  nolabel_line108/a2/clk1052hz/clk1052hz_signal           |                                                                       |                                                                        |                1 |              2 |
+|  nolabel_line108/a2/clk1320hz/clk1320hz_signal           |                                                                       |                                                                        |                1 |              2 |
+|  nolabel_line108/a2/clk1405hz/clk1405hz_signal           |                                                                       |                                                                        |                1 |              2 |
+|  nolabel_line108/a2/clk50Mhz/clk50Mhz_signal             |                                                                       |                                                                        |                1 |              2 |
+|  clk_2                                                   |                                                                       | nolabel_line91/nn_inst/nn_rst                                          |                3 |              6 |
+|  nolabel_line79/E[0]                                     |                                                                       |                                                                        |                1 |              6 |
+|  nolabel_line108/a2/audio_out_inst/shiftCounter_reg[0]_0 | nolabel_line108/a2/audio_out_inst/FSM_onehot_current_state[3]_i_1_n_0 |                                                                        |                1 |              6 |
+|  clk_2                                                   | nolabel_line91/nn_inst/nn1/digit[3]_i_1_n_0                           | nolabel_line91/nn_inst/nn_algo_rst                                     |                2 |              8 |
+|  clk_2                                                   | nolabel_line91/nn_inst/nn1/FSM_sequential_state[1]_i_1_n_0            | nolabel_line91/nn_inst/nn_algo_rst                                     |                3 |              8 |
+|  nolabel_line91/ccd_inst_27/CLK                          |                                                                       |                                                                        |                2 |              8 |
+|  clock_IBUF_BUFG                                         | sequence                                                              |                                                                        |                3 |              8 |
+|  nolabel_line91/unit_6p25m/clk_6p25MHz                   |                                                                       | nolabel_line91/mouse_press_y[5]_i_1_n_0                                |                2 |              8 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line79/Inst_Ps2Interface/clk_inter0                            |                1 |              8 |
+|  nolabel_line108/a2/audio_out_inst/shiftCounter_reg[0]_0 | nolabel_line108/a2/audio_out_inst/temp2                               |                                                                        |                2 |              8 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line79/Inst_Ps2Interface/data_inter0                           |                1 |              8 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/Inst_Ps2Interface/shift_frame                          | nolabel_line79/Inst_Ps2Interface/reset_bit_count                       |                1 |              8 |
+|  clock_IBUF_BUFG                                         | nolabel_line98/nolabel_line51/oled_data_reg[11]_4                     | nolabel_line98/nolabel_line51/oled_data_reg[4]_20                      |                3 |             10 |
+|  nolabel_line98/nolabel_line95/CLK                       |                                                                       |                                                                        |                2 |             10 |
+|  nolabel_line118/nolabel_line39/CLK                      |                                                                       |                                                                        |                3 |             10 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line98/man_lift[6]_i_1_n_0                                     |                2 |             10 |
+|  clock_IBUF_BUFG                                         | nolabel_line98/nolabel_line51/oled_data_reg[11]_4                     | nolabel_line98/nolabel_line51/oled_data_reg[11]_23                     |                2 |             10 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/Inst_Ps2Interface/right_down_reg                       | btnD_IBUF                                                              |                3 |             12 |
+|  nolabel_line108/a2/clock_1s/CLOCK_1HZ                   |                                                                       |                                                                        |                3 |             12 |
+|  clock_IBUF_BUFG                                         | nolabel_line98/nolabel_line51/oled_data_reg[11]_4                     | nolabel_line98/nolabel_line51/oled_data_reg[5]_14                      |                4 |             12 |
+|  clk_2                                                   | nolabel_line91/nn_inst/nn1/i[5]_i_1_n_0                               | nolabel_line91/nn_inst/nn_algo_rst                                     |                3 |             12 |
+|  nolabel_line108/digs/E[0]                               |                                                                       |                                                                        |                3 |             14 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/Inst_Ps2Interface/delay_63clk_count[6]_i_2_n_0         | nolabel_line79/Inst_Ps2Interface/delay_63clk_count[6]_i_1_n_0          |                3 |             14 |
+|  nolabel_line98/nolabel_line102/fivehertz                |                                                                       |                                                                        |                2 |             14 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/Inst_Ps2Interface/ps2_data_h_reg_inv_0                 |                                                                        |                2 |             14 |
+|  clk_2                                                   | nolabel_line91/nn_inst/nn1/next_out_valid                             | nolabel_line91/nn_inst/nn_algo_rst                                     |                4 |             14 |
+|  clk_2                                                   | nolabel_line91/nn_inst/nn1/addr_inter0                                | nolabel_line91/nn_inst/nn_algo_rst                                     |                5 |             14 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/Inst_Ps2Interface/E[0]                                 | btnD_IBUF                                                              |                1 |             16 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/tx_data[7]_i_1_n_0                                     |                                                                        |                3 |             16 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/Inst_Ps2Interface/y_inc_reg[0][0]                      | btnD_IBUF                                                              |                2 |             16 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/Inst_Ps2Interface/load_rx_data                         |                                                                        |                2 |             16 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line98/nolabel_line29/SR[0]                                    |                5 |             18 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/Inst_Ps2Interface/frame[9]_i_1_n_0                     |                                                                        |                2 |             20 |
+|  nolabel_line118/nolabel_line39/CLK                      | nolabel_line91/ssd1/E[0]                                              |                                                                        |                4 |             20 |
+|  clk_2                                                   | nolabel_line91/nn_inst/nn1/addr_img0                                  | nolabel_line91/nn_inst/nn_algo_rst                                     |                5 |             20 |
+|  clk_2                                                   | nolabel_line91/nn_inst/nn1/digit_valid                                | nolabel_line91/nn_inst/nn_rst                                          |                2 |             20 |
+|  clk_2                                                   | nolabel_line91/nn_inst/nn1/j[9]_i_1_n_0                               | nolabel_line91/nn_inst/nn_algo_rst                                     |                5 |             20 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line98/nolabel_line27/value_reg[10]                            |                4 |             22 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0         | nolabel_line79/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0          |                4 |             22 |
+|  clk_2                                                   | nolabel_line91/nn_inst/imgw_valid_i_1_n_0                             | nolabel_line91/nn_inst/nn_rst                                          |                4 |             22 |
+|  clock_IBUF_BUFG                                         | seg_reg[6]_i_1__0_n_0                                                 |                                                                        |                6 |             24 |
+|  clock_IBUF_BUFG                                         | nolabel_line98/nolabel_line29/peak_vol0                               |                                                                        |                3 |             24 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/x_new_reg_n_0                                          |                                                                        |                4 |             24 |
+| ~nolabel_line98/nolabel_line27/CLK                       |                                                                       |                                                                        |                4 |             24 |
+|  nolabel_line98/nolabel_line25/sample_reg[11]            |                                                                       |                                                                        |                3 |             24 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line98/nolabel_line25/sample_reg[11]                           |                3 |             24 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/y_new_reg_n_0                                          |                                                                        |                4 |             24 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line91/nn_inst/nn_rst_i_1_n_0                                  |                4 |             28 |
+|  clock_IBUF_BUFG                                         | nolabel_line79/Inst_Ps2Interface/delay_100us_count[0]_i_2_n_0         | nolabel_line79/Inst_Ps2Interface/clear                                 |                4 |             28 |
+|  nolabel_line108/a2/audio_out_inst/shiftCounter_reg[0]_0 | nolabel_line108/a2/audio_out_inst/temp2                               | nolabel_line108/a2/audio_out_inst/FSM_onehot_current_state_reg_n_0_[0] |                3 |             32 |
+|  nolabel_line108/hz10/clk_out_reg                        |                                                                       |                                                                        |               12 |             32 |
+|  clk_2                                                   | nolabel_line91/nn_inst/nn1/addr_const[15]_i_1_n_0                     | nolabel_line91/nn_inst/nn_algo_rst                                     |               10 |             32 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line91/AR[0]                                                   |                6 |             32 |
+|  nolabel_line98/nolabel_line83/moving_note               |                                                                       | nolabel_line98/clear                                                   |               13 |             34 |
+| ~clk625_BUFG                                             |                                                                       | btnD_IBUF                                                              |                5 |             34 |
+|  nolabel_line79/left                                     |                                                                       |                                                                        |                9 |             36 |
+| ~clk625_BUFG                                             | nolabel_line66/delay[0]_i_1_n_0                                       | btnD_IBUF                                                              |                5 |             40 |
+|  nolabel_line91/unit_6p25m/clk_6p25MHz                   |                                                                       |                                                                        |                8 |             42 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line79/reset_timeout_cnt                                       |                5 |             48 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line79/reset_periodic_check_cnt                                |                7 |             52 |
+|  clock_IBUF_BUFG                                         | nolabel_line108/a3/spider_timer[28]_i_2_n_0                           | nolabel_line108/a3/spider_timer[28]_i_1_n_0                            |                7 |             58 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line98/nolabel_line29/count[31]_i_1_n_0                        |                8 |             62 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line108/a2/clock_1s/clear                                      |                8 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line108/a2/clk1052hz/clear                                     |                8 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line108/a2/clk1320hz/clear                                     |                8 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line108/a2/clk1405hz/clear                                     |                8 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | debounce[32]_i_1_n_0                                                   |                8 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line108/a2/clk20khz/clear                                      |                8 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line108/a2/clk50Mhz/clear                                      |                8 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line108/a2/clk787hz/clear                                      |                8 |             64 |
+|  clock_IBUF_BUFG                                         | nolabel_line91/nn_inst/nn_rst_i_1_n_0                                 | nolabel_line91/nn_inst/rst_counter                                     |                8 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line108/a2/clk937hz/clear                                      |                8 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line108/a3/c4/COUNT[0]_i_1__0_n_0                              |                8 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line91/unit_6p25m/clear                                        |                8 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line91/clock_mouse/clear                                       |                8 |             64 |
+| ~clk625_BUFG                                             | nolabel_line66/state                                                  | btnD_IBUF                                                              |               10 |             64 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line118/nolabel_line39/clear                                   |                9 |             66 |
+|  clock_IBUF_BUFG                                         |                                                                       | clk6p25m/clear                                                         |                9 |             66 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line98/nolabel_line83/clear                                    |                9 |             66 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line98/nolabel_line95/clear                                    |                9 |             66 |
+|  clk_2                                                   |                                                                       |                                                                        |               25 |             66 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line98/nolabel_line25/clear                                    |                9 |             66 |
+|  clock_IBUF_BUFG                                         |                                                                       | nolabel_line98/nolabel_line102/clear                                   |                9 |             66 |
+|  clock_IBUF_BUFG                                         | nolabel_line91/nn_inst/ct_inst/nextDY                                 | nolabel_line91/AR[0]                                                   |               11 |             68 |
+| ~clk625_BUFG                                             |                                                                       | nolabel_line66/spi_word[39]_i_1_n_0                                    |               14 |             90 |
+|  clk_2                                                   | nolabel_line91/nn_inst/nn1/val_out[63]_i_1_n_0                        | nolabel_line91/nn_inst/nn_algo_rst                                     |               38 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[0][2]                                    |               25 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[64][1]                                   |               19 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[64][2]                                   |               23 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[0][0]                                    |               18 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[128][0]                                  |               18 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[256][0]                                  |               21 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[256][1]                                  |               20 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[256][2]                                  |               19 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[192][2]                                  |               19 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[128][2]                                  |               18 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[192][0]                                  |               19 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[64][0]                                   |               19 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[128][1]                                  |               22 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[192][1]                                  |               19 |            128 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[0][1]                                    |               19 |            128 |
+|  clock_IBUF_BUFG                                         |                                                                       | btnD_IBUF                                                              |               30 |            204 |
+|  clockMouse                                              |                                                                       | nolabel_line79/pixel_data_reg[320][0]                                  |               38 |            246 |
+|  clock_IBUF_BUFG                                         |                                                                       |                                                                        |               77 |            318 |
++----------------------------------------------------------+-----------------------------------------------------------------------+------------------------------------------------------------------------+------------------+----------------+
 
 

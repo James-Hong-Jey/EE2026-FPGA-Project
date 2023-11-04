@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Nov  4 15:43:46 2023
+| Date         : Sat Nov  4 16:52:29 2023
 | Host         : DESKTOP-J2M8M7A running 64-bit major release  (build 9200)
 | Command      : report_drc -file Top_Student_drc_routed.rpt -pb Top_Student_drc_routed.pb -rpx Top_Student_drc_routed.rpx
 | Design       : Top_Student
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 76
+             Violations found: 77
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
@@ -33,7 +33,7 @@ Table of Contents
 | DPIP-1    | Warning  | Input pipelining                                    | 29         |
 | DPOP-1    | Warning  | PREG Output pipelining                              | 12         |
 | DPOP-2    | Warning  | MREG Output pipelining                              | 11         |
-| PDRC-153  | Warning  | Gated clock check                                   | 1          |
+| PDRC-153  | Warning  | Gated clock check                                   | 2          |
 | REQP-1840 | Warning  | RAMB18 async control check                          | 20         |
 | REQP-181  | Advisory | writefirst                                          | 1          |
 +-----------+----------+-----------------------------------------------------+------------+
@@ -319,6 +319,11 @@ DSP nolabel_line91/p_0_in multiplier stage nolabel_line91/p_0_in/P[47:0] is not 
 Related violations: <none>
 
 PDRC-153#1 Warning
+Gated clock check  
+Net nolabel_line108/digs/E[0] is a gated clock net sourced by a combinational pin nolabel_line108/digs/seg_reg[0]_i_2/O, cell nolabel_line108/digs/seg_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
 Gated clock check  
 Net nolabel_line79/E[0] is a gated clock net sourced by a combinational pin nolabel_line79/state_reg[2]_i_2/O, cell nolabel_line79/state_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>

@@ -61,21 +61,32 @@ read_mem {
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/blk_mem_gen_img_synth_1/blk_mem_gen_img.mif
 }
 read_verilog -library xil_defaultlib {
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/CanvasTransfer.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/XADC/XADCdemo.v
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/alarm.v
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/alarm_starter.v
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/animation.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.ip_user_files/ip/blk_mem_gen_const/blk_mem_gen_const_stub.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.ip_user_files/ip/blk_mem_gen_img/blk_mem_gen_img_stub.v
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/clk_1hz_mod.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/clk_divider.v
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/clk_sound.v
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/clock_gen.v
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/digits.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/module_pack.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/neural_net.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/paint.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/password.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/ss_display.v
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/tenhz_gen.v
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/top_alarm.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v
 }
 read_vhdl -library xil_defaultlib {
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/Audio_Output.vhd
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd
 }
