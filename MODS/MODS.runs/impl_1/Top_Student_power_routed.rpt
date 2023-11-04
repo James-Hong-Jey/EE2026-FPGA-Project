@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Nov  4 16:52:40 2023
+| Date             : Sat Nov  4 20:18:48 2023
 | Host             : DESKTOP-J2M8M7A running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.134        |
+| Total On-Chip Power (W)  | 0.131        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.061        |
+| Dynamic (W)              | 0.057        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.3         |
@@ -52,22 +52,22 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.009 |        3 |       --- |             --- |
-| Slice Logic             |     0.011 |    12646 |       --- |             --- |
-|   LUT as Logic          |     0.009 |     7478 |     20800 |           35.95 |
-|   CARRY4                |     0.001 |      608 |      8150 |            7.46 |
-|   Register              |    <0.001 |     2812 |     41600 |            6.76 |
-|   F7/F8 Muxes           |    <0.001 |      490 |     32600 |            1.50 |
+| Clocks                  |     0.010 |        3 |       --- |             --- |
+| Slice Logic             |     0.012 |    13838 |       --- |             --- |
+|   LUT as Logic          |     0.010 |     7844 |     20800 |           37.71 |
+|   CARRY4                |     0.001 |      664 |      8150 |            8.15 |
+|   Register              |    <0.001 |     2848 |     41600 |            6.85 |
+|   F7/F8 Muxes           |    <0.001 |      701 |     32600 |            2.15 |
 |   BUFG                  |    <0.001 |        3 |        32 |            9.38 |
 |   LUT as Shift Register |    <0.001 |        2 |      9600 |            0.02 |
-|   Others                |     0.000 |      202 |       --- |             --- |
-| Signals                 |     0.011 |     9404 |       --- |             --- |
+|   Others                |     0.000 |      184 |       --- |             --- |
+| Signals                 |     0.012 |    10054 |       --- |             --- |
 | Block RAM               |     0.005 |     26.5 |        50 |           53.00 |
 | DSPs                    |     0.002 |       19 |        90 |           21.11 |
-| I/O                     |     0.021 |       64 |       106 |           60.38 |
+| I/O                     |     0.015 |       64 |       106 |           60.38 |
 | XADC                    |     0.002 |        1 |       --- |             --- |
 | Static Power            |     0.073 |          |           |                 |
-| Total                   |     0.134 |          |           |                 |
+| Total                   |     0.131 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,9 +77,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.049 |       0.038 |      0.010 |
+| Vccint    |       1.000 |     0.051 |       0.041 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |
-| Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |
+| Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -146,11 +146,11 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| Top_Student                                      |     0.061 |
+| Top_Student                                      |     0.057 |
 |   PS2Clk_IOBUF_inst                              |     0.000 |
 |   PS2Data_IOBUF_inst                             |     0.000 |
 |   clk6p25m                                       |    <0.001 |
-|   nolabel_line108                                |     0.006 |
+|   nolabel_line105                                |     0.006 |
 |     a1                                           |    <0.001 |
 |     a2                                           |     0.004 |
 |       audio_out_inst                             |    <0.001 |
@@ -162,17 +162,17 @@ Table of Contents
 |       clk787hz                                   |    <0.001 |
 |       clk937hz                                   |    <0.001 |
 |       clock_1s                                   |    <0.001 |
-|     a3                                           |    <0.001 |
+|     a3                                           |     0.001 |
 |       c4                                         |    <0.001 |
 |     digs                                         |    <0.001 |
 |     hz10                                         |    <0.001 |
 |     seg7                                         |    <0.001 |
-|   nolabel_line118                                |    <0.001 |
+|   nolabel_line115                                |    <0.001 |
 |     nolabel_line39                               |    <0.001 |
-|   nolabel_line66                                 |    <0.001 |
-|   nolabel_line79                                 |     0.004 |
+|   nolabel_line62                                 |    <0.001 |
+|   nolabel_line75                                 |     0.004 |
 |     Inst_Ps2Interface                            |     0.001 |
-|   nolabel_line91                                 |     0.019 |
+|   nolabel_line87                                 |     0.022 |
 |     ccd_inst_2                                   |    <0.001 |
 |     ccd_inst_27                                  |    <0.001 |
 |     clock_mouse                                  |    <0.001 |
@@ -264,23 +264,14 @@ Table of Contents
 |       nn1                                        |     0.004 |
 |     ssd1                                         |     0.000 |
 |     unit_6p25m                                   |    <0.001 |
-|   nolabel_line98                                 |     0.008 |
+|   nolabel_line94                                 |     0.008 |
 |     nolabel_line102                              |    <0.001 |
 |     nolabel_line25                               |    <0.001 |
 |     nolabel_line27                               |    <0.001 |
 |     nolabel_line29                               |    <0.001 |
 |     nolabel_line33                               |     0.002 |
 |       XLXI_7                                     |     0.002 |
-|     nolabel_line51                               |     0.001 |
 |     nolabel_line61                               |     0.000 |
-|     nolabel_line74                               |    <0.001 |
-|     nolabel_line75                               |    <0.001 |
-|     nolabel_line76                               |    <0.001 |
-|     nolabel_line77                               |    <0.001 |
-|     nolabel_line78                               |     0.000 |
-|     nolabel_line79                               |     0.000 |
-|     nolabel_line80                               |     0.000 |
-|     nolabel_line81                               |     0.000 |
 |     nolabel_line83                               |    <0.001 |
 |     nolabel_line95                               |    <0.001 |
 +--------------------------------------------------+-----------+

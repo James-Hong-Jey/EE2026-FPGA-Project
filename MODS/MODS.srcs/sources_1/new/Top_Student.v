@@ -40,7 +40,7 @@ module Top_Student (
 
     // Initialise the reset button
     wire rst;
-    reg rst_sw; // If sw changes at all, then this is 1 for a clock cycle, else 0
+    reg rst_sw = 0; // If sw changes at all, then this is 1 for a clock cycle, else 0
     assign rst = rst_sw || btnD; // Can assign to any button 
 
     reg [6:0] seg_reg = 7'b1111111;
@@ -52,17 +52,11 @@ module Top_Student (
     reg [15:0] led_reg = 15'b000000000000000;
     assign led = led_reg;
 
-    // Initialise everything to blank
-    initial begin
-        rst_sw <= 0;
-        oled_data <= 0;
-    end
-
     // Setting up the OLED
     wire clk625, frame_begin, sending_pixels, sample_pixel; // clk625 is the clock speed, rest are irrelevant
     wire [12:0] pixel_index; // where the pixel currently being analysed is
     wire [15:0] oled_data_final; // the colour the current pixel should be 
-    reg [15:0] oled_data; // need a reg so that it can be manipulated in always loop
+    reg [15:0] oled_data = 0; // need a reg so that it can be manipulated in always loop
     assign oled_data_final = oled_data;
     new_clock clk6p25m (6250000, clock, clk625);
     Oled_Display(clk625, rst, frame_begin, sending_pixels, sample_pixel, pixel_index, oled_data_final,
@@ -90,7 +84,7 @@ module Top_Student (
     reg [15:0] led_blink;
     wire [6:0] paint_seg;
     wire [15:0] oled_data_paint;
-    paint_modified(clock, left, (right || rst), 1'b1, xpos, ypos, pixel_index, led_paint, mouse_press, mouse_reset, mouse_press_x, mouse_press_y, paint_seg, oled_data_4e);
+    paint_modified(clock, left, (right || rst), 1'b1, xpos, ypos, pixel_index, led_paint, mouse_press, mouse_reset, mouse_press_x, mouse_press_y, paint_seg, oled_data_paint);
 
     // James
     wire [15:0] oled_data_mic;
@@ -139,12 +133,16 @@ module Top_Student (
     reg isActive = 0; // 0 will show the menu, 1 will show the associated screen
     always @ (posedge clock) begin
         // Debounce
+        if(rst_sw == 1) rst_sw <= 0;
         if(debounce > 0) debounce <= debounce - 1;
         if(debounce == 0) begin
             debounce <= 150 * 100000; // 150 ms
             if(btnR && !isActive) sequence <= sequence == 3 ? 0 : sequence + 1; 
             else if(btnL && !isActive) sequence <= sequence == 0 ? 3 : sequence - 1; 
-            else if(btnC) isActive <= ~isActive;
+            else if(btnC) begin
+                isActive <= ~isActive;
+                rst_sw <= 1;
+            end
         end
 
         case(sequence)
@@ -180,11 +178,17 @@ module Top_Student (
             end
         end
         4'b11: begin // Karishma - Password
+            // DRAW 3 2 0 5
             if(isActive) begin
                 seg_reg <= seg_pw;   
                 an_reg <= an_pw;
                 dp_reg <= dp_pw;
                 oled_data <= oled_data_paint;
+                if (dp_pw == 1) begin //pw successfully entered 
+                    led_reg[15:11] <= 0; 
+                end else begin 
+                    led_reg[15:11] <= 5'b11111; 
+                end
             end else begin
                 oled_data <= select_unlock[pixel_index];  
                 seg_reg <= 7'b1111111;
@@ -193,48 +197,8 @@ module Top_Student (
                 led_reg <= 15'b000000000000000;
             end
         end
-
         default: oled_data <= menu[pixel_index];
         endcase
     end
 
-endmodule
-
-/**  
- * usage:
- * new_clock clk625M (6250000, clock, <output>);
- */ 
-module new_clock (input [32:0] frequency, input clock, output reg SLOW_CLOCK);
-    reg [32:0] COUNT = 0;
-    // Equation: 1 / frequency / 2 / 10^-8 / 10
-    always @ (posedge clock) begin
-        COUNT <= (COUNT == 100000000 / frequency / 2 - 1) ? 0 : COUNT + 1;
-        SLOW_CLOCK <= (COUNT == 0) ? ~SLOW_CLOCK : SLOW_CLOCK;
-    end
-endmodule
-
-/**
- * This is to turn the pixel index into X and Y coordinates 
- */
-module xy (input [12:0] pixel_index, output [6:0] x, y);
-    assign x = pixel_index % `WIDTH;
-    assign y = pixel_index / `WIDTH;
-endmodule
-
-/**
- * Makes a 3x3 cursor around the mouse position
- */
-module cursor (
-    input clock,
-    input [15:0] color,
-    input [6:0] x, y,
-    input [11:0] xpos, ypos,
-    output reg [15:0] oled_data
-    );
-    
-    always @ (posedge clock) begin
-        if( x >= xpos - 1 && x <= xpos + 1 && y >= ypos - 1 && y <= ypos + 1) begin
-            oled_data <= color;
-        end else oled_data <= 0;
-    end
 endmodule

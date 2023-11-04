@@ -8,7 +8,7 @@ module top_alarm(
     input left,
     input [12:0] pixel_index,
     
-    output [0:6] seg,       // 7 segment display segment pattern
+    output [6:0] seg,       // 7 segment display segment pattern
     output [3:0] an,      // 7 segment display anodes
     output led0,
     //for the alarm

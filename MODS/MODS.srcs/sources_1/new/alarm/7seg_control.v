@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "constants.vh"
 
 module seg7_control(
     input clk_100MHz,
@@ -7,21 +8,31 @@ module seg7_control(
     input [3:0] tens,
     input [3:0] hundreds,
     input [3:0] thousands,
-    output reg [0:6] seg,       // segment pattern 0-9
+    output reg [6:0] seg,       // segment pattern 0-9
     output reg [3:0] an      // digit select signals
     );
     
     // Parameters for segment patterns
-    parameter ZERO  = 7'b000_0001;  // 0
-    parameter ONE   = 7'b100_1111;  // 1
-    parameter TWO   = 7'b001_0010;  // 2 
-    parameter THREE = 7'b000_0110;  // 3
-    parameter FOUR  = 7'b100_1100;  // 4
-    parameter FIVE  = 7'b010_0100;  // 5
-    parameter SIX   = 7'b010_0000;  // 6
-    parameter SEVEN = 7'b000_1111;  // 7
-    parameter EIGHT = 7'b000_0000;  // 8
-    parameter NINE  = 7'b000_0100;  // 9
+//    parameter ZERO  = 7'b000_0001;  // 0
+    //parameter ONE   = 7'b100_1111;  // 1
+    //parameter TWO   = 7'b001_0010;  // 2 
+    //parameter THREE = 7'b000_0110;  // 3
+    //parameter FOUR  = 7'b100_1100;  // 4
+    //parameter FIVE  = 7'b010_0100;  // 5
+    //parameter SIX   = 7'b010_0000;  // 6
+    //parameter SEVEN = 7'b000_1111;  // 7
+    //parameter EIGHT = 7'b000_0000;  // 8
+    //parameter NINE  = 7'b000_0100;  // 9
+    parameter ZERO  = 7'b1000000;
+    parameter ONE   = `DIG1;
+    parameter TWO   = `DIG2;
+    parameter THREE = `DIG3;
+    parameter FOUR  = `DIG4;
+    parameter FIVE  = `DIG5;
+    parameter SIX   = `DIG6;
+    parameter SEVEN = `DIG7;
+    parameter EIGHT = `DIG8;
+    parameter NINE  = `DIG9;
     
     // To select each digit in turn
     reg [1:0] digit_select;     // 2 bit counter for selecting each of 4 digits

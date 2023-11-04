@@ -83,6 +83,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/ss_display.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/tenhz_gen.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/top_alarm.v
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/utility_mods.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v
 }
 read_vhdl -library xil_defaultlib {

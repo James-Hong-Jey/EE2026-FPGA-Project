@@ -14,23 +14,23 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 432 
+INFO: Helper process launched with PID 10556 
 WARNING: [Synth 8-2490] overwriting previous definition of module XADC [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/XADC/XADCdemo.v:23]
 WARNING: [Synth 8-2611] redeclaration of ansi port pixel_index is not allowed [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/animation.v:53]
 WARNING: [Synth 8-2490] overwriting previous definition of module blk_mem_gen_const [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.ip_user_files/ip/blk_mem_gen_const/blk_mem_gen_const_stub.v:17]
 WARNING: [Synth 8-2490] overwriting previous definition of module blk_mem_gen_img [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.ip_user_files/ip/blk_mem_gen_img/blk_mem_gen_img_stub.v:17]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 398.090 ; gain = 112.387
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 400.023 ; gain = 113.297
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
-INFO: [Synth 8-3876] $readmem data file './pixel_art/morning.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:120]
-INFO: [Synth 8-3876] $readmem data file './pixel_art/menu_draft.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:124]
-INFO: [Synth 8-3876] $readmem data file './pixel_art/select_noise.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:126]
-INFO: [Synth 8-3876] $readmem data file './pixel_art/select_sheep.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:128]
-INFO: [Synth 8-3876] $readmem data file './pixel_art/select_alarm.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:130]
-INFO: [Synth 8-3876] $readmem data file './pixel_art/select_unlock.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:132]
-INFO: [Synth 8-6157] synthesizing module 'new_clock' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:194]
-INFO: [Synth 8-6155] done synthesizing module 'new_clock' (1#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:194]
+INFO: [Synth 8-3876] $readmem data file './pixel_art/morning.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:117]
+INFO: [Synth 8-3876] $readmem data file './pixel_art/menu_draft.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:121]
+INFO: [Synth 8-3876] $readmem data file './pixel_art/select_noise.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:123]
+INFO: [Synth 8-3876] $readmem data file './pixel_art/select_sheep.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:125]
+INFO: [Synth 8-3876] $readmem data file './pixel_art/select_alarm.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:127]
+INFO: [Synth 8-3876] $readmem data file './pixel_art/select_unlock.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:129]
+INFO: [Synth 8-6157] synthesizing module 'new_clock' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/utility_mods.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'new_clock' (1#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/utility_mods.v:5]
 INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
@@ -131,8 +131,8 @@ WARNING: [Synth 8-567] referenced signal 'pixel_data' should be on the sensitivi
 WARNING: [Synth 8-567] referenced signal 'row' should be on the sensitivity list [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/paint.v:313]
 WARNING: [Synth 8-567] referenced signal 'col' should be on the sensitivity list [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/paint.v:313]
 INFO: [Synth 8-6157] synthesizing module 'module_pack' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/module_pack.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-28260-DESKTOP-J2M8M7A/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (8#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-28260-DESKTOP-J2M8M7A/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-16884-DESKTOP-J2M8M7A/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (8#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-16884-DESKTOP-J2M8M7A/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'CanvasTransfer' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/CanvasTransfer.v:23]
 	Parameter CANVAS_SIZE bound to: 3136 - type: integer 
 	Parameter IDLE bound to: 2'b10 
@@ -152,8 +152,8 @@ WARNING: [Synth 8-6014] Unused sequential element offsetY_reg was removed.  [C:/
 INFO: [Synth 8-6155] done synthesizing module 'CanvasTransfer' (9#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/CanvasTransfer.v:23]
 INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_img' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.ip_user_files/ip/blk_mem_gen_img/blk_mem_gen_img_stub.v:17]
 INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_const' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.ip_user_files/ip/blk_mem_gen_const/blk_mem_gen_const_stub.v:17]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_inter' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-28260-DESKTOP-J2M8M7A/realtime/blk_mem_gen_inter_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_inter' (10#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-28260-DESKTOP-J2M8M7A/realtime/blk_mem_gen_inter_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_inter' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-16884-DESKTOP-J2M8M7A/realtime/blk_mem_gen_inter_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_inter' (10#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-16884-DESKTOP-J2M8M7A/realtime/blk_mem_gen_inter_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'neural_net' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/neural_net.v:3]
 	Parameter S_IDLE bound to: 2'b00 
 	Parameter S_FIRST bound to: 2'b01 
@@ -170,7 +170,6 @@ INFO: [Synth 8-6157] synthesizing module 'ss_display' [C:/Users/james/Desktop/EE
 WARNING: [Synth 8-6014] Unused sequential element numsd_reg was removed.  [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/ss_display.v:33]
 INFO: [Synth 8-6155] done synthesizing module 'ss_display' (13#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/ss_display.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'paint_modified' (14#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/paint.v:192]
-WARNING: [Synth 8-689] width (1) of port connection 'colour_chooser' does not match port width (16) of module 'paint_modified' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:91]
 INFO: [Synth 8-6157] synthesizing module 'mic' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:5]
 INFO: [Synth 8-3876] $readmem data file './pixel_art/noisy.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:68]
 INFO: [Synth 8-3876] $readmem data file './pixel_art/quiet.mem' is read successfully [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:70]
@@ -182,13 +181,12 @@ INFO: [Synth 8-6157] synthesizing module 'XADC' [C:/Users/james/Desktop/EE2026-P
 	Parameter S_IDLE bound to: 0 - type: integer 
 	Parameter S_FRAME_WAIT bound to: 1 - type: integer 
 	Parameter S_CONVERSION bound to: 2 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-28260-DESKTOP-J2M8M7A/realtime/xadc_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (17#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-28260-DESKTOP-J2M8M7A/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-16884-DESKTOP-J2M8M7A/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (17#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/.Xil/Vivado-16884-DESKTOP-J2M8M7A/realtime/xadc_wiz_0_stub.v:5]
 WARNING: [Synth 8-350] instance 'XLXI_7' of module 'xadc_wiz_0' requires 22 connections, but only 21 given [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/XADC/XADCdemo.v:63]
-WARNING: [Synth 8-3848] Net Address_in in module/entity XADC does not have driver. [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/XADC/XADCdemo.v:46]
 INFO: [Synth 8-6155] done synthesizing module 'XADC' (18#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/XADC/XADCdemo.v:23]
-INFO: [Synth 8-6157] synthesizing module 'xy' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:206]
-INFO: [Synth 8-6155] done synthesizing module 'xy' (19#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:206]
+INFO: [Synth 8-6157] synthesizing module 'xy' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/utility_mods.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'xy' (19#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/utility_mods.v:17]
 INFO: [Synth 8-6157] synthesizing module 'draw_box' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:229]
 INFO: [Synth 8-6155] done synthesizing module 'draw_box' (20#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:229]
 WARNING: [Synth 8-689] width (32) of port connection 'lefttopy' does not match port width (7) of module 'draw_box' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/mic.v:61]
@@ -218,22 +216,22 @@ INFO: [Synth 8-6157] synthesizing module 'tenHz_gen' [C:/Users/james/Desktop/EE2
 INFO: [Synth 8-6155] done synthesizing module 'tenHz_gen' (24#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/tenhz_gen.v:3]
 INFO: [Synth 8-6157] synthesizing module 'digits' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/digits.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'digits' (25#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/digits.v:3]
-INFO: [Synth 8-6157] synthesizing module 'seg7_control' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:3]
-	Parameter ZERO bound to: 7'b0000001 
-	Parameter ONE bound to: 7'b1001111 
-	Parameter TWO bound to: 7'b0010010 
-	Parameter THREE bound to: 7'b0000110 
-	Parameter FOUR bound to: 7'b1001100 
-	Parameter FIVE bound to: 7'b0100100 
-	Parameter SIX bound to: 7'b0100000 
-	Parameter SEVEN bound to: 7'b0001111 
+INFO: [Synth 8-6157] synthesizing module 'seg7_control' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:4]
+	Parameter ZERO bound to: 7'b1000000 
+	Parameter ONE bound to: 7'b1111001 
+	Parameter TWO bound to: 7'b0100100 
+	Parameter THREE bound to: 7'b0110000 
+	Parameter FOUR bound to: 7'b0011001 
+	Parameter FIVE bound to: 7'b0010010 
+	Parameter SIX bound to: 7'b0000010 
+	Parameter SEVEN bound to: 7'b1111000 
 	Parameter EIGHT bound to: 7'b0000000 
-	Parameter NINE bound to: 7'b0000100 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:59]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:74]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:89]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:104]
-INFO: [Synth 8-6155] done synthesizing module 'seg7_control' (26#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:3]
+	Parameter NINE bound to: 7'b0010000 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:70]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:85]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:100]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'seg7_control' (26#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:4]
 INFO: [Synth 8-6157] synthesizing module 'alarm_starter' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/alarm_starter.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'alarm_starter' (27#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/alarm_starter.v:23]
 INFO: [Synth 8-6157] synthesizing module 'alarm' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/alarm.v:13]
@@ -253,11 +251,10 @@ INFO: [Synth 8-6157] synthesizing module 'clk_sound' [C:/Users/james/Desktop/EE2
 INFO: [Synth 8-6155] done synthesizing module 'clk_sound' (32#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/clk_sound.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'animation' (33#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/animation.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'top_alarm' (34#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/top_alarm.v:3]
-WARNING: [Synth 8-689] width (8) of port connection 'JXADC' does not match port width (4) of module 'top_alarm' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:111]
+WARNING: [Synth 8-689] width (8) of port connection 'JXADC' does not match port width (4) of module 'top_alarm' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:108]
 INFO: [Synth 8-6157] synthesizing module 'password' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/password.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'password' (35#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/password.v:23]
-WARNING: [Synth 8-689] width (5) of port connection 'an' does not match port width (4) of module 'password' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:118]
-WARNING: [Synth 8-3848] Net oled_data_paint in module/entity Top_Student does not have driver. [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:90]
+WARNING: [Synth 8-689] width (5) of port connection 'an' does not match port width (4) of module 'password' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:115]
 INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (36#1) [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 WARNING: [Synth 8-3917] design Top_Student has port JA[7] driven by constant 0
 WARNING: [Synth 8-3917] design Top_Student has port JA[6] driven by constant 0
@@ -327,7 +324,7 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[3]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port btnU
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 521.316 ; gain = 235.613
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 522.855 ; gain = 236.129
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -341,26 +338,26 @@ WARNING: [Synth 8-3295] tying undriven pin audio_out_inst:RST to constant 0 [C:/
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 521.316 ; gain = 235.613
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 522.855 ; gain = 236.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 521.316 ; gain = 235.613
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 522.855 ; gain = 236.129
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/blk_mem_gen_const_synth_1/blk_mem_gen_const/blk_mem_gen_const_in_context.xdc] for cell 'nolabel_line91/nn_inst/blk_mem_gen_const_inst'
-Finished Parsing XDC File [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/blk_mem_gen_const_synth_1/blk_mem_gen_const/blk_mem_gen_const_in_context.xdc] for cell 'nolabel_line91/nn_inst/blk_mem_gen_const_inst'
-Parsing XDC File [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/blk_mem_gen_img_synth_1/blk_mem_gen_img/blk_mem_gen_img_in_context.xdc] for cell 'nolabel_line91/nn_inst/blk_mem_gen_img_inst'
-Finished Parsing XDC File [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/blk_mem_gen_img_synth_1/blk_mem_gen_img/blk_mem_gen_img_in_context.xdc] for cell 'nolabel_line91/nn_inst/blk_mem_gen_img_inst'
-Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_inter/blk_mem_gen_inter/blk_mem_gen_inter_in_context.xdc] for cell 'nolabel_line91/nn_inst/blk_mem_gen_inter_inst'
-Finished Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_inter/blk_mem_gen_inter/blk_mem_gen_inter_in_context.xdc] for cell 'nolabel_line91/nn_inst/blk_mem_gen_inter_inst'
-Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_0_1/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'nolabel_line91/nn_inst/blk_mem_gen_0_inst'
-Finished Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_0_1/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'nolabel_line91/nn_inst/blk_mem_gen_0_inst'
-Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/XADC/xadc_wiz_0/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'nolabel_line98/nolabel_line33/XLXI_7'
-Finished Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/XADC/xadc_wiz_0/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'nolabel_line98/nolabel_line33/XLXI_7'
+Parsing XDC File [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/blk_mem_gen_const_synth_1/blk_mem_gen_const/blk_mem_gen_const_in_context.xdc] for cell 'nolabel_line87/nn_inst/blk_mem_gen_const_inst'
+Finished Parsing XDC File [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/blk_mem_gen_const_synth_1/blk_mem_gen_const/blk_mem_gen_const_in_context.xdc] for cell 'nolabel_line87/nn_inst/blk_mem_gen_const_inst'
+Parsing XDC File [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/blk_mem_gen_img_synth_1/blk_mem_gen_img/blk_mem_gen_img_in_context.xdc] for cell 'nolabel_line87/nn_inst/blk_mem_gen_img_inst'
+Finished Parsing XDC File [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/blk_mem_gen_img_synth_1/blk_mem_gen_img/blk_mem_gen_img_in_context.xdc] for cell 'nolabel_line87/nn_inst/blk_mem_gen_img_inst'
+Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_inter/blk_mem_gen_inter/blk_mem_gen_inter_in_context.xdc] for cell 'nolabel_line87/nn_inst/blk_mem_gen_inter_inst'
+Finished Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_inter/blk_mem_gen_inter/blk_mem_gen_inter_in_context.xdc] for cell 'nolabel_line87/nn_inst/blk_mem_gen_inter_inst'
+Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_0_1/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'nolabel_line87/nn_inst/blk_mem_gen_0_inst'
+Finished Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/blk_mem_gen_0_1/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'nolabel_line87/nn_inst/blk_mem_gen_0_inst'
+Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/XADC/xadc_wiz_0/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'nolabel_line94/nolabel_line33/XLXI_7'
+Finished Parsing XDC File [c:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/XADC/xadc_wiz_0/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'nolabel_line94/nolabel_line33/XLXI_7'
 Parsing XDC File [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc]
 Finished Parsing XDC File [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
@@ -372,27 +369,27 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 868.020 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'nolabel_line91/nn_inst/blk_mem_gen_0_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'nolabel_line91/nn_inst/blk_mem_gen_img_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 869.234 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'nolabel_line87/nn_inst/blk_mem_gen_0_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'nolabel_line87/nn_inst/blk_mem_gen_img_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 869.582 ; gain = 583.879
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 870.801 ; gain = 584.074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 869.582 ; gain = 583.879
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 870.801 ; gain = 584.074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for nolabel_line91/nn_inst/blk_mem_gen_inter_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line91/nn_inst/blk_mem_gen_0_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line98/nolabel_line33/XLXI_7. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line87/nn_inst/blk_mem_gen_inter_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line87/nn_inst/blk_mem_gen_0_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line94/nolabel_line33/XLXI_7. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 869.582 ; gain = 583.879
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 870.801 ; gain = 584.074
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "SLOW_CLOCK0" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -591,6 +588,7 @@ INFO: [Synth 8-5544] ROM "colour_chooser" won't be mapped to Block RAM because a
 INFO: [Synth 8-5544] ROM "colour_chooser" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "mouse_press0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cursor_color" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5587] ROM size for "led" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "clk_out_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "tens" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "tens" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -610,6 +608,8 @@ INFO: [Synth 8-5546] ROM "audio10" won't be mapped to RAM because it is too spar
 INFO: [Synth 8-5546] ROM "audio20" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "audio30" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "audio40" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "seg_reg" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "led_reg" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -722,7 +722,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'neural_net'
 WARNING: [Synth 8-327] inferring latch for variable 'colour_chooser_reg' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/paint.v:315]
 WARNING: [Synth 8-327] inferring latch for variable 'state_reg' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/paint.v:252]
-WARNING: [Synth 8-327] inferring latch for variable 'seg_reg' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_reg' [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v:71]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -774,7 +774,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'audio3_reg' using encoding
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'audio4_reg' using encoding 'sequential' in module 'alarm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 869.582 ; gain = 583.879
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 870.801 ; gain = 584.074
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -782,13 +782,13 @@ Report RTL Partitions:
 |      |RTL Partition     |Replication |Instances |
 +------+------------------+------------+----------+
 |1     |new_clock         |           6|      4053|
-|2     |mic__GC0          |           1|     30513|
+|2     |mic__GC0          |           1|     30720|
 |3     |clock_gen         |           8|      3864|
 |4     |alarm__GC0        |           1|       586|
 |5     |top_alarm__GC0    |           1|      4535|
 |6     |password__GC0     |           1|        83|
-|7     |Top_Student__GCB0 |           1|     27744|
-|8     |Top_Student__GCB1 |           1|     22928|
+|7     |Top_Student__GCB0 |           1|     30067|
+|8     |Top_Student__GCB1 |           1|     20757|
 +------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -827,7 +827,7 @@ Detailed RTL Component Info :
 	               24 Bit    Registers := 1     
 	               23 Bit    Registers := 1     
 	               17 Bit    Registers := 2     
-	               16 Bit    Registers := 8     
+	               16 Bit    Registers := 9     
 	               12 Bit    Registers := 16    
 	               11 Bit    Registers := 3     
 	               10 Bit    Registers := 19    
@@ -838,7 +838,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 17    
 	                3 Bit    Registers := 361   
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 78    
+	                1 Bit    Registers := 79    
 +---Muxes : 
 	   2 Input     64 Bit        Muxes := 5     
 	   4 Input     64 Bit        Muxes := 1     
@@ -855,10 +855,11 @@ Detailed RTL Component Info :
 	  32 Input     20 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 20    
 	  17 Input     17 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 69    
+	   2 Input     16 Bit        Muxes := 74    
 	   3 Input     16 Bit        Muxes := 2     
-	   4 Input     16 Bit        Muxes := 4     
+	   4 Input     16 Bit        Muxes := 5     
 	   9 Input     16 Bit        Muxes := 1     
+	   6 Input     16 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 14    
 	   7 Input     12 Bit        Muxes := 1     
 	   3 Input     12 Bit        Muxes := 1     
@@ -868,17 +869,17 @@ Detailed RTL Component Info :
 	   4 Input     10 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 2     
 	  37 Input      8 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 9     
 	  14 Input      7 Bit        Muxes := 1     
 	   4 Input      7 Bit        Muxes := 4     
-	   2 Input      7 Bit        Muxes := 7     
 	   3 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 5     
-	   4 Input      6 Bit        Muxes := 1     
 	  32 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
 	  32 Input      5 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 5     
-	   2 Input      4 Bit        Muxes := 26    
+	   2 Input      4 Bit        Muxes := 27    
 	  37 Input      4 Bit        Muxes := 1     
 	   3 Input      4 Bit        Muxes := 1     
 	  11 Input      4 Bit        Muxes := 1     
@@ -886,9 +887,9 @@ Detailed RTL Component Info :
 	   5 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 5     
 	   4 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 445   
+	   2 Input      1 Bit        Muxes := 444   
 	   3 Input      1 Bit        Muxes := 12    
-	   4 Input      1 Bit        Muxes := 12    
+	   4 Input      1 Bit        Muxes := 11    
 	  23 Input      1 Bit        Muxes := 1     
 	  11 Input      1 Bit        Muxes := 3     
 	  14 Input      1 Bit        Muxes := 1     
@@ -912,20 +913,22 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit       Adders := 2     
 +---Registers : 
 	               33 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     33 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 4     
-	   4 Input     16 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 8     
+	   4 Input     16 Bit        Muxes := 2     
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 4     
 	   4 Input      7 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 6     
-	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 2     
 Module new_clock 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -952,6 +955,8 @@ Module XADC__mod
 Detailed RTL Component Info : 
 +---Registers : 
 	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
 Module draw_box__1 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -1062,6 +1067,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 16    
 	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 16    
@@ -1174,6 +1180,26 @@ Detailed RTL Component Info :
 	   4 Input      7 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 5     
+Module Oled_Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	  32 Input     20 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  32 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module Ps2Interface 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1346,26 +1372,6 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 365   
 	   9 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
-Module Oled_Display 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     17 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
-+---Registers : 
-	               40 Bit    Registers := 1     
-	               17 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     40 Bit        Muxes := 3     
-	  32 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 2     
-	  32 Input     20 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 1     
-	  32 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
-	  32 Input      5 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -1384,6 +1390,9 @@ Start Cross Boundary and Area Optimization
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5546] ROM "hz10/clk_out_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "seg7/digit_select" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
 DSP Report: Generating DSP nextTurtleX3, operation Mode is: A*B.
 DSP Report: operator nextTurtleX3 is absorbed into DSP nextTurtleX3.
 DSP Report: Generating DSP nextTurtleX1, operation Mode is: C+A*B.
@@ -1417,8 +1426,8 @@ WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [C:/Users/
 WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/neural_net.v:69]
 WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/neural_net.v:69]
 INFO: [Synth 8-5546] ROM "next_addr_inter" won't be mapped to RAM because it is too sparse
-DSP Debug: swapped A/B pins for adder 0000020DCF9067E0
-DSP Debug: swapped A/B pins for adder 0000020DCF911040
+DSP Debug: swapped A/B pins for adder 0000020B552348C0
+DSP Debug: swapped A/B pins for adder 0000020B5523E700
 DSP Report: Generating DSP next_val_out0, operation Mode is: A*B.
 DSP Report: operator next_val_out0 is absorbed into DSP next_val_out0.
 DSP Report: operator next_val_out0 is absorbed into DSP next_val_out0.
@@ -1471,28 +1480,11 @@ INFO: [Synth 8-5546] ROM "numsd" won't be mapped to RAM because it is too sparse
 DSP Report: Generating DSP p_0_in, operation Mode is: C+A*(B:0x13).
 DSP Report: operator p_0_in is absorbed into DSP p_0_in.
 DSP Report: operator p_0_out is absorbed into DSP p_0_in.
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line79/zpos_reg was removed.  [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:1011]
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line79/middle_down_reg was removed.  [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:425]
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line79/middle_reg was removed.  [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:425]
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line79/new_event_reg was removed.  [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:610]
-INFO: [Synth 8-5546] ROM "nolabel_line79/timeout" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3917] design Top_Student has port JA[7] driven by constant 0
 WARNING: [Synth 8-3917] design Top_Student has port JA[6] driven by constant 0
 WARNING: [Synth 8-3917] design Top_Student has port JA[5] driven by constant 0
 WARNING: [Synth 8-3917] design Top_Student has port JA[4] driven by constant 0
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[15]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[14]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[12]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[11]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[9]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[7]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[6]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[1]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[15]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[14]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[13]
@@ -1508,15 +1500,14 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[4]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[3]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port btnU
-INFO: [Synth 8-3886] merging instance 'nolabel_line98i_2/volume_level_reg[11]' (FDR) to 'nolabel_line98i_2/volume_level_reg[10]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line98i_2/volume_level_reg[10]' (FDR) to 'nolabel_line98i_2/volume_level_reg[9]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line98i_2/\volume_level_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line98i_2/\an_reg[0] )
-INFO: [Synth 8-3886] merging instance 'nolabel_line98i_2/an_reg[1]' (FD) to 'nolabel_line98i_2/an_reg[2]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line98i_2/an_reg[2]' (FD) to 'nolabel_line98i_2/an_reg[3]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (nolabel_line98i_2/\an_reg[3] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (nolabel_line98i_2/nolabel_line33/\led_reg[0] )
-WARNING: [Synth 8-3332] Sequential element (led_reg[0]) is unused and will be removed from module XADC__mod.
+INFO: [Synth 8-3886] merging instance 'nolabel_line94i_2/volume_level_reg[11]' (FDR) to 'nolabel_line94i_2/volume_level_reg[10]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line94i_2/volume_level_reg[10]' (FDR) to 'nolabel_line94i_2/volume_level_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line94i_2/\volume_level_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line94i_2/\an_reg[0] )
+INFO: [Synth 8-3886] merging instance 'nolabel_line94i_2/an_reg[1]' (FD) to 'nolabel_line94i_2/an_reg[2]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line94i_2/an_reg[2]' (FD) to 'nolabel_line94i_2/an_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (nolabel_line94i_2/\an_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (nolabel_line94i_2/\nolabel_line33/led_reg[0] )
 INFO: [Synth 8-3886] merging instance 'a2i_3/audio_out_reg[0]' (FDE) to 'a2i_3/audio_out_reg[1]'
 INFO: [Synth 8-3886] merging instance 'a2i_3/audio_out_reg[1]' (FDE) to 'a2i_3/audio_out_reg[2]'
 INFO: [Synth 8-3886] merging instance 'a2i_3/audio_out_reg[2]' (FDE) to 'a2i_3/audio_out_reg[3]'
@@ -1528,62 +1519,74 @@ INFO: [Synth 8-3886] merging instance 'a2i_3/audio_out_reg[7]' (FDE) to 'a2i_3/a
 INFO: [Synth 8-3886] merging instance 'a2i_3/audio_out_reg[8]' (FDE) to 'a2i_3/audio_out_reg[9]'
 INFO: [Synth 8-3886] merging instance 'a2i_3/audio_out_reg[9]' (FDE) to 'a2i_3/audio_out_reg[11]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (a2i_3/\audio_out_reg[11] )
-INFO: [Synth 8-3886] merging instance 'nolabel_line108i_4/a3/oled_data_reg[11]' (FD) to 'nolabel_line108i_4/a3/oled_data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line118i_5/seg_reg[0]' (FDE) to 'nolabel_line118i_5/seg_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/MOUSE_Y_POS_reg[0]' (FDR) to 'i_0/nolabel_line91/nn_inst/MOUSE_X_POS_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/MOUSE_Y_POS_reg[1]' (FDR) to 'i_0/nolabel_line91/nn_inst/MOUSE_X_POS_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/MOUSE_Y_POS_reg[2]' (FDR) to 'i_0/nolabel_line91/nn_inst/MOUSE_X_POS_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/MOUSE_X_POS_reg[0]' (FDR) to 'i_0/nolabel_line91/nn_inst/MOUSE_X_POS_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/MOUSE_X_POS_reg[1]' (FDR) to 'i_0/nolabel_line91/nn_inst/MOUSE_X_POS_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line91/nn_inst/\MOUSE_X_POS_reg[2] )
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[8]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[9]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[7]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[6]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[5]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[4]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[3]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[2]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[1]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/p_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line91/nn_inst/\ct_inst/p_reg[0] )
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[0]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[1]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[2]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[3]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[4]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[5]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[6]' (FDSE) to 'i_0/nolabel_line79/y_max_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[7]' (FDSE) to 'i_0/nolabel_line79/y_max_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[8]' (FDSE) to 'i_0/nolabel_line79/y_max_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[9]' (FDSE) to 'i_0/nolabel_line79/y_max_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[10]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/x_max_reg[11]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/y_max_reg[0]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/y_max_reg[1]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/y_max_reg[2]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/y_max_reg[3]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[4]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/y_max_reg[4]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/y_max_reg[5]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/y_max_reg[6]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[8]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/y_max_reg[7]' (FDSE) to 'i_0/nolabel_line79/y_max_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/y_max_reg[8]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[10]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_0/\nolabel_line79/y_max_reg[9] )
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line79/y_max_reg[10]' (FDRE) to 'i_0/nolabel_line79/y_max_reg[11]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\nolabel_line79/y_max_reg[11] )
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/startY_reg[0]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/goalX_reg[0]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/goalX_reg[1]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/goalX_reg[2]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/goalY_reg[0]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/goalY_reg[1]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/goalY_reg[2]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/startY_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/startY_reg[1]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/startY_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/startY_reg[2]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/startX_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/startX_reg[0]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/startX_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/startX_reg[1]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/startX_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line91/nn_inst/\ct_inst/startX_reg[2] )
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/dY_reg[1]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/dY_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/dX_reg[1]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/dX_reg[2]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line105i_4/a3/oled_data_reg[11]' (FD) to 'nolabel_line105i_4/a3/oled_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line115i_5/seg_reg[0]' (FDE) to 'nolabel_line115i_5/seg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/MOUSE_Y_POS_reg[0]' (FDR) to 'i_0/nolabel_line87/nn_inst/MOUSE_X_POS_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/MOUSE_Y_POS_reg[1]' (FDR) to 'i_0/nolabel_line87/nn_inst/MOUSE_X_POS_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/MOUSE_Y_POS_reg[2]' (FDR) to 'i_0/nolabel_line87/nn_inst/MOUSE_X_POS_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/MOUSE_X_POS_reg[0]' (FDR) to 'i_0/nolabel_line87/nn_inst/MOUSE_X_POS_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/MOUSE_X_POS_reg[1]' (FDR) to 'i_0/nolabel_line87/nn_inst/MOUSE_X_POS_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line87/nn_inst/\MOUSE_X_POS_reg[2] )
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[8]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[9]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[7]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[6]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[5]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[4]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[3]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[2]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[1]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/p_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line87/nn_inst/\ct_inst/p_reg[0] )
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[0]' (FDRE) to 'i_0/nolabel_line75/y_max_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[1]' (FDRE) to 'i_0/nolabel_line75/y_max_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[2]' (FDRE) to 'i_0/nolabel_line75/y_max_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[3]' (FDRE) to 'i_0/nolabel_line75/y_max_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[4]' (FDRE) to 'i_0/nolabel_line75/y_max_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[5]' (FDRE) to 'i_0/nolabel_line75/y_max_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[6]' (FDRE) to 'i_0/nolabel_line75/y_max_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[7]' (FDSE) to 'i_0/nolabel_line75/y_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[8]' (FDRE) to 'i_0/nolabel_line75/y_max_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[9]' (FDSE) to 'i_0/nolabel_line75/x_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[10]' (FDRE) to 'i_0/nolabel_line75/y_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/y_max_reg[11]' (FDRE) to 'i_0/nolabel_line75/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/x_max_reg[0]' (FDRE) to 'i_0/nolabel_line75/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/x_max_reg[1]' (FDRE) to 'i_0/nolabel_line75/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/x_max_reg[2]' (FDRE) to 'i_0/nolabel_line75/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/x_max_reg[3]' (FDRE) to 'i_0/nolabel_line75/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/x_max_reg[4]' (FDRE) to 'i_0/nolabel_line75/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/x_max_reg[5]' (FDRE) to 'i_0/nolabel_line75/x_max_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/x_max_reg[6]' (FDSE) to 'i_0/nolabel_line75/x_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/x_max_reg[7]' (FDSE) to 'i_0/nolabel_line75/x_max_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/x_max_reg[8]' (FDSE) to 'i_0/nolabel_line75/x_max_reg[9]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_0/\nolabel_line75/x_max_reg[9] )
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line75/x_max_reg[10]' (FDRE) to 'i_0/nolabel_line75/x_max_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\nolabel_line75/x_max_reg[11] )
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[1]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[2]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[3]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[5]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[6]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[7]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[8]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[9]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[11]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[12]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[13]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/colour_chooser_reg[14]' (LD) to 'i_0/nolabel_line87/colour_chooser_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/startY_reg[0]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/goalX_reg[0]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/goalX_reg[1]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/goalX_reg[2]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/goalY_reg[0]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/goalY_reg[1]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/goalY_reg[2]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/startY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/startY_reg[1]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/startY_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/startY_reg[2]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/startX_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/startX_reg[0]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/startX_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/startX_reg[1]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/startX_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line87/nn_inst/\ct_inst/startX_reg[2] )
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/dY_reg[1]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/dY_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/dX_reg[1]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/dX_reg[2]'
 WARNING: [Synth 8-3332] Sequential element (ct_inst/p_reg[0]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (ct_inst/startX_reg[2]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (nums_reg[15]) is unused and will be removed from module module_pack.
@@ -1603,49 +1606,18 @@ WARNING: [Synth 8-3332] Sequential element (nums_reg[2]) is unused and will be r
 WARNING: [Synth 8-3332] Sequential element (nums_reg[1]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (nums_reg[0]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (MOUSE_X_POS_reg[2]) is unused and will be removed from module module_pack.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[15]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[14]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[13]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[12]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[11]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[10]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[9]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[8]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[7]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[6]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[5]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[4]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[3]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[2]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[1]) is unused and will be removed from module paint_modified.
-WARNING: [Synth 8-3332] Sequential element (colour_chooser_reg[0]) is unused and will be removed from module paint_modified.
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/nn_inst/ct_inst/dY_reg[0]' (FDCE) to 'i_0/nolabel_line91/nn_inst/ct_inst/dX_reg[0]'
-WARNING: [Synth 8-3332] Sequential element (led_reg[15]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[14]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[13]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[12]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[11]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[10]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[9]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[8]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[7]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[6]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[5]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[4]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[3]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[2]) is unused and will be removed from module XADC__mod.
-WARNING: [Synth 8-3332] Sequential element (led_reg[1]) is unused and will be removed from module XADC__mod.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line91/nn_inst/\ct_inst/dX_reg[0] )
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/nn_inst/ct_inst/dY_reg[0]' (FDCE) to 'i_0/nolabel_line87/nn_inst/ct_inst/dX_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line87/nn_inst/\ct_inst/dX_reg[0] )
 WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[0]) is unused and will be removed from module module_pack.
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/i_2/h_cnt_reg[7]' (FD) to 'i_0/nolabel_line91/i_2/h_cnt_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/i_2/h_cnt_reg[8]' (FD) to 'i_0/nolabel_line91/i_2/h_cnt_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/i_2/h_cnt_reg[6]' (FD) to 'i_0/nolabel_line91/i_2/h_cnt_reg[9]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line91/i_2/\h_cnt_reg[9] )
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/mouse_press_y_reg[6]' (FD) to 'i_0/nolabel_line91/mouse_press_y_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/mouse_press_y_reg[7]' (FD) to 'i_0/nolabel_line91/mouse_press_y_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line91/mouse_press_y_reg[8]' (FD) to 'i_0/nolabel_line91/mouse_press_y_reg[9]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line91/\mouse_press_y_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line91/nn_inst/\ct_inst/goalY_reg[9] )
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/i_1/h_cnt_reg[7]' (FD) to 'i_0/nolabel_line87/i_1/h_cnt_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/i_1/h_cnt_reg[8]' (FD) to 'i_0/nolabel_line87/i_1/h_cnt_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/i_1/h_cnt_reg[6]' (FD) to 'i_0/nolabel_line87/i_1/h_cnt_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line87/i_1/\h_cnt_reg[9] )
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/mouse_press_y_reg[6]' (FD) to 'i_0/nolabel_line87/mouse_press_y_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/mouse_press_y_reg[7]' (FD) to 'i_0/nolabel_line87/mouse_press_y_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/mouse_press_y_reg[8]' (FD) to 'i_0/nolabel_line87/mouse_press_y_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line87/\mouse_press_y_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/nolabel_line87/nn_inst/\ct_inst/goalY_reg[9] )
 WARNING: [Synth 8-3332] Sequential element (ct_inst/goalY_reg[9]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[9]) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (ct_inst/dX_reg[8]) is unused and will be removed from module module_pack.
@@ -1691,7 +1663,7 @@ WARNING: [Synth 8-3332] Sequential element (LED_reg[2]_P) is unused and will be 
 WARNING: [Synth 8-3332] Sequential element (LED_reg[1]_P) is unused and will be removed from module module_pack.
 WARNING: [Synth 8-3332] Sequential element (LED_reg[0]_P) is unused and will be removed from module module_pack.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:23 ; elapsed = 00:02:31 . Memory (MB): peak = 963.949 ; gain = 678.246
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:26 ; elapsed = 00:02:32 . Memory (MB): peak = 994.953 ; gain = 708.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1762,13 +1734,13 @@ Report RTL Partitions:
 |      |RTL Partition     |Replication |Instances |
 +------+------------------+------------+----------+
 |1     |new_clock         |           1|       117|
-|2     |mic__GC0          |           1|      6404|
+|2     |mic__GC0          |           1|      6660|
 |3     |clock_gen         |           1|       102|
 |4     |alarm__GC0        |           1|       276|
-|5     |top_alarm__GC0    |           1|      1711|
+|5     |top_alarm__GC0    |           1|      1701|
 |6     |password__GC0     |           1|        82|
-|7     |Top_Student__GCB0 |           1|      8472|
-|8     |Top_Student__GCB1 |           1|      4750|
+|7     |Top_Student__GCB0 |           1|     11420|
+|8     |Top_Student__GCB1 |           1|      4034|
 |9     |new_clock__1      |           1|       116|
 |10    |new_clock__2      |           1|       114|
 |11    |new_clock__3      |           1|       112|
@@ -1785,13 +1757,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:40 ; elapsed = 00:02:48 . Memory (MB): peak = 963.949 ; gain = 678.246
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:43 ; elapsed = 00:02:49 . Memory (MB): peak = 994.953 ; gain = 708.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:42 ; elapsed = 00:02:50 . Memory (MB): peak = 989.336 ; gain = 703.633
+Finished Timing Optimization : Time (s): cpu = 00:02:45 ; elapsed = 00:02:52 . Memory (MB): peak = 998.320 ; gain = 711.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1799,13 +1771,13 @@ Report RTL Partitions:
 |      |RTL Partition     |Replication |Instances |
 +------+------------------+------------+----------+
 |1     |new_clock         |           1|       117|
-|2     |mic__GC0          |           1|      6404|
+|2     |mic__GC0          |           1|      6660|
 |3     |clock_gen         |           1|       102|
 |4     |alarm__GC0        |           1|       276|
-|5     |top_alarm__GC0    |           1|      1711|
+|5     |top_alarm__GC0    |           1|      1701|
 |6     |password__GC0     |           1|        82|
-|7     |Top_Student__GCB0 |           1|      8472|
-|8     |Top_Student__GCB1 |           1|      4750|
+|7     |Top_Student__GCB0 |           1|     11420|
+|8     |Top_Student__GCB1 |           1|      4034|
 |9     |new_clock__1      |           1|       116|
 |10    |new_clock__2      |           1|       114|
 |11    |new_clock__3      |           1|       112|
@@ -1821,14 +1793,9 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (nolabel_line108/a2/audio_out_inst/temp2_reg[15]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line108/a2/audio_out_inst/temp2_reg[14]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line108/a2/audio_out_inst/temp2_reg[13]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line108/a2/audio_out_inst/temp2_reg[12]) is unused and will be removed from module Top_Student.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/CanvasTransfer.v:80]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:53 ; elapsed = 00:03:01 . Memory (MB): peak = 1111.102 ; gain = 825.398
+Finished Technology Mapping : Time (s): cpu = 00:02:53 ; elapsed = 00:03:00 . Memory (MB): peak = 1043.918 ; gain = 757.191
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1848,20 +1815,13 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5365] Flop nolabel_line79/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to nolabel_line79/Inst_Ps2Interface/ps2_clk_h_reg_inv.
-INFO: [Synth 8-5365] Flop nolabel_line79/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to nolabel_line79/Inst_Ps2Interface/ps2_data_h_reg_inv.
+INFO: [Synth 8-5365] Flop nolabel_line75/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to nolabel_line75/Inst_Ps2Interface/ps2_clk_h_reg_inv.
+INFO: [Synth 8-5365] Flop nolabel_line75/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to nolabel_line75/Inst_Ps2Interface/ps2_data_h_reg_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \nolabel_line98/nolabel_line33/XLXI_7  has unconnected pin daddr_in[6]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \nolabel_line98/nolabel_line33/XLXI_7  has unconnected pin daddr_in[5]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \nolabel_line98/nolabel_line33/XLXI_7  has unconnected pin daddr_in[4]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \nolabel_line98/nolabel_line33/XLXI_7  has unconnected pin daddr_in[3]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \nolabel_line98/nolabel_line33/XLXI_7  has unconnected pin daddr_in[2]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \nolabel_line98/nolabel_line33/XLXI_7  has unconnected pin daddr_in[1]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \nolabel_line98/nolabel_line33/XLXI_7  has unconnected pin daddr_in[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:55 ; elapsed = 00:03:03 . Memory (MB): peak = 1111.102 ; gain = 825.398
+Finished IO Insertion : Time (s): cpu = 00:02:55 ; elapsed = 00:03:02 . Memory (MB): peak = 1043.918 ; gain = 757.191
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1874,7 +1834,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:55 ; elapsed = 00:03:04 . Memory (MB): peak = 1111.102 ; gain = 825.398
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:56 ; elapsed = 00:03:02 . Memory (MB): peak = 1043.918 ; gain = 757.191
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1886,25 +1846,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:56 ; elapsed = 00:03:05 . Memory (MB): peak = 1111.102 ; gain = 825.398
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:57 ; elapsed = 00:03:04 . Memory (MB): peak = 1043.918 ; gain = 757.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:56 ; elapsed = 00:03:05 . Memory (MB): peak = 1111.102 ; gain = 825.398
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:57 ; elapsed = 00:03:04 . Memory (MB): peak = 1043.918 ; gain = 757.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:57 ; elapsed = 00:03:06 . Memory (MB): peak = 1111.102 ; gain = 825.398
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:58 ; elapsed = 00:03:04 . Memory (MB): peak = 1043.918 ; gain = 757.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:57 ; elapsed = 00:03:06 . Memory (MB): peak = 1111.102 ; gain = 825.398
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:58 ; elapsed = 00:03:05 . Memory (MB): peak = 1043.918 ; gain = 757.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1914,8 +1874,8 @@ Static Shift Register Report:
 +------------+-------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name | RTL Name                                        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +------------+-------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Top_Student | nolabel_line108/a2/audio_out_inst/temp1_reg[15] | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|Top_Student | nolabel_line108/a2/audio_out_inst/temp1_reg[9]  | 10     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Top_Student | nolabel_line105/a2/audio_out_inst/temp1_reg[15] | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Top_Student | nolabel_line105/a2/audio_out_inst/temp1_reg[9]  | 10     | 1     | YES          | NO                 | YES               | 1      | 0       | 
 +------------+-------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
@@ -1946,115 +1906,106 @@ Report Cell Usage:
 |4     |blk_mem_gen_inter        |     1|
 |5     |xadc_wiz_0               |     1|
 |6     |BUFG                     |     4|
-|7     |CARRY4                   |   608|
+|7     |CARRY4                   |   664|
 |8     |DSP48E1                  |    13|
 |9     |DSP48E1_1                |     1|
 |10    |DSP48E1_2                |     1|
 |11    |DSP48E1_3                |     1|
 |12    |DSP48E1_4                |     2|
 |13    |DSP48E1_5                |     1|
-|14    |LUT1                     |   124|
-|15    |LUT2                     |  1100|
-|16    |LUT3                     |   810|
-|17    |LUT4                     |  1228|
-|18    |LUT5                     |  1578|
-|19    |LUT6                     |  3576|
-|20    |MUXF7                    |   387|
-|21    |MUXF8                    |    76|
+|14    |LUT1                     |   178|
+|15    |LUT2                     |  1222|
+|16    |LUT3                     |  1712|
+|17    |LUT4                     |   843|
+|18    |LUT5                     |  1393|
+|19    |LUT6                     |  3995|
+|20    |MUXF7                    |   522|
+|21    |MUXF8                    |   152|
 |22    |SRL16E                   |     2|
-|23    |FDCE                     |  1275|
+|23    |FDCE                     |  1277|
 |24    |FDPE                     |     6|
-|25    |FDRE                     |  1439|
+|25    |FDRE                     |  1466|
 |26    |FDRE_1                   |    31|
-|27    |FDSE                     |    19|
+|27    |FDSE                     |    22|
 |28    |FDSE_1                   |     1|
-|29    |LD                       |    10|
+|29    |LD                       |    14|
 |30    |IBUF                     |    18|
 |31    |IOBUF                    |     2|
-|32    |OBUF                     |    35|
-|33    |OBUFT                    |    11|
+|32    |OBUF                     |    45|
+|33    |OBUFT                    |     1|
 +------+-------------------------+------+
 
 Report Instance Areas: 
-+------+----------------------+-------------------+------+
-|      |Instance              |Module             |Cells |
-+------+----------------------+-------------------+------+
-|1     |top                   |                   | 12467|
-|2     |  clk6p25m            |new_clock          |    66|
-|3     |  nolabel_line108     |top_alarm          |   953|
-|4     |    a1                |alarm_starter      |     5|
-|5     |    a2                |alarm              |   566|
-|6     |      audio_out_inst  |Audio_Output       |    38|
-|7     |      clk1052hz       |clock_gen          |    63|
-|8     |      clk1320hz       |clock_gen_13       |    63|
-|9     |      clk1405hz       |clock_gen_14       |    63|
-|10    |      clk20khz        |clock_gen_15       |    63|
-|11    |      clk50Mhz        |clock_gen_16       |    63|
-|12    |      clk787hz        |clock_gen_17       |    63|
-|13    |      clk937hz        |clock_gen_18       |    63|
-|14    |      clock_1s        |clk_1hz_module     |    76|
-|15    |    a3                |animation          |   167|
-|16    |      c4              |clk_sound          |    55|
-|17    |    digs              |digits             |    93|
-|18    |    hz10              |tenHz_gen          |    60|
-|19    |    seg7              |seg7_control       |    62|
-|20    |  nolabel_line118     |password           |    88|
-|21    |    nolabel_line39    |new_clock_12       |    65|
-|22    |  nolabel_line66      |Oled_Display       |  2465|
-|23    |  nolabel_line79      |MouseCtl           |   923|
-|24    |    Inst_Ps2Interface |Ps2Interface       |   284|
-|25    |  nolabel_line91      |paint_modified     |  4624|
-|26    |    ccd_inst_2        |clock_count_div    |    36|
-|27    |    ccd_inst_27       |clock_count_div_11 |     1|
-|28    |    clock_mouse       |clk_freq_divider   |    63|
-|29    |    nn_inst           |module_pack        |  1487|
-|30    |      ct_inst         |CanvasTransfer     |   180|
-|31    |      nn1             |neural_net         |  1038|
-|32    |    ssd1              |ss_display         |    35|
-|33    |    unit_6p25m        |clk_divider        |    63|
-|34    |  nolabel_line98      |mic                |  3122|
-|35    |    nolabel_line102   |new_clock_0        |    65|
-|36    |    nolabel_line25    |new_clock_1        |    65|
-|37    |    nolabel_line27    |Audio_Capture      |    65|
-|38    |    nolabel_line29    |peak_intensity     |   100|
-|39    |    nolabel_line33    |XADC__mod          |    36|
-|40    |    nolabel_line51    |xy                 |   709|
-|41    |    nolabel_line61    |draw_box           |     2|
-|42    |    nolabel_line74    |draw_note          |    17|
-|43    |    nolabel_line75    |draw_note_2        |    17|
-|44    |    nolabel_line76    |draw_note_3        |    17|
-|45    |    nolabel_line77    |draw_note_4        |    17|
-|46    |    nolabel_line78    |draw_note_5        |    16|
-|47    |    nolabel_line79    |draw_note_6        |    16|
-|48    |    nolabel_line80    |draw_note_7        |    16|
-|49    |    nolabel_line81    |draw_note_8        |    16|
-|50    |    nolabel_line83    |new_clock_9        |    65|
-|51    |    nolabel_line95    |new_clock_10       |    65|
-+------+----------------------+-------------------+------+
++------+----------------------+------------------+------+
+|      |Instance              |Module            |Cells |
++------+----------------------+------------------+------+
+|1     |top                   |                  | 13697|
+|2     |  clk6p25m            |new_clock         |    65|
+|3     |  nolabel_line105     |top_alarm         |  1013|
+|4     |    a1                |alarm_starter     |     6|
+|5     |    a2                |alarm             |   571|
+|6     |      audio_out_inst  |Audio_Output      |    38|
+|7     |      clk1052hz       |clock_gen         |    63|
+|8     |      clk1320hz       |clock_gen_6       |    63|
+|9     |      clk1405hz       |clock_gen_7       |    63|
+|10    |      clk20khz        |clock_gen_8       |    63|
+|11    |      clk50Mhz        |clock_gen_9       |    63|
+|12    |      clk787hz        |clock_gen_10      |    63|
+|13    |      clk937hz        |clock_gen_11      |    63|
+|14    |      clock_1s        |clk_1hz_module    |    81|
+|15    |    a3                |animation         |   237|
+|16    |      c4              |clk_sound         |    83|
+|17    |    digs              |digits            |    77|
+|18    |    hz10              |tenHz_gen         |    60|
+|19    |    seg7              |seg7_control      |    62|
+|20    |  nolabel_line115     |password          |    92|
+|21    |    nolabel_line39    |new_clock_5       |    65|
+|22    |  nolabel_line62      |Oled_Display      |  4003|
+|23    |  nolabel_line75      |MouseCtl          |   979|
+|24    |    Inst_Ps2Interface |Ps2Interface      |   285|
+|25    |  nolabel_line87      |paint_modified    |  5567|
+|26    |    ccd_inst_2        |clock_count_div   |    36|
+|27    |    ccd_inst_27       |clock_count_div_4 |     1|
+|28    |    clock_mouse       |clk_freq_divider  |    63|
+|29    |    nn_inst           |module_pack       |  1492|
+|30    |      ct_inst         |CanvasTransfer    |   184|
+|31    |      nn1             |neural_net        |  1039|
+|32    |    ssd1              |ss_display        |    35|
+|33    |    unit_6p25m        |clk_divider       |    63|
+|34    |  nolabel_line94      |mic               |  1704|
+|35    |    nolabel_line102   |new_clock_0       |    65|
+|36    |    nolabel_line25    |new_clock_1       |    65|
+|37    |    nolabel_line27    |Audio_Capture     |    66|
+|38    |    nolabel_line29    |peak_intensity    |   100|
+|39    |    nolabel_line33    |XADC__mod         |    70|
+|40    |    nolabel_line61    |draw_box          |     2|
+|41    |    nolabel_line83    |new_clock_2       |    65|
+|42    |    nolabel_line95    |new_clock_3       |    65|
++------+----------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:57 ; elapsed = 00:03:06 . Memory (MB): peak = 1111.102 ; gain = 825.398
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:58 ; elapsed = 00:03:05 . Memory (MB): peak = 1043.918 ; gain = 757.191
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 7 critical warnings and 165 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:41 ; elapsed = 00:02:54 . Memory (MB): peak = 1111.102 ; gain = 477.133
-Synthesis Optimization Complete : Time (s): cpu = 00:02:58 ; elapsed = 00:03:06 . Memory (MB): peak = 1111.102 ; gain = 825.398
+Synthesis finished with 0 errors, 0 critical warnings and 91 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:41 ; elapsed = 00:02:53 . Memory (MB): peak = 1043.918 ; gain = 409.246
+Synthesis Optimization Complete : Time (s): cpu = 00:02:58 ; elapsed = 00:03:05 . Memory (MB): peak = 1043.918 ; gain = 757.191
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1152 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1423 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 44 instances were transformed.
+  A total of 48 instances were transformed.
   FDRE_1 => FDRE (inverted pins: C): 31 instances
   FDSE_1 => FDSE (inverted pins: C): 1 instances
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
-  LD => LDCE: 10 instances
+  LD => LDCE: 14 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-432 Infos, 264 Warnings, 7 Critical Warnings and 0 Errors encountered.
+446 Infos, 211 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:03 ; elapsed = 00:03:12 . Memory (MB): peak = 1111.102 ; gain = 836.926
+synth_design: Time (s): cpu = 00:03:03 ; elapsed = 00:03:11 . Memory (MB): peak = 1043.918 ; gain = 768.699
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.136 . Memory (MB): peak = 1111.102 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Nov  4 16:49:51 2023...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.123 . Memory (MB): peak = 1043.918 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  4 20:15:54 2023...

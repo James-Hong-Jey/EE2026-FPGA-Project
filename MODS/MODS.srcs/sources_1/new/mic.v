@@ -17,7 +17,7 @@ module mic (
     output reg [15:0] oled_data,
     output reg [6:0] seg,
     output reg [3:0] an,
-    output [15:0] led
+    output wire [15:0] led
     );
 
     // Set up Audio Capture
@@ -102,8 +102,8 @@ module mic (
     new_clock (4, clock, fivehertz);
     always @ (posedge fivehertz) begin
         an <= 4'b1110;
-        // case( (volume_level)/ 3)
-        case(light_data[15:12])
+        case( (volume_level)/ 3)
+        // case(light_data[15:11])
         0: seg <= 7'b1111111;
         1: seg <= `DIG1;
         2: seg <= `DIG2;
@@ -155,7 +155,7 @@ module mic (
         end else if (body) begin
             oled_data <= body;
 
-        end else if (light_data[15:12] > 5 && bright_bg[pixel_index]) begin
+        end else if (light_data[15:11] > 7 && bright_bg[pixel_index]) begin
             oled_data <= bright_bg[pixel_index];
         end else if (dark_bg[pixel_index]) begin
             oled_data <= dark_bg[pixel_index];

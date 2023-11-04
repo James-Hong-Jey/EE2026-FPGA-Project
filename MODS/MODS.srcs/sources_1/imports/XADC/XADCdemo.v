@@ -43,7 +43,7 @@ module XADC(
     wire enable;  
     wire ready;
     // wire [15:0] data;   
-    reg [6:0] Address_in;
+    reg [6:0] Address_in = 8'h16;
 	
 	//secen segment controller signals
     reg [32:0] count;
@@ -85,10 +85,10 @@ module XADC(
         .drdy_out(ready)
     );
     
-    //led visual dmm              
+    //led visual dmm              - Testing purposes 
     always @(posedge(CLK100MHZ)) begin            
         if(ready == 1'b1) begin
-            case (data[15:12])
+            case (data[15:11])
             1:  led <= 16'b11;
             2:  led <= 16'b111;
             3:  led <= 16'b1111;
