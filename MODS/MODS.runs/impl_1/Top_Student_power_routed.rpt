@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Nov  4 20:18:48 2023
+| Date             : Sun Nov  5 01:01:11 2023
 | Host             : DESKTOP-J2M8M7A running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.131        |
+| Total On-Chip Power (W)  | 0.132        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.057        |
+| Dynamic (W)              | 0.058        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.3         |
@@ -52,22 +52,22 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.010 |        3 |       --- |             --- |
-| Slice Logic             |     0.012 |    13838 |       --- |             --- |
-|   LUT as Logic          |     0.010 |     7844 |     20800 |           37.71 |
-|   CARRY4                |     0.001 |      664 |      8150 |            8.15 |
-|   Register              |    <0.001 |     2848 |     41600 |            6.85 |
-|   F7/F8 Muxes           |    <0.001 |      701 |     32600 |            2.15 |
-|   BUFG                  |    <0.001 |        3 |        32 |            9.38 |
+| Clocks                  |     0.011 |        3 |       --- |             --- |
+| Slice Logic             |     0.012 |    14787 |       --- |             --- |
+|   LUT as Logic          |     0.010 |     8505 |     20800 |           40.89 |
+|   CARRY4                |     0.001 |      712 |      8150 |            8.74 |
+|   Register              |    <0.001 |     2934 |     41600 |            7.05 |
+|   F7/F8 Muxes           |    <0.001 |      728 |     32600 |            2.23 |
+|   BUFG                  |    <0.001 |        4 |        32 |           12.50 |
 |   LUT as Shift Register |    <0.001 |        2 |      9600 |            0.02 |
-|   Others                |     0.000 |      184 |       --- |             --- |
-| Signals                 |     0.012 |    10054 |       --- |             --- |
+|   Others                |     0.000 |      191 |       --- |             --- |
+| Signals                 |     0.013 |    10756 |       --- |             --- |
 | Block RAM               |     0.005 |     26.5 |        50 |           53.00 |
 | DSPs                    |     0.002 |       19 |        90 |           21.11 |
-| I/O                     |     0.015 |       64 |       106 |           60.38 |
+| I/O                     |     0.014 |       65 |       106 |           61.32 |
 | XADC                    |     0.002 |        1 |       --- |             --- |
 | Static Power            |     0.073 |          |           |                 |
-| Total                   |     0.131 |          |           |                 |
+| Total                   |     0.132 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,8 +77,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.051 |       0.041 |      0.010 |
-| Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |
+| Vccint    |       1.000 |     0.054 |       0.043 |      0.010 |
+| Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -146,11 +146,14 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| Top_Student                                      |     0.057 |
+| Top_Student                                      |     0.058 |
 |   PS2Clk_IOBUF_inst                              |     0.000 |
 |   PS2Data_IOBUF_inst                             |     0.000 |
 |   clk6p25m                                       |    <0.001 |
-|   nolabel_line105                                |     0.006 |
+|   nolabel_line103                                |    <0.001 |
+|     nolabel_line17                               |    <0.001 |
+|     nolabel_line20                               |     0.000 |
+|   nolabel_line121                                |     0.006 |
 |     a1                                           |    <0.001 |
 |     a2                                           |     0.004 |
 |       audio_out_inst                             |    <0.001 |
@@ -167,7 +170,7 @@ Table of Contents
 |     digs                                         |    <0.001 |
 |     hz10                                         |    <0.001 |
 |     seg7                                         |    <0.001 |
-|   nolabel_line115                                |    <0.001 |
+|   nolabel_line131                                |    <0.001 |
 |     nolabel_line39                               |    <0.001 |
 |   nolabel_line62                                 |    <0.001 |
 |   nolabel_line75                                 |     0.004 |
@@ -261,7 +264,7 @@ Table of Contents
 |                 ramloop[0].ram.r                 |    <0.001 |
 |                   prim_noinit.ram                |    <0.001 |
 |       ct_inst                                    |    <0.001 |
-|       nn1                                        |     0.004 |
+|       nn1                                        |     0.005 |
 |     ssd1                                         |     0.000 |
 |     unit_6p25m                                   |    <0.001 |
 |   nolabel_line94                                 |     0.008 |

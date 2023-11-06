@@ -96,6 +96,22 @@ module Top_Student (
     .pixel_index(pixel_index), .oled_data(oled_data_mic), .seg(seg_mic), .an(an_mic), .led(led_light));
 
     // Matin
+    wire [15:0] oled_data_sheep;
+    wire [6:0] seg_sheep;
+    wire [3:0] an_sheep;
+    wire [15:0] led_sheep;
+    sheep(
+        .clock(clock),
+        .pixel_index(pixel_index),
+        .sw(sw),
+        .left(left),
+        .PS2Clk(PS2Clk),
+        .PS2Data(PS2Data),
+        .led_values(led_sheep),
+        .an(an_sheep),
+        .seg(seg_sheep),
+        .oled_data(oled_data_sheep)
+    );
 
     // Barbara
     wire [15:0] oled_data_alarm;
@@ -103,7 +119,7 @@ module Top_Student (
     wire [3:0] an_alarm;
     wire [15:0] led_alarm;
     top_alarm(.clk_100MHz(clock), .reset(rst), .sw0(sw[0]), 
-        .left(left), .pixel_index(pixel_index),
+        .btnU(btnU), .left(left), .pixel_index(pixel_index),
         .seg(seg_alarm), .an(an_alarm), 
         .led0(led_alarm[0]), .led(led_alarm[15:1]), .JXADC(JA), .oled_data(oled_data_alarm), 
         .sw1(sw[1]), .PS2Clk(PS2Clk), .PS2Data(PS2Data));
@@ -132,6 +148,7 @@ module Top_Student (
     reg [32:0] debounce = 0;
     reg isActive = 0; // 0 will show the menu, 1 will show the associated screen
     always @ (posedge clock) begin
+
         // Debounce
         if(rst_sw == 1) rst_sw <= 0;
         if(debounce > 0) debounce <= debounce - 1;
@@ -161,7 +178,20 @@ module Top_Student (
                 led_reg <= 15'b000000000000000;
             end
         end
-        4'b01: oled_data <= select_sheep[pixel_index];
+        4'b01: begin // Matin - Sheep
+            if(isActive) begin
+                oled_data <= oled_data_sheep;
+                seg_reg <= seg_sheep;   
+                an_reg <= an_sheep;
+                dp_reg <= 1;
+            end else begin
+                oled_data <= select_sheep[pixel_index];
+                seg_reg <= 7'b1111111;
+                an_reg <= 4'b1111;
+                dp_reg <= 1;
+                led_reg <= 15'b000000000000000;
+            end
+        end
         4'b10: begin // Barbara - Alarm
             if(isActive) begin
                 seg_reg <= seg_alarm;   
@@ -169,6 +199,7 @@ module Top_Student (
                 dp_reg <= 1;
                 led_reg <= led_alarm;
                 oled_data <= oled_data_alarm;
+
             end else begin
                 oled_data <= select_alarm[pixel_index];  
                 seg_reg <= 7'b1111111;
@@ -180,14 +211,16 @@ module Top_Student (
         4'b11: begin // Karishma - Password
             // DRAW 3 2 0 5
             if(isActive) begin
+                led_reg <= led_paint;
                 seg_reg <= seg_pw;   
                 an_reg <= an_pw;
                 dp_reg <= dp_pw;
                 oled_data <= oled_data_paint;
-                if (dp_pw == 1) begin //pw successfully entered 
-                    led_reg[15:11] <= 0; 
-                end else begin 
+                if (dp_pw == 0) begin //pw successfully entered 
                     led_reg[15:11] <= 5'b11111; 
+                    oled_data <= password_unlocked_screen[pixel_index];
+                end else begin 
+                    led_reg[15:11] <= 0; 
                 end
             end else begin
                 oled_data <= select_unlock[pixel_index];  

@@ -4,6 +4,8 @@ module digits(
     input clk_10Hz,
     input reset,
     input switch_down,  // New input for counting direction control
+    input btnU,
+    output reg start_counting = 0,
     output reg [3:0] ones,
     output reg [3:0] tens,
     output reg [3:0] hundreds,
@@ -12,9 +14,14 @@ module digits(
     input sw1
     );
    
+    reg start_counting = 0;
+    always @ (posedge clk_10Hz) begin
+        if(btnU) start_counting <= 1;
+    end
     
     // ones reg control
     always @(posedge clk_10Hz or posedge reset)
+        if(start_counting == 1)
         if(sw1 == 0)     
         if(alarm_unlocked == 0)
         if (reset)
@@ -32,6 +39,7 @@ module digits(
          
 // tens reg control       
     always @(posedge clk_10Hz or posedge reset)
+    if(start_counting == 1)
     if(sw1 == 0)  
     if(alarm_unlocked == 0)
         if (reset) begin
@@ -54,6 +62,7 @@ module digits(
       
     // hundreds reg control              
     always @(posedge clk_10Hz or posedge reset)
+    if(start_counting == 1)
     if(sw1 == 0)  
     if(alarm_unlocked == 0)
         if (reset) begin
@@ -75,6 +84,7 @@ module digits(
      
     // thousands reg control                
     always @(posedge clk_10Hz or posedge reset)
+    if(start_counting == 1)
     if(sw1 == 0) 
     if(alarm_unlocked == 0)
         if (reset) begin

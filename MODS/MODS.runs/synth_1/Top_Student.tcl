@@ -59,6 +59,14 @@ read_mem {
   C:/Users/james/Desktop/EE2026-Project/MODS/export_sim/vcs/blk_mem_gen_const.mif
   C:/Users/james/Desktop/EE2026-Project/MODS/export_sim/xsim/blk_mem_gen_const.mif
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.runs/blk_mem_gen_img_synth_1/blk_mem_gen_img.mif
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/pixel_art/menu_draft.mem
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/pixel_art/select_alarm.mem
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/pixel_art/quiet.mem
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/pixel_art/morning.mem
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/pixel_art/select_noise.mem
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/pixel_art/noisy.mem
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/pixel_art/select_sheep.mem
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/pixel_art/select_unlock.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/7seg_control.v
@@ -80,6 +88,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/neural_net.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/paint.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/password.v
+  C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/sheep.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/imports/Desktop/ss_display.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/tenhz_gen.v
   C:/Users/james/Desktop/EE2026-Project/MODS/MODS.srcs/sources_1/new/alarm/top_alarm.v

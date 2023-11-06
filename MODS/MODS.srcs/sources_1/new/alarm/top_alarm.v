@@ -5,6 +5,7 @@ module top_alarm(
     input reset,            // btnC
     input sw0,
 
+    input btnU,
     input left,
     input [12:0] pixel_index,
     
@@ -25,18 +26,19 @@ module top_alarm(
     wire w_10Hz;
     wire [3:0] w_1s, w_10s, w_100s, w_1000s;
     wire w_alarm_unlocked;
-    wire [31:0] spider_timer;
+    wire [31:0] spider_timer;    
+    wire start_counting;
     
     // Instantiate inner design modules
     tenHz_gen hz10(.clk_100MHz(clk_100MHz), .reset(reset), .clk_10Hz(w_10Hz));
     
-    digits digs(.clk_10Hz(w_10Hz), .reset(reset), .switch_down(sw0), .ones(w_1s), 
+    digits digs(.clk_10Hz(w_10Hz), .reset(reset), .switch_down(sw0), .btnU(btnU), .start_counting(start_counting), .ones(w_1s), 
                     .tens(w_10s), .hundreds(w_100s), .thousands(w_1000s), .alarm_unlocked(w_alarm_unlocked), .sw1(sw1));
     
     seg7_control seg7(.clk_100MHz(clk_100MHz), .reset(reset), .ones(w_1s), .tens(w_10s),
                       .hundreds(w_100s), .thousands(w_1000s), .seg(seg), .an(an));
                       
-    alarm_starter a1(clk_100MHz, led0, sw0, w_1s, w_10s, w_100s, w_1000s, w_alarm_unlocked);
+    alarm_starter a1(clk_100MHz, led0, sw0, start_counting, w_1s, w_10s, w_100s, w_1000s, w_alarm_unlocked);
     
     alarm a2 (
         .clock_100Mhz(clk_100MHz),

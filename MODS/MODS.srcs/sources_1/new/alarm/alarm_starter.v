@@ -24,6 +24,7 @@ module alarm_starter(
     input clk_100MHz,
     output led0,
     input sw0,
+    input start_counting,
     input [3:0] ones,
     input [3:0] tens,
     input [3:0] hundreds,
@@ -33,7 +34,7 @@ module alarm_starter(
     
     always @ (posedge clk_100MHz) begin
     if (alarm_unlocked == 0) begin
-            if (sw0) begin
+            if (sw0 && start_counting == 1) begin
                 if(ones == 0 && tens == 0 && hundreds == 0 && thousands == 0) begin
                 alarm_unlocked <= 1;
                 end
